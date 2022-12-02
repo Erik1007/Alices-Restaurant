@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.views import generic
+from django.shortcuts import render, get_object_or_404
+from django.views import generic, View
 from .models import Post
 
 
@@ -9,4 +9,4 @@ class PostList(generic.ListView):
     template_name = 'reviews.html'
     paginate_by = 12
 
-# Create your views here.
+
