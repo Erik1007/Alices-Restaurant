@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Main -->
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-xs-12 image-container align-items-left">
+                <div class="">
+                    <div>
+                        <img src="/media/old house.jpg" style="height:auto; margin-left:-15px">
+                    </div>
+                    <p class="">The Home of Alice's Restaurant, with its simple and clean design
+                        language, has been a landmark in Stockholm since 1955. It was designed by the
+                        well-known architect Peter Celsing back in 1949 and was the first architect-designed pier side
+                        gas station in Sweden. With its humble and yet sleek design, this building has been
+                        the centerpiece of the inner harbor for over 70 years.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-12 image-container align-items-right">
+                <div class="col-4">
+                    <p class="">
+                        After a number of different businesses, such as
+                        tourist office, ice cream bar, cafe and pizzeria, the time finally came to transform the
+                        iconic structure into a pure restaurant and brasserie with bars and outdoor seating. The future looks as
+                        bright as a glass of champagne overlooking the calm harbor</p>
+                </div>
+                <div>
+                    <img src="/media/over harbor.jpg" style="height:auto; margin-right:-15px">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    {% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+     <!-- Main -->
+     <main class="row">
+        <div class="col-sm-6 col-md-12 align-items-center light-bg">
+            <div class="container-fluid">
+                <div>
+                    <h1 class="main" tabindex="1">Alice's Restaurant</h1>
+                </div>
+                <div class="container-fluid">
+                    <div class="img-responsive align-items-center justify-content-center">
+                        <video id="background-video" autoplay loop muted>
+                            <source src="/media/Main Loop 3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Main Navigation Links -->
+                    <h2>You can get anything you want
+                        at Alice's Restaurant
+                    </h2>
+                    <div class="row">
+                        <div class="col-sm-4 text-center">
+                            <a href="bar.html" button type="button" class="btn btn-outline-primary"
+                                class="align-items-center" class="justify-content-evenly">
+                                <h2>Bar</h2></button>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <div class="modal-dialog modal-dialog-centered" class="btn btn-outline-primary" class="justify-content-evenly">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">
+                                    <h2>Book A Table</h2>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <a href="restaurant.html" button type="button" class="btn btn-outline-primary"
+                                class="align-items-center" class="justify-content-evenly">
+                                <h2>Restaurant</h2></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="ModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   {% endblock %}
