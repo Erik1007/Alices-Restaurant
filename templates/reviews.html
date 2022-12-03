@@ -5,16 +5,16 @@
 <div class="col-12 mt-3 align-items-center">
     <div class="row">
         <div class="col-md-4">
-        <div>
             <div>
-                <h2>Sign Uo to Let Us know About Your Expeirence With Us</h2>
+                <div>
+                    <h2>Sign Uo to Let Us know About Your Expeirence With Us</h2>
+                </div>
+                <div>
+                    <p>Please share about your time with us,
+                        when you were here and your name if you want.
+                    </p>
+                </div>
             </div>
-            <div>
-                <p>Please share about your time with us,
-                    when you were here and your name if you want.
-                </p>
-            </div>
-        </div>
         </div>
 
         <!-- Reviews Entries Column -->
@@ -26,15 +26,35 @@
                             {{ post.content | safe }}
                         </p>
                         <div class="row">
-        
+
                             <div class="col-1">
-                                
+                                <strong>
+                                    {% if user.is_authenticated %}
+                                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                        {% csrf_token %}
+                                        {% if liked %}
+                                        <button type="submit" name="blogpost_id" value="{{post.slug}}"
+                                            class="btn-like"><i class="fas fa-heart"></i></button>
+                                        {% else %}
+                                        <button type="submit" name="blogpost_id" value="{{post.slug}}"
+                                            class="btn-like"><i class="far fa-heart"></i></button>
+                                        {% endif %}
+                                    </form>
+                                    {% else %}
+                                    <span class="text-secondary"><i class="far fa-heart"></i></span>
+                                    {% endif %}
+                                    <span class="text-secondary">{{ post.number_of_likes }} </span>
+                                </strong>
+                            </div>
+
+                            <div class="col-1">
+
                                 <strong class=""><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
                             </div>
                             <div class="col-1">
                                 {% with comments.count as total_comments %}
                                 <strong class=""><i class="far fa-comments"></i>
-                                    
+
                                     {{ total_comments }}</strong>
                                 {% endwith %}
                             </div>
@@ -51,21 +71,21 @@
                 <div class="col-md-8 card mb-4  mt-3 ">
                     <h3>Comments:</h3>
                     <div class="card-body">
-                        
+
                         {% for comment in comments %}
                         <div class="comments" style="padding: 10px;">
                             <p class="font-weight-bold">
-                                
+
                                 {{ comment.name }}
                                 <span class=" text-muted font-weight-normal">
-                                   
+
                                     {{ comment.created_on }}
                                 </span> wrote:
                             </p>
-                            
+
                             {{ comment.body | linebreaks }}
                         </div>
-                        
+
                         {% endfor %}
                     </div>
                 </div>
@@ -78,7 +98,7 @@
                         </div>
                         {% else %}
                         {% if user.is_authenticated %}
-        
+
                         <h3>Leave a comment:</h3>
                         <p>Posting as: {{ user.username }}</p>
                         <form method="post" style="margin-top: 1.3em;">
@@ -92,5 +112,5 @@
                 </div>
             </div>
         </div>
-        
+
         {% endblock content %}
