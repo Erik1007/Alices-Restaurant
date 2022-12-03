@@ -32,7 +32,7 @@ Many different sources have been used as insipration and for multiple levels of 
 
 1. Bootstrap ![https://getbootstrap.com/docs/5.2/getting-started/introduction/] was  used for assistance in the development and execution of the interactive and style process for this project.
 
-2. The Code Institute 'I think therefor I blog' walk through project was used for the Django development and database development in this project.
+2. The Code Institute 'I think therefor I blog' walk through project was used for the Django development and database development in this project. Much of the code used in teh reviews section was taken directly from the 'think before I blog' tutorial so that patrons of the resturant could leave reviews and like for their experiences and others comments.
 
 3. The Code Institute 'Resume' walk through project was used for assistance in bootstrap and styling code for this project.
 
