@@ -9,4 +9,3 @@ class PostList(generic.ListView):
     template_name = 'reviews.html'
     paginate_by = 12
 
-

@@ -1,1 +1,1 @@
-web: gunicorn alices-restaurant.wsgi
+web: gunicorn alice.wsgi
