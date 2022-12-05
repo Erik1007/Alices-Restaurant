@@ -18,8 +18,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("food.urls"), name="food-urls"),
+    path("", include("food.urls"), namespace="food-urls"),
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
+    path('reserve_table/', include('reservation.urls', namespace='reservation')),
     
 ]
