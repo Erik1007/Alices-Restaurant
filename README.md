@@ -42,6 +42,12 @@ Many different sources have been used as insipration and for multiple levels of 
 
 6. All in One Bar ![https://www.allbarone.co.uk/drink#] was used for drink content and design inspiration
 
+7. For assistance with developing the reservation form, the YouTube tutorials ![https://www.youtube.com/watch?v=TuXFAl8aMvc] and ![https://www.youtube.com/watch?v=xcsbQHdtI2k] were used for code assistance and app setup.
+
+8. For addiditional code assistance, the restuarant booking system found in github ![https://github.com/andreagrandi/booking-example/tree/master/booking/restaurants] was used for a guide and reference as to different ways to set up the reservation system.
+
+9. ![https://chat.openai.com/] was used for tutorial help, code help, trouble shooting, assistance, support and code development through the building process of this project.
+
 
 
 ## Media:
