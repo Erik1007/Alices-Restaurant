@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from blog.views import HomeScreen
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +24,6 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('reserve_table/', include(
         'reservation.urls', namespace='reservation')),
-    path("", include("blog.urls"), name="blog"),
+    path("reviews/", include("blog.urls"), name="blog"),
+    path("", HomeScreen.as_view(), name="HomeScreen")
 ]

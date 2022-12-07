@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% crispy form %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <!-- Main -->
@@ -9,6 +11,8 @@
                 <h2>When Would You Like to Join Us?</h2>
             </div>
         </div>
+
+        <div class="date-picker"></div>
 
         <form action="" method="POST">
             {% csrf_token %}

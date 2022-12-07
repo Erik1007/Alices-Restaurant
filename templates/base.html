@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'HomeScreen' %}">Home</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -44,7 +44,7 @@
                 </li>
                 {% endif %}
                 <li class="nav-item">
-                    <a class="nav-link" href="foodmenu.html"> Restaurant Menu</a>
+                    <a class="nav-link" href="foodmenu.html"> Menu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="barmenu.html"> Drinks Menu</a>
@@ -53,7 +53,7 @@
                     <a class="nav-link" href="#footer">Contact / Hours</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="reviews">Reviews</a>
+                    <a class="nav-link" href="reviews.html">Reviews</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="aboutus.html">About US</a>

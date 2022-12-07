@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.views import generic
 from reservation.models import Reservation
 from .forms import ReserveTableForm
+from bootstrap_datepicker_plus.widgets import DateTimePickerInput
+from django.views import generic
+from .models import Question
 
 
 def reserve_table(request):
@@ -16,3 +19,13 @@ def reserve_table(request):
     context = {'form': reserve_form}
 
     return render(request, 'reservation/reservation.html')
+
+
+class CreateView(generic.edit.CreateView):
+    model = Question
+    fields = ["question_text", "pub_date"]
+    
+    def get_form(self):
+        form = super().get_form()
+        form.fields["pub_date"].widget = DateTimePickerInput()
+        return form

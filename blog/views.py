@@ -3,6 +3,9 @@ from django.views import generic, View
 from .models import Post
 from .forms import CommentForm
 
+class HomeScreen(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "index.html")
 
 class PostList(generic.ListView):
     model = Post
