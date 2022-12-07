@@ -51,7 +51,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "reviews.html",
             {
                 "post": post,
                 "comments": comments,
@@ -71,4 +71,4 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('reviews', args=[slug]))
