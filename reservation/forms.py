@@ -1,6 +1,12 @@
 from django import forms
 from .models import Reservation
-from bootstrap_datepicker_plus.widgets import DatePickerInput, TimePickerInput, DateTimePickerInput, MonthPickerInput, YearPickerInput
+from bootstrap_datepicker_plus.widgets import (
+    DatePickerInput, 
+    TimePickerInput, 
+    DateTimePickerInput, 
+    MonthPickerInput, 
+    YearPickerInput
+)
 
 
 class ReserveTableForm(forms.ModelForm):

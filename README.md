@@ -1,7 +1,13 @@
-# Alice's Restuarant
+########################################
+# Alice's Restaurant
+########################################
+
+********************
 ## You can get anything you want, at Alice's Restuarant
+********************
 
 
+********************
 ## Table of contents
 1. Introduction
 2. Program Features
@@ -10,52 +16,91 @@
 5. Unfixed Bugs
 6. Deployment
 7. Credits
+********************
 
+
+********************
 # Introduction
+********************
 
+
+
+********************
 # Program Features
+********************
 
+
+
+********************
 # Future Implementaions
+********************
 
+In the future, there are a few additonal interactive steps that I would like to add that would increase the satisfaction feelings of using this site:
+
+The first and formost addional step that I would like to make would be to make both the restuarant and the bar menus fully interactive when each item was hovered over a widget image would pop up on the side of the page displaying the item in all its glory in an attempy to inspire the users appetite desires.
+
+Secondly, I would like to include more background images and videos for every template page that would increa the viewing pleasure for the user and hopefully increase the visitor traffic to the imaginary restuarant.
+
+
+
+********************
 # Testing and Validation
+********************
 
+
+
+********************
 # Unfixed Bugs
+********************
 
+
+
+********************
 # Deployment
+********************
+
 
 There are multiple provides supporting the deployment of this project. The code was written and stored in a GitHub repository ![https://github.com/Erik1007/Alices-Restaurant]. This was migrated to Heroku ![https://dashboard.heroku.com/apps/alices-restaurant-eh] to deploy the inbedded Django and python code. ElephantSQL ![https://api.elephantsql.com] was linked into to house the databases used for this project. And lastly, Cloudinary ![https://console.cloudinary.com] was linked in and used as the media storage.
 
+********************
 # Credits
+********************
+
 Many different sources have been used as insipration and for multiple levels of assistance in the creation of this project. The sources used in the development process of this poject will be presented in two main groups: code and media.
 
+********************
 ## Code:
+********************
 
-1. Bootstrap ![https://getbootstrap.com/docs/5.2/getting-started/introduction/] was  used for assistance in the development and execution of the interactive and style process for this project.
+- `Bootstrap <https://getbootstrap.com/docs/5.2/getting-started/introduction/>`_ was  used for assistance in the development and execution of the interactive and style process for this project.
 
-2. The Code Institute 'I think therefor I blog' walk through project was used for the Django development and database development in this project. Much of the code used in teh reviews section was taken directly from the 'think before I blog' tutorial so that patrons of the resturant could leave reviews and like for their experiences and others comments.
+- The Code Institute 'I think therefor I blog' walk through project was used for the Django development and database development in this project. Much of the code used in teh reviews section was taken directly from the 'think before I blog' tutorial so that patrons of the resturant could leave reviews and like for their experiences and others comments.
 
-3. The Code Institute 'Resume' walk through project was used for assistance in bootstrap and styling code for this project.
+- The Code Institute 'Resume' walk through project was used for assistance in bootstrap and styling code for this project.
 
-4. Oxen Restaurant ![https://oaxen.com/en/home/] was used for design inspiration, project layout and some code was used for inspiration for the html and style pages in this project.
+- `Oxen Restaurant <https://oaxen.com/en/home/>`_ was used for design inspiration, project layout and some code was used for inspiration for the html and style pages in this project.
 
-5. Glasshouse Restaurant ![https://www.glashuset.com/] was used for design inspiration, project layout, and html and style code was used for inspiration and guidance for the development and execution of this project. Food menu content was used for inspiration and assistance.
+- `Glasshouse Restaurant <https://www.glashuset.com/>`_ was used for design inspiration, project layout, and html and style code was used for inspiration and guidance for the development and execution of this project. Food menu content was used for inspiration and assistance.
 
-6. All in One Bar ![https://www.allbarone.co.uk/drink#] was used for drink content and design inspiration
+- `All in One Bar <https://www.allbarone.co.uk/drink#>`_ was used for drink content and design inspiration
 
-7. For assistance with developing the reservation form, the YouTube tutorials ![https://www.youtube.com/watch?v=TuXFAl8aMvc] and ![https://www.youtube.com/watch?v=xcsbQHdtI2k] were used for code assistance and app setup.
+- For assistance with developing the reservation form, the `YouTube tutorials <https://www.youtube.com/watch?v=TuXFAl8aMvc>_ and <https://www.youtube.com/watch?v=xcsbQHdtI2k>`_ were used for code assistance and app setup.
 
-8. For addiditional code assistance, the restuarant booking system found in github ![https://github.com/andreagrandi/booking-example/tree/master/booking/restaurants] was used for a guide and reference as to different ways to set up the reservation system.
+- For addiditional code assistance, `the restuarant booking system found in github <https://github.com/andreagrandi/booking-example/tree/master/booking/restaurants>`_ was used for a guide and reference as to different ways to set up the reservation system.
 
-9. ![https://chat.openai.com/] was used for tutorial help, code help, trouble shooting, assistance, support and code development through the building process of this project.
+- `<https://chat.openai.com/>`_ was used for tutorial help, code help, trouble shooting, assistance, support and code development through the building process of this project.
+
+- `<https://github.com/monim67/django-bootstrap-datepicker-plus>`_ was used for teh date/time picker used in the reservation app, template and view.
 
 
-
+********************
 ## Media:
+********************
 
-1. ![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.millerandcarter.co.uk%2Frestaurants%2Fscotland-and-northern-ireland%2Fmillerandcarteredinburghcitycentre&psig=AOvVaw0BcdhbWh6sSdGkmrm9zBoj&ust=1669377418830000&source=images&cd=vfe&ved=0CA8QjhxqFwoTCPjNg9LhxvsCFQAAAAAdAAAAABAE] was used for a background video loop.
+- `<https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.millerandcarter.co.uk%2Frestaurants%2Fscotland-and-northern-ireland%2Fmillerandcarteredinburghcitycentre&psig=AOvVaw0BcdhbWh6sSdGkmrm9zBoj&ust=1669377418830000&source=images&cd=vfe&ved=0CA8QjhxqFwoTCPjNg9LhxvsCFQAAAAAdAAAAABAE>`_ was used for a background video loop.
 
-2. ![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sfgate.com%2Fwine%2Fspirits%2Farticle%2FFive-drinks-that-bartenders-just-hate-to-make-2500138.php&psig=AOvVaw15YutI6WYRkbXBZzARNYCh&ust=1669299861155000&source=images&cd=vfe&ved=0CBEQjhxqFwoTCMip5O_hxvsCFQAAAAAdAAAAABAD] is an image of a bartender used in this project
+- `<https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sfgate.com%2Fwine%2Fspirits%2Farticle%2FFive-drinks-that-bartenders-just-hate-to-make-2500138.php&psig=AOvVaw15YutI6WYRkbXBZzARNYCh&ust=1669299861155000&source=images&cd=vfe&ved=0CBEQjhxqFwoTCMip5O_hxvsCFQAAAAAdAAAAABAD>`_ is an image of a bartender used in this project
 
-3. ![https://www.google.com/url?sa=i&url=https%3A%2F%2Fthenounproject.com%2Fphoto%2Fgroup-of-young-people-having-drinks-at-bar-41d2N5%2F&psig=AOvVaw0LUIQY1-saAq8t39rksS0g&ust=1669299224807000&source=images&cd=vfe&ved=0CBEQjhxqFwoTCKCvrJXixvsCFQAAAAAdAAAAABAb] is an image of people having fun in a bar used for this project
+- `<https://www.google.com/url?sa=i&url=https%3A%2F%2Fthenounproject.com%2Fphoto%2Fgroup-of-young-people-having-drinks-at-bar-41d2N5%2F&psig=AOvVaw0LUIQY1-saAq8t39rksS0g&ust=1669299224807000&source=images&cd=vfe&ved=0CBEQjhxqFwoTCKCvrJXixvsCFQAAAAAdAAAAABAb>`_ is an image of people having fun in a bar used for this project
 
 4. 
