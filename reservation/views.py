@@ -19,10 +19,7 @@ def reserve_table(request):
     return render(request, 'reservation/reservation.html')
 
 
-
-
-
-#class CreateView(generic.edit.CreateView):
+# class CreateView(generic.edit.CreateView):
 #    model = Question
 #    fields = ["question_text", "pub_date"]
 

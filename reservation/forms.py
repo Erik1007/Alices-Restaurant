@@ -6,13 +6,14 @@ from bootstrap_datepicker_plus.widgets import DatePickerInput, TimePickerInput, 
 class ReserveTableForm(forms.ModelForm):
     class Meta:
         model = Reservation
-        fields = '__all__'
-      
+        fields = '__all__'     
 
 # class EventForm(forms.ModelForm):
 #    class Meta:
 #        model = Event
-#        fields = ["start_date", "start_time", "start_datetime", "start_month", "start_year"]
+#        fields = [
+#           "start_date", "start_time", "start_datetime", "start_month",
+#           "start_year"]
 #        widgets = {
 #            "start_date": DatePickerInput(),
 #            "start_time": TimePickerInput(),
@@ -22,7 +23,7 @@ class ReserveTableForm(forms.ModelForm):
 #       }
 
 
-#class EventForm(forms.ModelForm):
+# class EventForm(forms.ModelForm):
 #    class Meta:
 #        model = Event
 #        fields = ["name", "start_date", "end_date", "start_time", "end_time"]
