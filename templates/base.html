@@ -44,19 +44,19 @@
                 </li>
                 {% endif %}
                 <li class="nav-item">
-                    <a class="nav-link" href="foodmenu.html"> Menu</a>
+                    <a class="nav-link" href="{% url 'menu' %}"> Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="barmenu.html"> Drinks Menu</a>
+                    <a class="nav-link" href="{% url 'barmenu' %}"> Drinks Menu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#footer">Contact / Hours</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="reviews.html">Reviews</a>
+                    <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="aboutus.html">About US</a>
+                    <a class="nav-link" href="{% url 'aboutus' %}">About US</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'reservation:reserve_table' %}">Reserve a Table</a>
@@ -98,24 +98,24 @@
                             target="_blank" aria-label="">
                              Open in Google Maps</a></p>
                     <h5><strong>Contact</strong><br></h5>
-                    <strong>Phone</strong>: +46 (0) 8 666 02 01<br>
+                    <strong>Phone</strong>: +46 (0) 8 555 02 01<br>
                     <strong>Email</strong>: info@alicesrestaurant.com</p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <h5 class="uppercase general-sub">Short Cuts</h5>
                 <p class="inline-block">
-                    <a href="reservation.html">Book a Table</a>
+                    <a href="{% url 'reservation:reserve_table' %}">Book a Table</a>
                     <br>
-                    <a href="foodmenu.html">Food Menu</a>
+                    <a href="{% url 'menu' %}">Food Menu</a>
                     <br>
-                    <a href="barmenu.html">Drinks Menu</a>
+                    <a href="{% url 'barmenu' %}">Drinks Menu</a>
                     <br>
-                    <a href="aboutus.html">About Us</a>
+                    <a href="{% url 'aboutus' %}">About Us</a>
                     <br>
                     <a href="signup.html">Sign Up</a>
                     <br>
-                    <a href="reviews.html">Reviews</a>
+                    <a href="{% url 'reviews' %}">Reviews</a>
                     <br>
                     <a href="https://visitskargarden.se/" target="_blank" aria-label="">Visit Skargarden</a>
                     <p>

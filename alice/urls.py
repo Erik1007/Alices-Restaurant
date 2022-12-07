@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
 from blog.views import HomeScreen
+
+
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +31,14 @@ urlpatterns = [
     path('reserve_table/', include(
         'reservation.urls', namespace='reservation')),
     path("reviews/", include("blog.urls"), name="blog"),
+    path('menu/', views.menu, name='menu'),
+    path('barmenu/', views.barmenu, name='barmenu'),
+    path('aboutus/', views.aboutus, name='aboutus'),
+    path('reviews/', views.reviews, name='reviews'),
+    path('signup/', views.signup, name='signup'),
     path("", HomeScreen.as_view(), name="HomeScreen")
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.STATIC_URL, document_root=settings.STATIC_ROOT)

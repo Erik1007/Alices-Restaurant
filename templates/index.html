@@ -9,7 +9,7 @@
             <div class="container-fluid">
                 <div class="img-responsive align-items-center justify-content-center">
                     <video id="background-video" autoplay loop muted>
-                        <source src="https://console.cloudinary.com/console/c-2407df5d917cb9784febf8bea3a704/media_library/folders/c26bdd5bc689162fe62cdd7af3f023f66f" type="video/mp4">
+                        <source src="https://res.cloudinary.com/dkkxjgoqr/video/upload/v1670066748/Alices%20Restaurant/Alice_Intro_Loop_1_rjtdsh.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Main Navigation Links -->
@@ -18,23 +18,9 @@
                 </h2>
                 <div class="row">
                     <div class="col-sm-4 text-center">
-                        <a href="bar.html" button type="button" class="btn btn-outline-primary"
+                        <a href="{% url 'reservation:reserve_table' %}" button type="button" class="btn btn-outline-primary"
                             class="align-items-center" class="justify-content-evenly">
-                            <h2>Bar</h2></button>
-                        </a>
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <div class="modal-dialog modal-dialog-centered" class="btn btn-outline-primary" class="justify-content-evenly">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#bookingModal">
-                                <h2>Book A Table</h2>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <a href="restaurant.html" button type="button" class="btn btn-outline-primary"
-                            class="align-items-center" class="justify-content-evenly">
-                            <h2>Restaurant</h2></button>
+                            <h2>Book A Table</h2></button>
                         </a>
                     </div>
                 </div>
