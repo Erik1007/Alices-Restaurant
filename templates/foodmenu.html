@@ -1,7 +1,80 @@
-{% extends 'base.html' %} {% block content %}
-{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
 
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Alice's Restaurant</title>
+</head>
 
+<body class="container-fluid row flex-column">
+
+    <!-- Navigation -->
+
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light light-bg">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'foodmenu.html' %}"> Restaurant Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'barmenu.html' %}"> Drinks Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact / Hours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'aboutus.html' %}">About US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'reservation:reserve_table' %}">Reserve a Table</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 <!-- Main -->
 <main class="row">
     <div class="col-sm-6 col-md-12 align-items-center light-bg">
@@ -181,4 +254,90 @@
     </div>
 </main>
 
-{% endblock content %}
+<footer class="container-fluid" id="footer">
+    <div id="footer-details" class="row">
+        <div class="col-sm-4">
+            <h5 class="uppercase general-sub">Location</h5>
+            <div class="sqs-block-content">
+                <p id="Location"><strong>Alice's Restaurant</strong><br>
+                    Kajplats 15, Strandvagen<br>
+                    114 56 Stockholm<br>
+                    <a href="https://www.google.com/maps/place/Strandv%C3%A4gen+12,+114+56+Stockholm,+Sweden/@59.3311936,18.0821878,99m/data=!3m1!1e3!4m5!3m4!1s0x465f9d50ba312521:0x2d99d7b4e6ccb006!8m2!3d59.331265!4d18.0825199?shorturl=1"
+                        target="_blank" aria-label="">
+                         Open in Google Maps</a></p>
+                <h5><strong>Contact</strong><br></h5>
+                <strong>Phone</strong>: +46 (0) 8 666 02 01<br>
+                <strong>Email</strong>: info@alicesrestaurant.com</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h5 class="uppercase general-sub">Short Cuts</h5>
+            <p class="inline-block">
+                <a href="reservation.html">Book a Table</a>
+                <br>
+                <a href="foodmenu.html">Food Menu</a>
+                <br>
+                <a href="barmenu.html">Drinks Menu</a>
+                <br>
+                <a href="aboutus.html">About Us</a>
+                <br>
+                <a href="signup.html">Sign Up</a>
+                <br>
+                <a href="reviews.html">Reviews</a>
+                <br>
+                <a href="https://visitskargarden.se/" target="_blank" aria-label="">Visit Skargarden</a>
+                <p>
+        </div>
+        <div class="col-sm-4">
+            <h5 class="uppercase general-sub">Social</h5>
+            <ul class="list-inline social-links">
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                        <span class="sr-only">YouTube</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        
+        <div class="sqs-block-content">
+            <p class=""><h5><strong>Opening Hours</strong></h5>
+            <strong>Wednesday</strong>: 15:00 - 21:00<br>
+            <strong>Thursday</strong>: 15:00 - 22:00<br>
+            <strong>Friday</strong>: 15:00 - 1:00<br>
+            <strong>Saturday</strong>: 11:00 - 1:00<br>
+            <strong>Sunday</strong>: 11:00 - 21:00<br></p>
+        </div>
+    </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+</script>
+<script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 3000);
+</script>
+</body>
+
+</html>

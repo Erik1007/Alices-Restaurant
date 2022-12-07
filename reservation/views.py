@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import generic
 from reservation.models import Reservation
 from .forms import ReserveTableForm
 
