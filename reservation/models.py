@@ -1,18 +1,7 @@
 from django.db import models
 from . import forms
+from django import date, timedelta 
 
-
-class Reservation(models.Model):
-    name = models.CharField(max_length=100)
-    number_of_persons = models.IntegerField()
-    date = models.DateField()
-    time = models.TimeField()
-    booking_date_time_start = models.DateTimeField()
-    booking_date_time_end = models.DateTimeField()
-
-    def __str__(self):
-        return self.name
-        
 
 class Event(models.Model):
     name = models.CharField(max_length=200)
@@ -29,6 +18,21 @@ class Event(models.Model):
 
     def __str__(self) -> str:
         return str(self.name)
+
+
+# class Reservation(models.Model):
+#    name = models.CharField(max_length=100)
+#    number_of_persons = models.IntegerField()
+#    date = models.DateField()
+#    time = models.TimeField()
+#    booking_date_time_start = models.DateTimeField()
+#    booking_date_time_end = models.DateTimeField()
+
+#    def __str__(self):
+#        return self.name
+        
+
+
 
 # class Table(models.Model):
 #   table = models.ForeignKey(Table)

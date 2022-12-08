@@ -10,8 +10,16 @@
                 <h2>When Would You Like to Join Us?</h2>
             </div>
         </div>
+        <div class="col-sm-6 col-md-12 align-items-center light-bg">
+            <div class="date-picker">
+                {{ form.media }} 
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form | crispy }} 
+                </form>
 
-        <div class="date-picker"></div>
+            </div>
+        </div>
 
         <form action="" method="POST">
             {% csrf_token %}

@@ -7,5 +7,6 @@ class TestReservationView(TestCase):
         response = self.client.get(reverse('reservation:reserve_table'))
         
         self.assertContains(response, '<div class="date-picker">')
+        self.assertContains(response, '<form>')
         self.assertTemplateUsed(response, 'reservation/reservation.html')
         
