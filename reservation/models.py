@@ -3,12 +3,12 @@ from datetime import date, timedelta
 
 
 class Reservation(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, default="Placeholder")
     number_of_persons = models.IntegerField()
-    email = models.CharField(max_length=150)
+    email = models.CharField(max_length=150, default="Placeholder")
 #    date = models.DateField()
 #    time = models.TimeField()
-    booking_date_time_start = models.DateTimeField()
+#    booking_date_time_start = models.DateTimeField()
 #    booking_date_time_end = models.DateTimeField()
 
     def __str__(self):
