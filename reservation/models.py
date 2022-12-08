@@ -5,9 +5,10 @@ from datetime import date, timedelta
 class Reservation(models.Model):
     name = models.CharField(max_length=100)
     number_of_persons = models.IntegerField()
+    email = models.CharField(max_length=150)
 #    date = models.DateField()
 #    time = models.TimeField()
-#    booking_date_time_start = models.DateTimeField()
+    booking_date_time_start = models.DateTimeField()
 #    booking_date_time_end = models.DateTimeField()
 
     def __str__(self):

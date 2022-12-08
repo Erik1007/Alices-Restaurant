@@ -3,9 +3,11 @@ from django.views import generic, View
 from .models import Post
 from .forms import CommentForm
 
+
 class HomeScreen(View):
     def get(self, request, *args, **kwargs):
         return render(request, "index.html")
+
 
 class PostList(generic.ListView):
     model = Post
@@ -19,9 +21,9 @@ class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
-        liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
+#        liked = False
+#        if post.likes.filter(id=self.request.user.id).exists():
+#            liked = True
 
         return render(
             request,
@@ -29,18 +31,18 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "liked": liked,
+#               "liked": liked,
                 "comment_form": CommentForm()
             },
         )
 
     def post(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+#        queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
-        liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
+#        liked = False
+#        if post.likes.filter(id=self.request.user.id).exists():
+#            liked = True
 
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -60,18 +62,18 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
+#               "liked": liked
             },
         )
 
 
-class PostLike(View):
+# class PostLike(View):
   
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
+#    def post(self, request, slug, *args, **kwargs):
+#        post = get_object_or_404(Post, slug=slug)
+#        if post.likes.filter(id=request.user.id).exists():
+#            post.likes.remove(request.user)
+#        else:
+#            post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('reviews', args=[slug]))
+#        return HttpResponseRedirect(reverse('reviews', args=[slug]))
