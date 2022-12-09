@@ -9,30 +9,33 @@ body {
     color: #555555;
 }
 
-#background-video { 
+#background-video {
     object-fit: cover;
     align-items: center;
-    justify-content: center; 
-    left: 0; 
-    right: 0; 
-    top: 0; 
-    bottom: 0; 
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
-h1, h2 { 
-    color: #555555; 
-    font-family: Robotico, sans-serif; 
-    font-weight: bold; 
-    text-align: center;}
-    
-h1 { 
-    font-size: 4rem; 
-    margin-top: 10vh;}
-    
-h2 { 
-    font-size: 2rem; 
+h1,
+h2 {
+    color: #555555;
+    font-family: Robotico, sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
-    
+
+h1 {
+    font-size: 4rem;
+    margin-top: 10vh;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 
 /*--------------------------------------------Colors*/
 
@@ -53,8 +56,10 @@ h2 {
 .navbar {
     margin: 0;
     padding-left: 20px;
-    color: #8f8f8f;
-    background: #fafafa;
+    color: #525252;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: #fafafa;
 }
 
 /*--------------------------------------------Footer*/

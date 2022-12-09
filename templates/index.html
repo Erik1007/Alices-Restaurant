@@ -1,28 +1,33 @@
 {% extends 'base.html' %} {% block content %}
 
 <main class="row">
-    <div class="col-md-8 mt-3 offset-md-2 light-bg">
+    <div class="col-md-8 offset-md-2 light-bg">
         <div class="container-fluid">
             <div>
                 <h1 class="main" tabindex="1">Alice's Restaurant</h1>
             </div>
             <div class="container-fluid">
-                <div class="img-responsive align-items-center justify-content-center">
-                    <video id="background-video" autoplay loop muted>
-                        <source
-                            src="https://res.cloudinary.com/dkkxjgoqr/video/upload/v1670066748/Alices%20Restaurant/Alice_Intro_Loop_1_rjtdsh.mp4"
-                            type="video/mp4">
-                    </video>
+                <div class="col-md-8 offset-md-2">
+                    <div class="img-responsive align-items-center">
+                        <video id="background-video" autoplay loop muted>
+                            <source
+                                src="https://res.cloudinary.com/dkkxjgoqr/video/upload/v1670066748/Alices%20Restaurant/Alice_Intro_Loop_1_rjtdsh.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-                <!-- Main Navigation Links -->
-                <h2>You can get anything you want
-                    at Alice's Restaurant
-                </h2>
-                <div class="col-sm-4 align-items-center justify-content-center text-center">
-                    <a href="{% url 'reservation:reserve_table' %}" button type="button" class="btn btn-outline-primary"
-                        class="align-items-center" class="justify-content-evenly">
-                        <h2>Book A Table</h2></button>
-                    </a>
+                <div>
+                    <div class="col-md-8 col-sm-4 offset-md-2">
+                        <h2>You can get anything you want
+                            at Alice's Restaurant
+                        </h2>
+                    </div>
+                    <div class="col-md-8 col-sm-4 align-items-center justify-content-center text-center">
+                        <a href="{% url 'reservation:reserve_table' %}" button type="button"
+                            class="btn btn-outline-primary" class="align-items-center" class="justify-content-evenly">
+                            <h2>Book A Table</h2></button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
