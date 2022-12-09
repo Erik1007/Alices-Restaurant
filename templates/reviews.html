@@ -2,9 +2,9 @@
 {% load crispy_forms_tags %}
 
 
-<div class="col-md-8 offset-md-2">
+<div class="col-md-10 col-sm-6 offset-md-2">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div>
                 <div>
                     <h2>Sign Up to Let Us know About Your Expeirence With Us!</h2>
@@ -13,22 +13,22 @@
                     <h5>Please share about your time with us,
                         when you were here and your name if you want.
                     </h5>
+                    <a href="{% url 'account_signup' %}">Sign Up</a>
                 </div>
             </div>
         </div>
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 mt-3 left">
+                <div class="col-md-10 col-sm-6 col-xs-3 center">
                     <div class="row">
-                        {% for post in post_list %}
-                        <div class="col-md-4 col-sm-8">
-                            <div class="card mb-4  mt-3">
-                                <p class="{card-text">
+                        {% for post in post_list %} {% csrf_token %}
+                        <div class="">
+                            <div class="card mb-4">
+                                <p class="card-text">
                                     <h2 class="card-title">{{ post.title }}</h2>
-                                    <p class="card-text">{{ comments|clean_html }}</p>
-                                    <p class="card-text text-muted h6">{{ post.created_on }}
-                                        {% csrf_token %}</p>
+                                    <p class="card-text">{{ post.content | safe }}</p>
+                                    <p class="card-text text-muted h5">{{ post.created_on }}</p>
                                 </p>
                             </div>
                         </div>
