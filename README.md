@@ -7,20 +7,20 @@
 ********************
 
 
-
+********************
 ## Table of contents
-1. Introduction
-2. Program Features
-3. Future Implementations
-4. Testing and Validation
-5. Unfixed Bugs
-6. Deployment
-7. Credits
+1. [Introduction](#Introduction)
+2. [Program Features](#Program-Features)
+3. [Future Implementations](#Future-Implementations)
+4. [Testing and Validation](#Testing-and-Validation)
+5. [Unfixed Bugs](#Unfixed-Bugs)
+6. [Deployment](#Deployment)
+7. [Credits](#Credits)
 ********************
 
 
 
-# Introduction
+## Introduction
 ********************
 
 
@@ -32,7 +32,7 @@ This project is designed to represent an imaginary restuarant (semi-set in Stock
 
 
 
-# Program Features
+## Program Features
 ********************
 
 This app is set up to mimic a real world website for a restuarant, therefor it has a number of essentail features for any real world business. From the fully functional navigation bar to the informative footer, the central features of the website are the reservaation system and the review section which are both interactive and function with the users input. The reservation system is an open system that anyone can interact with the website to make a reservation; however, to be able to leave a review or comment, one has to signup to be a member of the restuarant. As this website is designed with bootstrap it is a moblie first design and there for is fully responsive, thereby meeting the needs to be informative and look good on multiple screen sizes.
@@ -55,7 +55,7 @@ From the navigation bar, the signup page is fairly straightforward, proding inte
 
 
 
-# Future Implementaions
+## Future Implementaions
 ********************
 
 In the future, there are a few additonal interactive steps that I would like to add that would increase the satisfaction feelings of using this site:
@@ -67,26 +67,26 @@ Secondly, I would like to include more background images and videos for every te
 
 
 
-# Testing and Validation
+## Testing and Validation
 ********************
 
 
 
 
-# Unfixed Bugs
+## Unfixed Bugs
 ********************
 
 
 
 
-# Deployment
+## Deployment
 ********************
 
 
 There are multiple provides supporting the deployment of this project. The code was written and stored in the[Alices Restuarant GitHub repository](https://github.com/Erik1007/Alices-Restaurant). This was migrated to [Heroku Alices Restuarant](https://dashboard.heroku.com/apps/alices-restaurant-eh) to deploy the inbedded Django and python code. [ElephantSQL](https://api.elephantsql.com) was linked into to house the databases used for this project. And lastly, [Cloudinary](https://console.cloudinary.com) was linked in and used as the media storage.
 
 
-# Credits
+## Credits
 ********************
 
 Many different sources have been used as insipration and for multiple levels of assistance in the creation of this project. The sources used in the development process of this poject will be presented in two main groups code and media:
@@ -136,4 +136,7 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - [Image of people at a bar](https://www.google.com/url?sa=i&url=https%3A%2F%2Fthenounproject.com%2Fphoto%2Fgroup-of-young-people-having-drinks-at-bar-41d2N5%2F&psig=AOvVaw0LUIQY1-saAq8t39rksS0g&ust=1669299224807000&source=images&cd=vfe&ved=0CBEQjhxqFwoTCKCvrJXixvsCFQAAAAAdAAAAABAb) that was used for this project
 
-- 
+- [Harbor image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fventeco%2F671328968&psig=AOvVaw0iiN8iburCgWVi5TFiDYJw&ust=1670863908840000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPi_t7mT8vsCFQAAAAAdAAAAABAE) that was used for this project.
+
+-[A second harbor image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dstrandvagen&psig=AOvVaw0iiN8iburCgWVi5TFiDYJw&ust=1670863908840000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCODx6feT8vsCFQAAAAAdAAAAABAD) that was used for  background in this project.
+
