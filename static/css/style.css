@@ -9,8 +9,43 @@ body {
     color: #555555;
 }
 
+#about-us-body {
+    background-image: url('https://res.cloudinary.com/dkkxjgoqr/video/upload/v1670776181/Alices%20Restaurant/water_loop_vyifah.mp4');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .25;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+#barmenu-body {
+    background-image: url('https://res.cloudinary.com/dkkxjgoqr/image/upload/v1670776719/Alices%20Restaurant/over_the_sea_vfjgzx.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .25;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+.about-us-info div {
+    z-index: 1;
+    position: relative;
+}
+
+.barmenu-div {
+    z-index: 1;
+    position: relative;
+}
+
 #background-video {
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
     align-items: center;
     justify-content: center;
     left: 0;
