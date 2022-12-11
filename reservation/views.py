@@ -4,10 +4,9 @@ from .forms import ReservationForm
 # from reservation.models import Reservation
 # from .forms import ReserveTableForm
 from bootstrap_datepicker_plus.widgets import DateTimePickerInput
-# from .models import Question
 
 
-class CreateView(generic.edit.CreateView):
+# class CreateView(generic.edit.CreateView):
 #    model = Reservation
 #    fields = ["question_text", "pub_date"]
 
