@@ -1,8 +1,8 @@
 from collections import namedtuple
 from datetime import date, timedelta, datetime
-
-from django.db import models
+import pytz
 from django.utils import timezone
+from django.db import models
 from django.core.exceptions import ValidationError
 
 
@@ -34,16 +34,22 @@ class Seat(models.Model):
     occupied = models.BooleanField(default=False)
 
     # Relationships
-    table = models.ForeignKey('reservation.Table', on_delete=models.SET_NULL, null=True, related_name='seats')
+    table = models.ForeignKey(
+        'reservation.Table', on_delete=models.SET_NULL, null=True, related_name='seats')
 
 
 class Reservation(models.Model):
     name = models.CharField(max_length=100, default="Placeholder")
     number_of_persons = models.IntegerField()
     email = models.CharField(max_length=150, null=True)
-    date = models.DateField('Start date', default=datetime.today)
-    time = models.TimeField('Start time', default=timezone.now)
-    tables = models.ManyToManyField('reservation.Table', related_name='reservations')
+    # date = models.DateField('Start date', default=datetime.today)
+    # datetime_field = models.DateTimeField(
+    #    limit_choices_to={'datetime_field__gte': timezone.now()},
+    #    initial=timezone.now)
+    # time = models.TimeField('Start time', timezone.activate(
+    #    pytz.timezone('CET')), default=timezone.now())
+    tables = models.ManyToManyField(
+        'reservation.Table', related_name='reservations')
     # is_valid = models.BooleanField(default=False)
 
     def __str__(self):
@@ -52,7 +58,8 @@ class Reservation(models.Model):
     # def save(self, *args, **kwargs):
     #     super().save(*args, **kwargs)
     #     if not self.does_not_overlap():
-    #         raise ValidationError('Reservation datetime overlaps with another reservation.')
+    #         raise ValidationError(
+    #           'Reservation datetime overlaps with another reservation.')
     #     return self
 
     # def datetime(self):
@@ -69,7 +76,7 @@ class Reservation(models.Model):
     #                 reservation_doesnt_overlap = False
     #     return reservation_doesnt_overlap
 
-   
+
 class Customer():
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=150)
@@ -77,8 +84,3 @@ class Customer():
     number_of_persons = models.IntegerField()
 
 
-
-
-
-
-# Google Reverse Relationships
