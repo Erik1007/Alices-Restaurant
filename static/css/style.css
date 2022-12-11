@@ -33,12 +33,29 @@ body {
     z-index: -1;
 }
 
+#foodmenu-body {
+    background-image: url('https://res.cloudinary.com/dkkxjgoqr/image/upload/v1670777672/Alices%20Restaurant/harbor_view_wyevaq.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .25;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
 .about-us-info div {
     z-index: 1;
     position: relative;
 }
 
 .barmenu-div {
+    z-index: 1;
+    position: relative;
+}
+
+.foodmenu-div {
     z-index: 1;
     position: relative;
 }

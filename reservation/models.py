@@ -42,12 +42,12 @@ class Reservation(models.Model):
     name = models.CharField(max_length=100, default="Placeholder")
     number_of_persons = models.IntegerField()
     email = models.CharField(max_length=150, null=True)
-    # date = models.DateField('Start date', default=datetime.today)
-    # datetime_field = models.DateTimeField(
-    #    limit_choices_to={'datetime_field__gte': timezone.now()},
-    #    initial=timezone.now)
-    # time = models.TimeField('Start time', timezone.activate(
-    #    pytz.timezone('CET')), default=timezone.now())
+    date = models.DateField('Start date', default=datetime.today)
+    datetime_field = models.DateTimeField(
+        limit_choices_to={'datetime_field__gte': timezone.now()},
+        initial=timezone.now)
+    time = models.TimeField('Start time', timezone.activate(
+        pytz.timezone('CET')), default=timezone.now())
     tables = models.ManyToManyField(
         'reservation.Table', related_name='reservations')
     # is_valid = models.BooleanField(default=False)
