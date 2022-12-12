@@ -112,7 +112,7 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - For addiditional code assistance, [the restuarant booking system](https://github.com/andreagrandi/booking-example/tree/master/booking/restaurants) found in githu was used for a guide and reference as to different ways to set up the reservation system.
 
-- [Open AI Chatbot](https://chat.openai.com/) was used for tutorial help, code help, trouble shooting, assistance, support and code development through the building process of this project.
+- [Open AI Chatbot](https://chat.openai.com/) was used for tutorial help, code help, trouble shooting, assistance, support and code development through the building process of this project. The AI bot was crucial getting help with: JS onclick linsteners, reservation modal, confirmation views, creating modals, connecting urls, running tests, manipulating the DOM, inserting JS, using bootstrap features, inserting bootstrap code, using JS code, and much more.
 
 - [Github Date-Picker](https://github.com/monim67/django-bootstrap-datepicker-plus) was used for as a reference for the date/time picker used in the reservation app, template and view.
 
@@ -124,7 +124,9 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - [Stackoverflow time-period-overlap](https://stackoverflow.com/questions/69015339/how-to-check-two-time-period-for-overlap-in-django) was used for code help and as a reference for creating code that prevents an overlapping booking at the same time and date.
 
-- 
+- [StackoverFlow JS onclick and JS modal code](https://stackoverflow.com/questions/8664486/javascript-code-to-stop-form-submission) This page was used extensivly for help writing the JavaScript code used in the reservation system modal linking the 'submit' button with the first confirmation pop up modal.
+
+- [StackoverFlow JS manipulating the DOM/SCript conversion](https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements) This page was used extensivly for help writing the JavaScript code used in the reservation system modal linking the 'submit' button with the first confirmation pop up modal.
 
 
 ## Media:

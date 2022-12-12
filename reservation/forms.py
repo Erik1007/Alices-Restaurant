@@ -17,3 +17,9 @@ class ReservationForm(forms.ModelForm):
             "date": DatePickerInput(),
             "time": TimePickerInput(),
         }
+
+
+#class confirmPlease(forms.ModelForm):
+#    class Meta:
+#        model = Confirm
+#        Fields = ["name", "number_of_persons", "date", "time"]

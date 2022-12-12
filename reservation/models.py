@@ -48,12 +48,8 @@ class Reservation(models.Model):
     tables = models.ManyToManyField(
         'reservation.Table', related_name='reservations')
 #   is_valid = models.BooleanField(default=False)
-    current_date = datetime.now()
-
-#   Query the database for bookings that have passed
+#   current_date = datetime.now()
 #   bookings = Reservation.objects.filter(date__lt=current_date)
-
-#   Delete the bookings
 #   bookings.delete()
 
     def __str__(self):

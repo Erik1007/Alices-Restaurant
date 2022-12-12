@@ -4,6 +4,8 @@ from .forms import ReservationForm
 # from reservation.models import Reservation
 # from .forms import ReserveTableForm
 from bootstrap_datepicker_plus.widgets import DateTimePickerInput
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
 
 
 # class CreateView(generic.edit.CreateView):
@@ -17,17 +19,25 @@ from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 
 
 def reserve_table(request):
-    reserve_form = ReservationForm()
-
     if request.method == 'POST':
-        reserve_form = ReserveTableForm(request.POST)
-
-        if reserve_form.is_valid():
-            reserve_form.save()
-
-    context = {'form': reserve_form}
-
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ReservationForm()
+    context = {'form': form}
     return render(request, 'reservation/reservation.html', context)
 
 
+# def edit_confirmation(request):
+#    confirm_form = ConfirmPlease()
 
+#    if request.method == 'POST':
+#        confirm_form = ConfirmPlease(request.POST)
+
+#        if confirm_form.is_valid():
+#            confirm_form.save()
+    
+#    context = {'form': confirm_form}
+
+    # return render(request, 'reservation/reservation.html', context)
