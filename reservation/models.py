@@ -34,23 +34,27 @@ class Seat(models.Model):
     occupied = models.BooleanField(default=False)
 
     # Relationships
-    table = models.ForeignKey(
+    seat = models.ForeignKey(
         'reservation.Table', on_delete=models.SET_NULL, null=True, related_name='seats')
 
 
 class Reservation(models.Model):
-    name = models.CharField(max_length=100, default="Placeholder")
+    name = models.CharField(max_length=100,)
     number_of_persons = models.IntegerField()
     email = models.CharField(max_length=150, null=True)
     date = models.DateField('Start date', default=datetime.today)
-    datetime_field = models.DateTimeField(
-        limit_choices_to={'datetime_field__gte': timezone.now()},
-        initial=timezone.now)
     time = models.TimeField('Start time', timezone.activate(
         pytz.timezone('CET')), default=timezone.now())
     tables = models.ManyToManyField(
         'reservation.Table', related_name='reservations')
-    # is_valid = models.BooleanField(default=False)
+#   is_valid = models.BooleanField(default=False)
+    current_date = datetime.now()
+
+#   Query the database for bookings that have passed
+#   bookings = Reservation.objects.filter(date__lt=current_date)
+
+#   Delete the bookings
+#   bookings.delete()
 
     def __str__(self):
         return self.name
@@ -71,7 +75,8 @@ class Reservation(models.Model):
     # def does_not_overlap(self):
     #     reservation_doesnt_overlap = True
     #     for table in self.tables.all():
-    #         for reservation in table.reservations.exclude(id=self.id).filter(date=self.date):
+    #         for reservation in table.reservations.exclude(
+    #           id=self.id).filter(date=self.date):
     #             if overlap(self.time_range(), reservation.time_range()):
     #                 reservation_doesnt_overlap = False
     #     return reservation_doesnt_overlap
