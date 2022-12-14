@@ -124,9 +124,9 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - [Stackoverflow time-period-overlap](https://stackoverflow.com/questions/69015339/how-to-check-two-time-period-for-overlap-in-django) was used for code help and as a reference for creating code that prevents an overlapping booking at the same time and date.
 
-- [StackoverFlow JS onclick and JS modal code](https://stackoverflow.com/questions/8664486/javascript-code-to-stop-form-submission) This page was used extensivly for help writing the JavaScript code used in the reservation system modal linking the 'submit' button with the first confirmation pop up modal.
-
 - [StackoverFlow JS manipulating the DOM/SCript conversion](https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements) This page was used extensivly for help writing the JavaScript code used in the reservation system modal linking the 'submit' button with the first confirmation pop up modal.
+
+- [StackoverFlow Preventing Sumission to the database](https://stackoverflow.com/questions/8664486/javascript-code-to-stop-form-submission) This page was used extensivly for help writing the JavaScript code used in the reservation system modal preventing the 'submit' button fron linking with the first confirmation pop up modal.
 
 
 ## Media:

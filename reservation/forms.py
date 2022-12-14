@@ -1,5 +1,4 @@
 from django import forms
-# from .models import Event
 from .models import Reservation
 from bootstrap_datepicker_plus.widgets import (
     DatePickerInput,
@@ -17,9 +16,3 @@ class ReservationForm(forms.ModelForm):
             "date": DatePickerInput(),
             "time": TimePickerInput(),
         }
-
-
-#class confirmPlease(forms.ModelForm):
-#    class Meta:
-#        model = Confirm
-#        Fields = ["name", "number_of_persons", "date", "time"]

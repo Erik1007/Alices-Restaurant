@@ -6,9 +6,9 @@ class TestReservationView(TestCase):
     def test_user_should_see_date_picker(self):
         response = self.client.get(reverse('reservation:reserve_table'))
         self.assertContains(response, '<div class="date-picker">')
-        
+       
         self.assertTemplateUsed(response, 'reservation/reservation.html')
-        
+      
     def test_user_can_submit_name_and_number_of_people(self):
         response = self.client.post(reverse('reservation:reserve_table'))
 
@@ -26,4 +26,3 @@ class TestReservationView(TestCase):
 
         self.assertContains(response, '<div id="confirmationmodal">')
         self.assertTempleteUsed(response, 'reservation/reservation.html')
-
