@@ -32,7 +32,7 @@ class Reservation(models.Model):
     email = models.CharField(max_length=150, null=True)
     date = models.DateField('Start date', default=datetime.today)
     time = models.TimeField('Start time', timezone.activate(
-        pytz.timezone('CET')), default=timezone.now())
+        pytz.timezone('CET')), default=timezone.now)
     tables = models.ManyToManyField(
         'reservation.Table', related_name='reservations')
 #   current_date = datetime.now()

@@ -128,6 +128,8 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - [StackoverFlow Preventing Sumission to the database](https://stackoverflow.com/questions/8664486/javascript-code-to-stop-form-submission) This page was used extensivly for help writing the JavaScript code used in the reservation system modal preventing the 'submit' button fron linking with the first confirmation pop up modal.
 
+- [StackoverFlow creating choicefeilds in forms](https://stackoverflow.com/questions/22255759/django-forms-dynamic-choices-for-choicefield) This page was used as guidance and code for creating an available times choicefield in the reservation forms.
+
 
 ## Media:
 ********************
