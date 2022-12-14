@@ -20,28 +20,6 @@ body {
     z-index: -1;
 }
 
-#barmenu-body {
-    background-image: url('https://res.cloudinary.com/dkkxjgoqr/image/upload/v1670776719/Alices%20Restaurant/over_the_sea_vfjgzx.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-}
-
-#foodmenu-body {
-    background-image: url('https://res.cloudinary.com/dkkxjgoqr/image/upload/v1670777672/Alices%20Restaurant/harbor_view_wyevaq.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-}
-
 .about-us-info div {
     z-index: 1;
     position: relative;
