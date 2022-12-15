@@ -50,7 +50,7 @@
                 }
 
                 const updateModalMessage = () => {
-                    let reservationModalBody = document.querySelector('#reservationModal .modal-body')
+                    let reservationModalBody = document.querySelector('#reservationModal.modal-body')
                     console.log(reservationModalBody)
                     reservationModalBody.innerText = buildModalMessage()
                     $('#reservationModal').modal('show');

@@ -15,3 +15,15 @@ def reserve_table(request):
         form = ReservationForm()
     context = {'form': form}
     return render(request, 'reservation/reservation.html', context)
+
+
+def table_booking(request):
+    if request.method == 'POST':
+        form = TableBookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('reservationModal')
+    else:
+        form = TableBookingForm()
+
+    return render(request, 'reservation/reservation.html', {'form': form})
