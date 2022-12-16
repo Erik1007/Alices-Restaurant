@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .forms import ReservationForm
+from .forms import TableBookingForm
 from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 from django.views.generic import CreateView
 from django.urls import reverse_lazy

@@ -24,11 +24,9 @@
 ********************
 
 
-This website introduces the user/world to a fictional restuarant (inspired by Arlo Guthrie) that is set in the luxurious inner downtown harbour archipelego in Stockholm Sweden. Using real landmarks for inspiration with a twist of fiction, this website aims to provide the user with something fun and functional.
+This website introduces the user/world to a fictional restuarant (inspired by a 60's counterculter anthem) that is set in the luxurious inner downtown harbour archipelego in Stockholm Sweden. Using real landmarks for inspiration with a twist of fiction, this website aims to provide the user with something fun and functional.
 
-This project is designed to represent an imaginary restuarant (semi-set in Stockholm Sweden) that is designed to be interactive and informative. The goal of the project is to combine django foundations and bootsrap elements that facilitate a working database on the back end of the project that a user can interact with using every element of the C.R.U.D. model. 
-
-
+This project represents an imaginary restuarant (semi-set in Stockholm Sweden) that is designed to be interactive and informative. The goal of the project is to combine django foundations and bootsrap elements that facilitate a working database on the back end of the project that a user can interact with using every element of the C.R.U.D. model. A custom reservation app is the heart of the user interaction with the database along with a secondary app for users to signup and leave comments about the site.
 
 
 
@@ -38,17 +36,23 @@ This project is designed to represent an imaginary restuarant (semi-set in Stock
 This app is set up to mimic a real world website for a restuarant, therefor it has a number of essentail features for any real world business. From the fully functional navigation bar to the informative footer, the central features of the website are the reservaation system and the review section which are both interactive and function with the users input. The reservation system is an open system that anyone can interact with the website to make a reservation; however, to be able to leave a review or comment, one has to signup to be a member of the restuarant. As this website is designed with bootstrap it is a moblie first design and there for is fully responsive, thereby meeting the needs to be informative and look good on multiple screen sizes.
 
 The main page is designed to entice the user to click further and explore the website.
-This main page uses a looping background video that shows many highlights of the restuarant, from the food, to people enjoying themselves at the establishment, with some inspirational cameos too.
+This main page uses a looping background video that shows many highlights of the restuarant, from the food, to people enjoying themselves at the establishment, with some inspirational cameos too. [Screenshot]
 
 On the main page, just below the main background video, there is a link that whisks the user to the booking system,for those that instantly want to come join us for a good time, so that they can start interacting with the website and entering information.
 
-On the top of the main page there is a navigation bar that allows the user to easily move from page to page of the restuarant to fully explore and become inticed by the restaurant. This navigation bar is preseant on every page, along with the footer for easy navigation through the webite. Links to the signup page, the food and drink menu's, the page telling a bit of a fictional backstory and of course to the reservation system are all preseant.
+On the top of the main page there is a navigation bar that allows the user to easily move from page to page of the restuarant to fully explore and become inticed by the restaurant. This navigation bar is preseant on every page, along with the footer for easy navigation through the webite. Links to the signup page, the food and drink menu's, the page telling a bit of a fictional backstory and of course to the reservation system are all preseant. [screenshot]
 
 At the bottom of the main page the footer can be found. In the footer section alot of vital business inforation can be found. On the left hand side there is a column providing the important business information for the address location, phone number and the website, along with a link to google maps that provides an interactive geo-location for the restuarant.
-In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the webiste. On the right hand side of the footer, the last of the vital information is found concerning the open hours.
+In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the webiste. On the right hand side of the footer, the last of the vital information is found concerning the open hours and social links to the major social networks. [screenshot]
 
-From the navigation bar, the signup page is fairly straightforward, proding interactive prompts for the user to create a log in username and password to be a memeber of the restuarant. The seond link from the navigation bar is for member to log in so that they can leave a review or comment on the review page. The next link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection. The foloowing link on the navigation bar brings the user to the nect main reason to visit the restuarant, its incredible and vast selction of drinks which are fully described in the drink menu. From there the navigation bar provides the user to see other customers thoughts/opinions of the resturant and dining expericnce on the review page. And finally the navigation bar provides the customer the link to the reservation system so that they can make their booking.
+From the navigation bar, the signup page is fairly straightforward, proding interactive prompts for the user to create a log in username and password to be a memeber of the restuarant. The seond link from the navigation bar is for member to log in so that they can leave a review or comment on the review page. The next link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection. After the food menu, the following link provides the option for the user to the next main reason to visit the restuarant, its incredible and vast selction of drinks, which are fully described in the drink menu. From there the navigation bar provides the user to see other customers thoughts/opinions of the resturant and dining expericnce on the review page. And finally the navigation bar provides the customer the link to the reservation system so that they can make their booking.
 
+Both the Sign up and Log in pages have color coded alert messages to inform the user of success or failures in their attempt to sign up, log in and log out (green for success, red for unsuccessful). [screenshot]
+
+The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering thier name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. [screenshot]
+Once the user has selected their date and time, they are prompted to confirm the reservation via a popup modal that provides the opportunity to either delete the booking or to move forward and confirm their reservation time. [screenshot].
+
+On the back end side of this project there is a fully functioning Admin page that supports the admin with a number of options to help the fictional restuarant run and to be successful. [screenshot]. On the righthand side of the Admin page, there is a selection of options for the admin to navigate through including the options to see comments and posts, users, emails, reservations, tables and seats and more. Each page in the admin has a display list of methods to search the barious topics for ease of use and navigation. [screenshot]
 
 
 
@@ -60,9 +64,11 @@ From the navigation bar, the signup page is fairly straightforward, proding inte
 
 In the future, there are a few additonal interactive steps that I would like to add that would increase the satisfaction feelings of using this site:
 
-The first and formost addional step that I would like to make would be to make both the restuarant and the bar menus fully interactive when each item was hovered over a widget image would pop up on the side of the page displaying the item in all its glory in an attempy to inspire the users appetite desires.
+The first and formost addional step that I would like to make would be to make both the restuarant and the bar menus fully interactive when each item was hovered over a widget image would pop up on the side of the page displaying the item in all its glory in an attempt to inspire the users appetite desires. In a perfect world, each menu item(both food and drinks) would link to an image of that item with a backdrop of the restuarant of harbour view. 
 
 Secondly, I would like to include more background images and videos for every template page that would increa the viewing pleasure for the user and hopefully increase the visitor traffic to the imaginary restuarant.
+
+On the Admin side, one of the main feature that I would like to include in the next round of improvements would be to code the automatic deletion of reservations that have surpased the reservation date. As of now, deleting reservations falls to Admin manual deletion.
 
 
 
@@ -70,13 +76,23 @@ Secondly, I would like to include more background images and videos for every te
 ## Testing and Validation
 ********************
 
+This project was designed and releid upon the Red/Green/Refactor testing method for the development of many of the functions that are the hghlights of the site. This method is derived in methodically using basic additions to code that build to a working function or app. 
 
+The project also uses Pep8 for code validation to ensure that all code is error free/bug free and user friendly [screenshot]
 
 
 ## Unfixed Bugs
 ********************
 
+This project has seen a number of bugs and issues, but as of right now, there are no unfixed bugs that I am aware of (that doesnt mean that there arent any, it just means that I am unaware of them).
+In the creation of the blog app that is the means for users to signup/log-in and leave reviews about the resturant; there were significant issues maintinaing the url connections to the project. Those url issues gave way to bugs connecting the project to the database.
 
+One of the main issues came from the migration of the database from Heroku to Elephantsql, which at one point resulted in the need to recover the database. 
+Most recently a bug in Gitpod erased the environmental skeleton of the project including the env.py file, the djago downoad and all of the connecting url paths in the settings. 
+
+As far as bugs in the actual project, there were significant issues building the tables/seats in the shell connecting to the database for the function to prevent a double booking on a specific date and time. There were also bugs surrounding the javascript code for the pop up modal in the interactive delete/confirm pop up modal in the reservation system.
+
+However, as each new issue presented itself, a solution was found to allieviate the problem.
 
 
 ## Deployment
