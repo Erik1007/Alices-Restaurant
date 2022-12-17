@@ -146,6 +146,14 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - [StackoverFlow creating choicefeilds in forms](https://stackoverflow.com/questions/22255759/django-forms-dynamic-choices-for-choicefield) This page was used as guidance and code for creating an available times choicefield in the reservation forms.
 
+- [StackoverFlow many to many models validaiton](https://stackoverflow.com/questions/7986510/django-manytomany-model-validation/7986937#7986937) This page was used for guidance in developing a method for preventing overlaping bookings
+
+- [StackoverFlow many to many models validaiton](https://stackoverflow.com/questions/7986510/django-manytomany-model-validation)This page was used for guidance in developing a method for preventing overlaping bookings.
+
+- [StackoverFlow many to many filters](https://stackoverflow.com/questions/2218327/django-manytomany-filter) This page was used for guidance in developing a method for preventing overlaping bookings.
+
+- [StackoverFlow zime zone settings](https://stackoverflow.com/questions/15980302/django-set-datetime-in-views-to-utc1) This page was used for guidance on reseting the curent time for the current location time zone
+
 
 ## Media:
 ********************
@@ -160,3 +168,28 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - [A second harbor image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dstrandvagen&psig=AOvVaw0iiN8iburCgWVi5TFiDYJw&ust=1670863908840000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCODx6feT8vsCFQAAAAAdAAAAABAD) that was used for  background in this project.
 
+
+
+# Data schema
+
+## entities
+- User
+- Tables
+- Reservation
+- slots
+
+## Relationship
+- user makes a reservation
+- reservation are for an available slot
+- slots are free tables that can be reserved for a given datetime
+
+## schema
+
+### User    Reservation   Slot     Table
+pk          pk            pk       pk 
+username    user          table    slug/name
+            slot          date     capacity
+                          Time     location
+
+
+MOdel driven develope
