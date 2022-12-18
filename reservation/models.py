@@ -55,7 +55,7 @@ class Table(models.Model):
         return f'Table {self.id}'
 
 
-# class NewReservation(models.Model):
+class NewReservation(models.Model):
 #    name = models.CharField(max_length=150)
 #    available_table = models.ManyToManyField(Reservation)
 #    NewReservation = Reservation.objects.create(name='reserved_table')
