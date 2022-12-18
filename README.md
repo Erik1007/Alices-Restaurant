@@ -3,7 +3,7 @@
 ********************
 
 
-## You can get anything you want, at Alice's Restuarant
+## You can get anything you want, at Alice's Restaurant
 ********************
 
 
@@ -24,53 +24,54 @@
 ********************
 
 
-This website introduces the user/world to a fictional restuarant (inspired by a 60's counterculter anthem) that is set in the luxurious inner downtown harbour archipelego in Stockholm Sweden. Using real landmarks for inspiration with a twist of fiction, this website aims to provide the user with something fun and functional.
+This website introduces the user/world to a fictional restaurant (inspired by a 60's counter-culture anthem) that is set in the luxurious inner downtown harbour archipelago in Stockholm Sweden. Using real landmarks for inspiration with a twist of fiction, this website aims to provide the user with something fun and functional.
 
-This project represents an imaginary restuarant (semi-set in Stockholm Sweden) that is designed to be interactive and informative. The goal of the project is to combine django foundations and bootsrap elements that facilitate a working database on the back end of the project that a user can interact with using every element of the C.R.U.D. model. A custom reservation app is the heart of the user interaction with the database along with a secondary app for users to signup and leave comments about the site.
+This project represents an imaginary restaurant (semi-set in Stockholm Sweden) that is designed to be interactive and informative. The goal of the project is to combine Django foundations and Bootstrap elements that facilitate a working database on the back end of the project that a user can interact with using every element of the C.R.U.D. model. A custom reservation app is the heart of the user interaction with the database along with a secondary app for users to signup and leave comments about the site.
 
 
 
 ## Program Features
 ********************
 
-This app is set up to mimic a real world website for a restuarant, therefor it has a number of essentail features for any real world business. From the fully functional navigation bar to the informative footer, the central features of the website are the reservaation system and the review section which are both interactive and function with the users input. The reservation system is an open system that anyone can interact with the website to make a reservation; however, to be able to leave a review or comment, one has to signup to be a member of the restuarant. As this website is designed with bootstrap it is a moblie first design and there for is fully responsive, thereby meeting the needs to be informative and look good on multiple screen sizes.
+This app is set up to mimic a real world website for a restaurant, therefor it has a number of essential features for any real world business. From the fully functional navigation bar to the informative footer, the central features of the website are the reservation system and the review section which are both interactive and function with the user's input. The reservation system is an open system that anyone can interact with the website to make a reservation; however, to be able to leave a review or comment, one has to signup to be a member of the restaurant. As this website is designed with bootstrap it is a mobile first design and there for is fully responsive, thereby meeting the needs to be informative and look good on multiple screen sizes.
 
 The main page is designed to entice the user to click further and explore the website.
-This main page uses a looping background video that shows many highlights of the restuarant, from the food, to people enjoying themselves at the establishment. ![Main Page Screenshot](/media/main%20page%20screenshot%201.jpg)
+This main page uses a looping background video that shows many highlights of the restaurant, from the food, to people enjoying themselves at the establishment. ![Main Page Screenshot](/media/main%20page%20screenshot%201.jpg)
 
-On the main page, just below the main background video, there is a link that whisks the user to the booking system,for those that instantly want to come join us for a good time, so that they can start interacting with the website and entering information.
+On the main page, just below the main background video, there is a link that whisks the user to the booking system, for those that instantly want to come join us for a good time, so that they can start interacting with the website and entering information.
 
-On the top of the main page there is a navigation bar that allows the user to easily move from page to page of the restuarant to fully explore and become inticed by the restaurant. This navigation bar is preseant on every page, along with the footer for easy navigation through the webite. Links to the signup page, the food and drink menu's, the page telling a bit of a fictional backstory and of course to the reservation system are all preseant. ![navbar screenshot](/media/nav%20bar%20screenshot.jpg)
+On the top of the main page there is a navigation bar that allows the user to easily move from page to page of the restaurant to fully explore and become enticed by the restaurant. This navigation bar is present on every page, along with the footer for easy navigation through the website. Links to the signup page, the food and drink menu's, the page telling a bit of a fictional backstory and of course to the reservation system are all present. ![navbar screenshot](/media/nav%20bar%20screenshot.jpg)
 
-At the bottom of the main page the footer can be found. In the footer section alot of vital business inforation can be found. On the left hand side there is a column providing the important business information for the address location, phone number and the website, along with a link to google maps that provides an interactive geo-location for the restuarant.
-In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the webiste. On the right hand side of the footer, the last of the vital information is found concerning the open hours and social links to the major social networks. ![footer screenshot](/media/footer%20screenshot.jpg)
+At the bottom of the main page the footer can be found. In the footer section alot of vital business information can be found. On the left hand side there is a column providing the important business information for the address location, phone number and the website, along with a link to google maps that provides an interactive geo-location for the restaurant.
+In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the website. On the right hand side of the footer, the last of the vital information is found concerning the open hours and social links to the major social networks. ![footer screenshot](/media/footer%20screenshot.jpg)
 
-From the navigation bar, the signup page is fairly straightforward, proding interactive prompts for the user to create a log in username and password to be a memeber of the restuarant.![sign-up screenshot](/media/signup%20screenshot.jpg) The seond link from the navigation bar is for member to log in so that they can leave a review or comment on the review page.![sign-in screenshot](/media/signin%20screenshot.jpg) The next link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection.![alt text](image_url) After the food menu, the following link provides the option for the user to the next main reason to visit the restuarant, its incredible and vast selction of drinks, which are fully described in the drink menu.![alt text](image_url) From there the navigation bar provides the user to see other customers thoughts/opinions of the resturant and dining expericnce on the review page.![review page](/media/reviews%20screenshot.jpg) And finally the navigation bar provides the customer the link to the reservation system so that they can make their booking.![alt text](image_url)
+From the navigation bar, the signup page is fairly straightforward, prodding interactive prompts for the user to create a log in username and password to be a member of the restaurant.![sign-up screenshot](/media/signup%20screenshot.jpg) The second link from the navigation bar is for member to log in so that they can leave a review or comment on the review page.![sign-in screenshot](/media/signin%20screenshot.jpg) The next link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection.![alt text](image_url) After the food menu, the following link provides the option for the user to the next main reason to visit the restaurant, its incredible and vast selection of drinks, which are fully described in the drink menu.![alt text](image_url) From there the navigation bar provides the user to see other customers thoughts/opinions of the restaurant and dining experience on the review page.![review page](/media/reviews%20screenshot.jpg) And finally the navigation bar provides the customer the link to the reservation system so that they can make their booking.![alt text](image_url)
 
 Both the Sign up and Log in pages have color coded alert messages to inform the user of success or failures in their attempt to sign up, log in and log out (green for success, red for unsuccessful). ![successful alert](/media/success%20alert%20screenshot.jpg)
 
-The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering thier name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/reservation%20screenshot.jpg)
+The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering their name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/reservation%20screenshot.jpg)
 Once the user has selected their date and time, they are prompted to confirm the reservation via a popup modal that provides the opportunity to either delete the booking or to move forward and confirm their reservation time. [screenshot].
 
-On the back end side of this project there is a fully functioning Admin page that supports the admin with a number of options to help the fictional restuarant run and to be successful. ![Admin screenshot](/media/admin%20screenshot.jpgT). On the righthand side of the Admin page, there is a selection of options for the admin to navigate through including the options to see comments and posts, users, emails, reservations, tables and more. Each page in the admin has a display list of methods to search the barious topics for ease of use and navigation.The Admin page for reservations provides controls for the reservations ![Reservations Admin](/media/table%20admin%20screenshot.jpg) and for tables and seating capacity assigned to each table ![Tables Admin](/media/Table%20Admin%202.jpg).
+On the back end side of this project there is a fully functioning Admin page that supports the admin with a number of options to help the fictional restuarant run and to be successful. ![Admin screenshot](/media/admin%20screenshot.jpgT). On the righthand side of the Admin page, there is a selection of options for the admin to navigate through including the options to see comments and posts, users, emails, reservations, tables and more. Each page in the admin has a display list of methods to search the various topics for ease of use and navigation. The Admin page for reservations provides controls for the reservations ![Reservations Admin](/media/table%20admin%20screenshot.jpg) and for tables and seating capacity assigned to each table ![Tables Admin](/media/Table%20Admin%202.jpg).
 
 This project has combined numerous aspects of the full stack process, from Agile development process to front and backend languages; it has been a full spectrum project. To compliment such an undertaking there have been numerous production thought processes and designs to make it possible. 
 ![front end wireframe](/media/front%20end%20wireframe.jpg)
 ![full project wireframe](/media/full%20project%20wireframe.jpg)
 ![reservation app wireframe](/media/reservation%20app%20wireframe%20-%20Copy.jpg)
 ![agile example](/media/agile%20porcess%20screenshot%20-%20Copy.jpg)
+![Reservation flow](/media/reservation%20flow%20wire.jpg)
 
 
-## Future Implementaions
+## Future Implementations
 ********************
 
-In the future, there are a few additonal interactive steps that I would like to add that would increase the satisfaction feelings of using this site:
+In the future, there are a few additional interactive steps that I would like to add that would increase the satisfaction feelings of using this site:
 
-The first and formost addional step that I would like to make would be to make both the restuarant and the bar menus fully interactive when each item was hovered over a widget image would pop up on the side of the page displaying the item in all its glory in an attempt to inspire the users appetite desires. In a perfect world, each menu item(both food and drinks) would link to an image of that item with a backdrop of the restuarant of harbour view. 
+The first and fore most additional step that I would like to make would be to make both the restaurant and the bar menus fully interactive when each item was hovered over a widget image would pop up on the side of the page displaying the item in all its glory in an attempt to inspire the user's appetite desires. In a perfect world, each menu item (both food and drinks) would link to an image of that item with a backdrop of the restaurant of harbour view. 
 
-Secondly, I would like to include more background images and videos for every template page that would increa the viewing pleasure for the user and hopefully increase the visitor traffic to the imaginary restuarant.
+Secondly, I would like to include more background images and videos for every template page that would increase the viewing pleasure for the user and hopefully increase the visitor traffic to the imaginary restaurant.
 
-On the Admin side, one of the main feature that I would like to include in the next round of improvements would be to code the automatic deletion of reservations that have surpased the reservation date. As of now, deleting reservations falls to Admin manual deletion.
+On the Admin side, one of the main features that I would like to include in the next round of improvements would be to code the automatic deletion of reservations that have surpassed the reservation date. As of now, deleting reservations falls to Admin manual deletion.
 
 
 
@@ -78,7 +79,7 @@ On the Admin side, one of the main feature that I would like to include in the n
 ## Testing and Validation
 ********************
 
-This project was designed and releid upon the Red/Green/Refactor testing method for the development of many of the functions that are the hghlights of the site. This method is derived in methodically using basic additions to code that build to a working function or app. 
+This project was designed and relied upon the Red/Green/Refactor testing method for the development of many of the functions that are the highlights of the site. This method is derived in methodically using basic additions to code that build to a working function or app. 
 
 The project also uses Pep8 for code validation to ensure that all code is error free/bug free and user friendly [screenshot]
 
@@ -86,30 +87,30 @@ The project also uses Pep8 for code validation to ensure that all code is error 
 ## Unfixed Bugs
 ********************
 
-This project has seen a number of bugs and issues, but as of right now, there are no unfixed bugs that I am aware of (that doesnt mean that there arent any, it just means that I am unaware of them).
-In the creation of the blog app that is the means for users to signup/log-in and leave reviews about the resturant; there were significant issues maintinaing the url connections to the project. Those url issues gave way to bugs connecting the project to the database.
+This project has seen a number of bugs and issues, but as of right now, there are no unfixed bugs that I am aware of (that does not mean that there are not any, it just means that I am unaware of them).
+In the creation of the blog app that is the means for users to signup/log-in and leave reviews about the restaurant; there were significant issues maintaining the url connections to the project. Those url issues gave way to bugs connecting the project to the database.
 
 One of the main issues came from the migration of the database from Heroku to Elephantsql, which at one point resulted in the need to recover the database. 
-Most recently a bug in Gitpod erased the environmental skeleton of the project including the env.py file, the djago downoad and all of the connecting url paths in the settings. 
+Most recently a bug in Gitpod erased the environmental skeleton of the project including the env.py file, the djago download and all of the connecting url paths in the settings. 
 
 As far as bugs in the actual project, there were significant issues building the tables/seats in the shell connecting to the database for the function to prevent a double booking on a specific date and time. There were also bugs surrounding the javascript code for the pop up modal in the interactive delete/confirm pop up modal in the reservation system.
 
-The many to many object combining the reservation with the tables to save the reservation and reserve the table (checking for availaibility) created many bugs and error codes that needed to be systematically tracked down and solved.
+The many to many object combining the reservation with the tables to save the reservation and reserve the table (checking for availability) created many bugs and error codes that needed to be systematically tracked down and solved.
 
-However, as each new issue presented itself, a solution was found to allieviate the problem.
+However, as each new issue presented itself, a solution was found to alleviate the problem.
 
 
 ## Deployment
 ********************
 
 
-There are multiple provides supporting the deployment of this project. The code was written and stored in the[Alices Restuarant GitHub repository](https://github.com/Erik1007/Alices-Restaurant). This was migrated to [Heroku Alices Restuarant](https://dashboard.heroku.com/apps/alices-restaurant-eh) to deploy the inbedded Django and python code. [ElephantSQL](https://api.elephantsql.com) was linked into to house the databases used for this project. And lastly, [Cloudinary](https://console.cloudinary.com) was linked in and used as the media storage.
+There are multiple provides supporting the deployment of this project. The code was written and stored in the[Alices restaurant GitHub repository](https://github.com/Erik1007/Alices-Restaurant). This was migrated to [Heroku Alices restaurant](https://dashboard.heroku.com/apps/alices-restaurant-eh) to deploy the imbedded Django and python code. [ElephantSQL](https://api.elephantsql.com) was linked into to house the databases used for this project. And lastly, [Cloudinary](https://console.cloudinary.com) was linked in and used as the media storage.
 
 
 ## Credits
 ********************
 
-Many different sources have been used as insipration and for multiple levels of assistance in the creation of this project. The sources used in the development process of this poject will be presented in two main groups code and media:
+Many different sources have been used as inspiration and for multiple levels of assistance in the creation of this project. The sources used in the development process of this project will be presented in two main groups code and media:
 
 ## Code:
 ********************
@@ -118,7 +119,7 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - [Django Documentation](https://www.djangoproject.com/) became both the holy grail and nightly bed time reading for references, code help and inspiration for numerous aspects of this project.
 
-- The Code Institute 'I think therefor I blog' walk through project was used for the Django development and database development in this project. Much of the code used in teh reviews section was taken directly from the 'think before I blog' tutorial so that patrons of the resturant could leave reviews and like for their experiences and others comments.
+- The Code Institute 'I think therefor I blog' walk through project was used for the Django development and database development in this project. Much of the code used in the reviews section was taken directly from the 'think before I blog' tutorial so that patrons of the restaurant could leave reviews and like for their experiences and others' comments.
 
 - The Code Institute 'Resume' walk through project was used for assistance in bootstrap and styling code for this project.
 
@@ -130,9 +131,9 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - For assistance with developing the reservation form, the [YouTube tutorial](https://www.youtube.com/watch?v=TuXFAl8aMvc) and [YouTube tutorial](https://www.youtube.com/watch?v=xcsbQHdtI2k) were used for code assistance and app setup.
 
-- For addiditional code assistance, [the restuarant booking system](https://github.com/andreagrandi/booking-example/tree/master/booking/restaurants) found in githu was used for a guide and reference as to different ways to set up the reservation system.
+- For additional code assistance, [the restaurant booking system](https://github.com/andreagrandi/booking-example/tree/master/booking/restaurants) found in github was used for a guide and reference as to different ways to set up the reservation system.
 
-- [Open AI Chatbot](https://chat.openai.com/) was used for tutorial help, code help, trouble shooting, assistance, support and code development through the building process of this project. The AI bot was crucial getting help with: JS onclick linsteners, reservation modal, confirmation views, creating modals, connecting urls, running tests, manipulating the DOM, inserting JS, using bootstrap features, inserting bootstrap code, using JS code, and much more.
+- [Open AI Chatbot](https://chat.openai.com/) was used for tutorial help, code help, trouble shooting, assistance, support and code development through the building process of this project. The AI bot was crucial getting help with: JS onclick listeners, reservation modal, confirmation views, creating modals, connecting urls, running tests, manipulating the DOM, inserting JS, using bootstrap features, inserting bootstrap code, using JS code, and much more.
 
 - [Github Date-Picker](https://github.com/monim67/django-bootstrap-datepicker-plus) was used for as a reference for the date/time picker used in the reservation app, template and view.
 
@@ -144,19 +145,19 @@ Many different sources have been used as insipration and for multiple levels of 
 
 - [Stackoverflow time-period-overlap](https://stackoverflow.com/questions/69015339/how-to-check-two-time-period-for-overlap-in-django) was used for code help and as a reference for creating code that prevents an overlapping booking at the same time and date.
 
-- [StackoverFlow JS manipulating the DOM/SCript conversion](https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements) This page was used extensivly for help writing the JavaScript code used in the reservation system modal linking the 'submit' button with the first confirmation pop up modal.
+- [StackoverFlow JS manipulating the DOM/SCript conversion](https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements) This page was used extensively for help writing the JavaScript code used in the reservation system modal linking the 'submit' button with the first confirmation pop up modal.
 
-- [StackoverFlow Preventing Sumission to the database](https://stackoverflow.com/questions/8664486/javascript-code-to-stop-form-submission) This page was used extensivly for help writing the JavaScript code used in the reservation system modal preventing the 'submit' button fron linking with the first confirmation pop up modal.
+- [StackoverFlow Preventing Submission to the database](https://stackoverflow.com/questions/8664486/javascript-code-to-stop-form-submission) This page was used extensively for help writing the JavaScript code used in the reservation system modal preventing the 'submit' button fron linking with the first confirmation pop up modal.
 
-- [StackoverFlow creating choicefeilds in forms](https://stackoverflow.com/questions/22255759/django-forms-dynamic-choices-for-choicefield) This page was used as guidance and code for creating an available times choicefield in the reservation forms.
+- [StackoverFlow creating choicefeilds in forms](https://stackoverflow.com/questions/22255759/django-forms-dynamic-choices-for-choicefield) This page was used as guidance and code for creating an available times choice field in the reservation forms.
 
-- [StackoverFlow many to many models validaiton](https://stackoverflow.com/questions/7986510/django-manytomany-model-validation/7986937#7986937) This page was used for guidance in developing a method for preventing overlaping bookings
+- [StackoverFlow many to many models validaiton](https://stackoverflow.com/questions/7986510/django-manytomany-model-validation/7986937#7986937) This page was used for guidance in developing a method for preventing overlapping bookings
 
-- [StackoverFlow many to many models validaiton](https://stackoverflow.com/questions/7986510/django-manytomany-model-validation)This page was used for guidance in developing a method for preventing overlaping bookings.
+- [StackoverFlow many to many models validaiton](https://stackoverflow.com/questions/7986510/django-manytomany-model-validation)This page was used for guidance in developing a method for preventing overlapping bookings.
 
-- [StackoverFlow many to many filters](https://stackoverflow.com/questions/2218327/django-manytomany-filter) This page was used for guidance in developing a method for preventing overlaping bookings.
+- [StackoverFlow many to many filters](https://stackoverflow.com/questions/2218327/django-manytomany-filter) This page was used for guidance in developing a method for preventing overlapping bookings.
 
-- [StackoverFlow zime zone settings](https://stackoverflow.com/questions/15980302/django-set-datetime-in-views-to-utc1) This page was used for guidance on reseting the curent time for the current location time zone
+- [StackoverFlow zime zone settings](https://stackoverflow.com/questions/15980302/django-set-datetime-in-views-to-utc1) This page was used for guidance on resetting the current time for the current location time zone
 
 
 ## Media:
