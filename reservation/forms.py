@@ -19,8 +19,7 @@ class ReservationForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['tables'].widget.attrs.update(
-             {'class': 'form-control'})
+        self.fields['tables'].widget.attrs.update['class'] = 'form-control'
         self.fields['booking_time'].widget = forms.ListBox(
              attrs={"size": len(AVAILABLE_TIMES)})
     

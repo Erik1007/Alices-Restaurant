@@ -14,12 +14,13 @@ class Customer():
 
 
 class Reservation(models.Model):
+    customer = models.CharField(max_length=150)
     number_of_persons = models.IntegerField()
     email = models.CharField(max_length=150, null=True)
     date = models.DateField(default=timezone.now)
     tables = models.ManyToManyField(
         'reservation.Table', related_name='reservations')
-    booking_time = models.CharField(max_length=50, choices=[
+    booking_time = models.CharField(max_length=50, default=1, choices=[
         ("1", "15:00-17:00",),
         ("2", "16:00-18:00",),
         ("3", "17:00-19:00",),
@@ -33,7 +34,7 @@ class Reservation(models.Model):
 
 
 class Table(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, default='placeholder')
     capacity = models.IntegerField()
     STATUS_CHOICES = [
         ('AVAILABLE', 'Available'),
