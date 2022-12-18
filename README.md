@@ -49,14 +49,16 @@ From the navigation bar, the signup page is fairly straightforward, proding inte
 
 Both the Sign up and Log in pages have color coded alert messages to inform the user of success or failures in their attempt to sign up, log in and log out (green for success, red for unsuccessful). ![successful alert](/media/success%20alert%20screenshot.jpg)
 
-The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering thier name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. [screenshot]
+The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering thier name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/reservation%20screenshot.jpg)
 Once the user has selected their date and time, they are prompted to confirm the reservation via a popup modal that provides the opportunity to either delete the booking or to move forward and confirm their reservation time. [screenshot].
 
 On the back end side of this project there is a fully functioning Admin page that supports the admin with a number of options to help the fictional restuarant run and to be successful. ![Admin screenshot](/media/admin%20screenshot.jpgT). On the righthand side of the Admin page, there is a selection of options for the admin to navigate through including the options to see comments and posts, users, emails, reservations, tables and more. Each page in the admin has a display list of methods to search the barious topics for ease of use and navigation.The Admin page for reservations provides controls for the reservations ![Reservations Admin](/media/table%20admin%20screenshot.jpg) and for tables and seating capacity assigned to each table ![Tables Admin](/media/Table%20Admin%202.jpg).
 
-
-
-
+This project has combined numerous aspects of the full stack process, from Agile development process to front and backend languages; it has been a full spectrum project. To compliment such an undertaking there have been numerous production thought processes and designs to make it possible. 
+![front end wireframe](/media/front%20end%20wireframe.jpg)
+![full project wireframe](/media/full%20project%20wireframe.jpg)
+![reservation app wireframe](/media/reservation%20app%20wireframe%20-%20Copy.jpg)
+![agile example](/media/agile%20porcess%20screenshot%20-%20Copy.jpg)
 
 
 ## Future Implementaions
@@ -91,6 +93,8 @@ One of the main issues came from the migration of the database from Heroku to El
 Most recently a bug in Gitpod erased the environmental skeleton of the project including the env.py file, the djago downoad and all of the connecting url paths in the settings. 
 
 As far as bugs in the actual project, there were significant issues building the tables/seats in the shell connecting to the database for the function to prevent a double booking on a specific date and time. There were also bugs surrounding the javascript code for the pop up modal in the interactive delete/confirm pop up modal in the reservation system.
+
+The many to many object combining the reservation with the tables to save the reservation and reserve the table (checking for availaibility) created many bugs and error codes that needed to be systematically tracked down and solved.
 
 However, as each new issue presented itself, a solution was found to allieviate the problem.
 

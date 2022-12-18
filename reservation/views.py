@@ -27,3 +27,5 @@ def table_booking(request):
         form = TableForm()
 
     return render(request, 'reservation/reservation.html', {'form': form})
+
+
