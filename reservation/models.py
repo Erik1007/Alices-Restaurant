@@ -45,7 +45,6 @@ class ReservationManager(models.Manager):
         for a_table in available[:requested_tables]:
             new_reservation.tables.add(a_table)
         new_reservation.save()
-        # existing_reservations = Reservation.objects.filter()
         
         is_available = False
         tables = []
@@ -75,18 +74,7 @@ class Reservation(models.Model):
 class Table(models.Model):
     name = models.CharField(max_length=50, default='placeholder')
     capacity = models.IntegerField()
-    # Reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE)
-    # booked_table = models.ManyToManyField('table', blank=True)
 
     def __str__(self):
         return f'Table {self.id}'
-
-
-# class NewReservation(models.Model):
-#    name = models.CharField(max_length=150)
-#    
-#    NewReservation = Reservation.objects.create(name='reserved_table')
-#    
-
-#    new_reservation.save()
 
