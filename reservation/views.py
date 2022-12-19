@@ -14,13 +14,11 @@ def reserve_table(request):
         if form.is_valid():
             new_reservation = Reservation.objects.make_reservation(
                 form.cleaned_data['name'], 
-    #           form.cleaned_data['email'], 
-                "placeholder@email.com",
                 form.cleaned_data['number_of_persons'], 
                 form.cleaned_data['date'], 
                 form.cleaned_data['booking_time'])
             if new_reservation['available']:
-                redirect('/success')
+                redirect('reservation/success.html')
     else:
         form = ReservationForm()
     context = {'form': form, "new_reservation": new_reservation}
@@ -36,6 +34,6 @@ def table_booking(request):
     else:
         form = TableForm()
 
-    return render(request, 'reservation/reservation.html', {'form': form})
+    return render(request, 'reservation/failure.html', {'form': form})
 
 

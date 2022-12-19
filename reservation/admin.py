@@ -4,7 +4,7 @@ from .models import Customer, Reservation, Table
 
 class AdminReservation(admin.ModelAdmin):
     list_display = [
-        'email', 'number_of_persons',
+        'name', 'number_of_persons',
     ]
     list_filter = [
         'date', 'booking_time',
@@ -14,14 +14,13 @@ class AdminReservation(admin.ModelAdmin):
 
 class AdminTable(admin.ModelAdmin):
     list_display = [
-        'name', 
+        'name',
         'capacity',
     ]
 
 
 admin.site.register(Reservation, AdminReservation)
 admin.site.register(Table, AdminTable)
-# admin.site.register(Seat)
 
 
 def approve_reservation(self, request, queryset):

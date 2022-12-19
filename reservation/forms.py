@@ -23,6 +23,5 @@ class ReservationForm(forms.ModelForm):
         new_reservation.number_of_persons = cleaned_data['number_of_persons']
         new_reservation.date = cleaned_data['date']
         new_reservation.time = cleaned_data['booking_time']
-        
+    
         return cleaned_data
-
