@@ -12,8 +12,15 @@ class AdminReservation(admin.ModelAdmin):
     actions = ['approve_reservation']
 
 
+class AdminTable(admin.ModelAdmin):
+    list_display = [
+        'name', 
+        'capacity',
+    ]
+
+
 admin.site.register(Reservation, AdminReservation)
-admin.site.register(Table)
+admin.site.register(Table, AdminTable)
 # admin.site.register(Seat)
 
 

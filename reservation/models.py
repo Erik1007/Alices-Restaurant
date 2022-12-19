@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from django.db import models
 from django.core.exceptions import ValidationError
+import math
 
 
 class Customer():
@@ -23,6 +24,38 @@ TABLE_TIME_CHOICES = [
     ]
 
 
+class ReservationManager(models.Manager):
+    def make_reservation(self, name, email, number_of_persons, date, booking_time):
+        existing_reservations=Reservation.objects.filter(date=date, booking_time=booking_time) 
+        used_tables = existing_reservations.values('tables')
+        used_table_ids = []
+        for u_table in used_tables:
+            used_table_ids.append(u_table['tables'])
+        
+        available = Table.objects.exclude(id__in=used_table_ids)
+        if available.count() == 0:
+            return {'available' : False}
+        requested_tables = math.ceil(number_of_persons / 4.0)
+
+        if available.count() < requested_tables:
+            return {'available' : False}
+        new_reservation = Reservation(name=name, number_of_persons=number_of_persons, date=date, email=email, booking_time=booking_time)
+        new_reservation.save()
+
+        for a_table in available[:requested_tables]:
+            new_reservation.tables.add(a_table)
+        new_reservation.save()
+        # existing_reservations = Reservation.objects.filter()
+        
+        is_available = False
+        tables = []
+
+        return {
+            "available": True,
+            "tables": new_reservation.tables
+        }
+
+
 class Reservation(models.Model):
     name = models.CharField(max_length=150)
     number_of_persons = models.IntegerField()
@@ -33,23 +66,17 @@ class Reservation(models.Model):
     booking_time = models.CharField(
         max_length=50, default=1, choices=TABLE_TIME_CHOICES)
 
+    objects = ReservationManager()
+
     def __str__(self):
         return self.name
-
+        
 
 class Table(models.Model):
     name = models.CharField(max_length=50, default='placeholder')
     capacity = models.IntegerField()
-    STATUS_CHOICES = [
-        ('AVAILABLE', 'Available'),
-        ('RESERVED', 'Reserved'),
-    ]
-    status = models.CharField(
-        max_length=10,
-        choices=STATUS_CHOICES,
-        default='AVAILABLE',
-    )
-    Reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE)
+    # Reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE)
+    # booked_table = models.ManyToManyField('table', blank=True)
 
     def __str__(self):
         return f'Table {self.id}'
@@ -57,8 +84,9 @@ class Table(models.Model):
 
 # class NewReservation(models.Model):
 #    name = models.CharField(max_length=150)
-#    available_table = models.ManyToManyField(Reservation)
+#    
 #    NewReservation = Reservation.objects.create(name='reserved_table')
+#    
 
 #    new_reservation.save()
 

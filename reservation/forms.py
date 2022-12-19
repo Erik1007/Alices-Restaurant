@@ -15,7 +15,6 @@ class ReservationForm(forms.ModelForm):
         widgets = {
              "date": DatePickerInput()}
 
-
     def clean(self):
         cleaned_data = super().clean()
         print(cleaned_data)
@@ -23,12 +22,7 @@ class ReservationForm(forms.ModelForm):
         new_reservation.name = cleaned_data['name']
         new_reservation.number_of_persons = cleaned_data['number_of_persons']
         new_reservation.date = cleaned_data['date']
-        new_reservation.time = cleaned_data['time']
+        new_reservation.time = cleaned_data['booking_time']
         
-        if Table.objects.filter(
-                 table_number=table_number, booking_time=booking_time).exists():
-            raise forms.ValidationError(
-                 "This table is already booked for the selected time. Please choose a different table or time.")
-
         return cleaned_data
 
