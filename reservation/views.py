@@ -13,9 +13,9 @@ def reserve_table(request):
         form = ReservationForm(request.POST)
         if form.is_valid():
             new_reservation = Reservation.objects.make_reservation(
-                form.cleaned_data['name'], 
-                form.cleaned_data['number_of_persons'], 
-                form.cleaned_data['date'], 
+                form.cleaned_data['name'],
+                form.cleaned_data['number_of_persons'],
+                form.cleaned_data['date'],
                 form.cleaned_data['booking_time'])
             if new_reservation['available']:
                 redirect('reservation/success.html')
@@ -35,5 +35,3 @@ def table_booking(request):
         form = TableForm()
 
     return render(request, 'reservation/failure.html', {'form': form})
-
-

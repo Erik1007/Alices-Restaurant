@@ -59,12 +59,3 @@ class TestReservationBooking(TestCase):
          )
 
         self.assertFalse(result['available'])
-        
-        
-test_confirm_button(
-    'should open the modal and redirect to the success page', () => {
-        document.getElementById(
-    'modal-confirmation-button').click();
-        expect(
-        window.location.href).toEqual('/reservation/success.hmtl');
-})

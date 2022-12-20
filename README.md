@@ -75,7 +75,7 @@ On the Admin side, one of the main features that I would like to include in the 
 
 Another concept that will be involved in the next round of improvments will be the re-insertion of the favicon icon that initially was installed but was removed at the last moment as it was not rendering consistenly or correctly.
 
-
+Lastly, in the next round of development for this project, I intend on adding a success and failure html pages that will link off of the confirm button in the rservation modal. There were many attempts made pre-submission to make this a possibility, however, I determined that the confirm modal was enough of an user C.R.U.D. interaction and that the additional pages would be for the net round of development.
 
 
 ## Testing and Validation
@@ -172,6 +172,22 @@ Many different sources have been used as inspiration and for multiple levels of 
 - [StackoverFlow zime zone settings](https://stackoverflow.com/questions/15980302/django-set-datetime-in-views-to-utc1) This page was used for guidance on resetting the current time for the current location time zone
 
 - [W3C validator html/css](https://validator.w3.org/#validate_by_input) these pages were used for the validation and error degubbing processes to finalize the code throughout the project to ensure that all pages met the current standards for accessability and readability.
+
+- [Django primary keys/foreign keys](https://docs.djangoproject.com/en/4.1/topics/db/models/?fbclid=IwAR1DeUwd0LjO066e5O74Ry6UyJGuK6HlQdNt6R7l-3QI8vuay_0MgyGp3XA#field-options) The Django Documentation was read and re-read nearly every day for assistance in making correct code for this project.
+
+- [Django testing processes](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
+
+- [Bootstrap flex columns and grid help](https://getbootstrap.com/docs/5.2/layout/columns/)
+
+- [Bootstrap modal information](https://getbootstrap.com/docs/5.0/components/modal/)
+
+- 
+
+
+
+
+
+
 
 
 ## Media:
