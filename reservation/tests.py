@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 from .models import Table, Reservation, TABLE_TIME_CHOICES
 from datetime import datetime
+from django import jest
 
 
 class TestReservationView(TestCase):
@@ -60,3 +61,10 @@ class TestReservationBooking(TestCase):
         self.assertFalse(result['available'])
         
         
+test_confirm_button(
+    'should open the modal and redirect to the success page', () => {
+        document.getElementById(
+    'modal-confirmation-button').click();
+        expect(
+        window.location.href).toEqual('/reservation/success.hmtl');
+})

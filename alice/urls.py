@@ -36,6 +36,8 @@ urlpatterns = [
     path('aboutus/', views.aboutus, name='aboutus'),
     path('reviews/', views.reviews, name='reviews'),
     path('signup/', views.signup, name='signup'),
+    path('success/', views.success, name='success'),
+    path('failure/', views.failure, name='failure'),
     path("", HomeScreen.as_view(), name="HomeScreen")
 ]
 

@@ -50,7 +50,7 @@ From the navigation bar, the signup page is fairly straightforward, prodding int
 Both the Sign up and Log in pages have color coded alert messages to inform the user of success or failures in their attempt to sign up, log in and log out (green for success, red for unsuccessful). ![successful alert](/media/success%20alert%20screenshot.jpg)
 
 The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering their name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/reservation%20screenshot.jpg)
-Once the user has selected their date and time, they are prompted to confirm the reservation via a popup modal that provides the opportunity to either delete the booking or to move forward and confirm their reservation time. [screenshot].
+Once the user has selected their date and time, they are prompted to confirm the reservation via a popup modal that provides the opportunity to either delete the booking or to move forward and confirm their reservation time. ![confirm pop-up modal](/media/confirm%20popup%20modal.jpg).
 
 On the back end side of this project there is a fully functioning Admin page that supports the admin with a number of options to help the fictional restuarant run and to be successful. ![Admin screenshot](/media/admin%20screenshot.jpgT). On the righthand side of the Admin page, there is a selection of options for the admin to navigate through including the options to see comments and posts, users, emails, reservations, tables and more. Each page in the admin has a display list of methods to search the various topics for ease of use and navigation. The Admin page for reservations provides controls for the reservations ![Reservations Admin](/media/table%20admin%20screenshot.jpg) and for tables and seating capacity assigned to each table ![Tables Admin](/media/Table%20Admin%202.jpg).
 
@@ -73,6 +73,8 @@ Secondly, I would like to include more background images and videos for every te
 
 On the Admin side, one of the main features that I would like to include in the next round of improvements would be to code the automatic deletion of reservations that have surpassed the reservation date. As of now, deleting reservations falls to Admin manual deletion.
 
+Another concept that will be involved in the next round of improvments will be the re-insertion of the favicon icon that initially was installed but was removed at the last moment as it was not rendering consistenly or correctly.
+
 
 
 
@@ -81,13 +83,23 @@ On the Admin side, one of the main features that I would like to include in the 
 
 This project was designed and relied upon the Red/Green/Refactor testing method for the development of many of the functions that are the highlights of the site. This method is derived in methodically using basic additions to code that build to a working function or app. 
 
-The project also uses Pep8 for code validation to ensure that all code is error free/bug free and user friendly [screenshot]
+The red/green/refractor process was especially essential for the process of building the reservation manager which controls the incoming reservation request from the user, checks for table availability by date, time and number of persons and provides a success or failure response to the user. 
+The testing process was also especially essential in the development of the JavaScript code controlling the user interaction with the confirmation button, linking the confirm modal with the success page to provide the user feedback.
+
+
+Pep8 was installed in the gitpod for developmental control ensuring that during the whole process all for the code written complied with the accessibility and readability standards.
+
+W3C html validator was used for debugging errors in all of the html pages. The one flaw that this validator has is that it does not like the python extensions and throws errors for the pythonic setups. However, it was essentail in tracking down and correcting numerous html and css bugs.
+![w3c html validator screenshot](/media/W3C%20html%20validator.jpg)
+![w3s css validator](/media/css%20validator.jpg)
+
 
 
 ## Unfixed Bugs
 ********************
 
-This project has seen a number of bugs and issues, but as of right now, there are no unfixed bugs that I am aware of (that does not mean that there are not any, it just means that I am unaware of them).
+As far as continuing unfixed bugs, there are a couple that exist that do not impede the functionality of the project:
+
 In the creation of the blog app that is the means for users to signup/log-in and leave reviews about the restaurant; there were significant issues maintaining the url connections to the project. Those url issues gave way to bugs connecting the project to the database.
 
 One of the main issues came from the migration of the database from Heroku to Elephantsql, which at one point resulted in the need to recover the database. 
@@ -97,7 +109,7 @@ As far as bugs in the actual project, there were significant issues building the
 
 The many to many object combining the reservation with the tables to save the reservation and reserve the table (checking for availability) created many bugs and error codes that needed to be systematically tracked down and solved.
 
-However, as each new issue presented itself, a solution was found to alleviate the problem.
+The favicon icon is set to appear in the browser tab for the project, to provide a symbol or icon for the user to identify the website easily on their browser, however, despite multiple attempts to create a path and test for the path to work, the icon itself has not rendered and instead provides an error code. Although this is not essential for the project, it is never the less on ongoing bug. At the last moment I decided to remove the favicon icon code as it was causing more issues while not displaying the icon; there for this will now be another concept for the next round in the future.
 
 
 ## Deployment
@@ -158,6 +170,8 @@ Many different sources have been used as inspiration and for multiple levels of 
 - [StackoverFlow many to many filters](https://stackoverflow.com/questions/2218327/django-manytomany-filter) This page was used for guidance in developing a method for preventing overlapping bookings.
 
 - [StackoverFlow zime zone settings](https://stackoverflow.com/questions/15980302/django-set-datetime-in-views-to-utc1) This page was used for guidance on resetting the current time for the current location time zone
+
+- [W3C validator html/css](https://validator.w3.org/#validate_by_input) these pages were used for the validation and error degubbing processes to finalize the code throughout the project to ensure that all pages met the current standards for accessability and readability.
 
 
 ## Media:

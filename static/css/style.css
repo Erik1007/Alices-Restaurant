@@ -9,54 +9,6 @@ body {
     color: #555555;
 }
 
-#reviews-body {
-    background-image: url('https://res.cloudinary.com/dkkxjgoqr/video/upload/v1670776181/Alices%20Restaurant/water_loop_vyifah.mp4');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-}
-
-#foodmenu-body {
-    background-image: url('https://res.cloudinary.com/dkkxjgoqr/image/upload/v1670777672/Alices%20Restaurant/harbor_view_wyevaq.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-}
-
-#barmenu-body {
-    background-image: url('https://res.cloudinary.com/dkkxjgoqr/image/upload/v1670776719/Alices%20Restaurant/over_the_sea_vfjgzx.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-}
-
-.about-us-info div {
-    z-index: 1;
-    position: relative;
-}
-
-.barmenu-div {
-    z-index: 1;
-    position: relative;
-}
-
-.foodmenu-div {
-    z-index: 1;
-    position: relative;
-}
-
 #background-video {
     background-size: cover;
     background-position: center;
@@ -151,50 +103,20 @@ footer {
 /*--------------------------------------------media quesries*/
 
 
-@include media-breakpoint-up(sm) {
-    ...
-}
+/* X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap*/
 
-@include media-breakpoint-up(md) {
-    ...
-}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {}
 
-@include media-breakpoint-up(lg) {
-    ...
-}
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
 
-@include media-breakpoint-up(xl) {
-    ...
-}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {}
 
-@include media-breakpoint-up(xxl) {
-    ...
-}
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
 
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-    ...
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-    ...
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    ...
-}
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    ...
-}
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
-    ...
-}
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {}
