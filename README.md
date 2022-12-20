@@ -204,27 +204,3 @@ Many different sources have been used as inspiration and for multiple levels of 
 - [A second harbor image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dstrandvagen&psig=AOvVaw0iiN8iburCgWVi5TFiDYJw&ust=1670863908840000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCODx6feT8vsCFQAAAAAdAAAAABAD) that was used for  background in this project.
 
 
-
-# Data schema
-
-## entities
-- User
-- Tables
-- Reservation
-- slots
-
-## Relationship
-- user makes a reservation
-- reservation are for an available slot
-- slots are free tables that can be reserved for a given datetime
-
-## schema
-
-### User    Reservation   Slot     Table
-pk          pk            pk       pk 
-username    user          table    slug/name
-            slot          date     capacity
-                          Time     location
-
-
-MOdel driven develope
