@@ -75,6 +75,8 @@ On the Admin side, one of the main features that I would like to include in the 
 
 Another concept that will be involved in the next round of improvments will be the re-insertion of the favicon icon that initially was installed but was removed at the last moment as it was not rendering consistenly or correctly.
 
+In the next round of deployment, I will reintroduce the javascript that was previously working to create a message inside of the pop up modal, that for some reason decided not to work any longer, so it was removed to prevent it from causing an other issues.
+
 Lastly, in the next round of development for this project, I intend on adding a success and failure html pages that will link off of the confirm button in the rservation modal. There were many attempts made pre-submission to make this a possibility, however, I determined that the confirm modal was enough of an user C.R.U.D. interaction and that the additional pages would be for the net round of development.
 
 
@@ -88,6 +90,8 @@ The testing process was also especially essential in the development of the Java
 
 
 Pep8 was installed in the gitpod for developmental control ensuring that during the whole process all for the code written complied with the accessibility and readability standards.
+
+Jasmine was used for javascript testing.
 
 W3C html validator was used for debugging errors in all of the html pages. The one flaw that this validator has is that it does not like the python extensions and throws errors for the pythonic setups. However, it was essentail in tracking down and correcting numerous html and css bugs.
 ![w3c html validator screenshot](/media/W3C%20html%20validator.jpg)
@@ -110,6 +114,8 @@ As far as bugs in the actual project, there were significant issues building the
 The many to many object combining the reservation with the tables to save the reservation and reserve the table (checking for availability) created many bugs and error codes that needed to be systematically tracked down and solved.
 
 The favicon icon is set to appear in the browser tab for the project, to provide a symbol or icon for the user to identify the website easily on their browser, however, despite multiple attempts to create a path and test for the path to work, the icon itself has not rendered and instead provides an error code. Although this is not essential for the project, it is never the less on ongoing bug. At the last moment I decided to remove the favicon icon code as it was causing more issues while not displaying the icon; there for this will now be another concept for the next round in the future.
+
+The javascript controlling the inner message for the pop up modal stopped working today, so instead of leaving non fucntioning script in the project, I removed it.
 
 
 ## Deployment
@@ -182,12 +188,6 @@ Many different sources have been used as inspiration and for multiple levels of 
 - [Bootstrap modal information](https://getbootstrap.com/docs/5.0/components/modal/)
 
 - 
-
-
-
-
-
-
 
 
 ## Media:

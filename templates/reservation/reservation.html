@@ -38,28 +38,8 @@
             </form>
 
 
-
-            <script>
-                const buildModalMessage = () => {
-                    let reservationGuestCount = document.querySelector('#id_number_of_persons').value
-                    let reservationDate = document.querySelector('#id_date').value
-                    let reservationTime = document.querySelector('#id_time').value
-                    let modalMessage =
-                        `Please Confirm your reservation on ${reservationDate} at ${reservationTime} for ${reservationGuestCount} guests. Thank you, we look forward to seeing you`
-                    return modalMessage
-                }
-
-                const updateModalMessage = () => {
-                    let reservationModalBody = document.querySelector('#reservationModal.modal-body')
-                    console.log(reservationModalBody)
-                    reservationModalBody.innerText = buildModalMessage()
-                    $('#reservationModal').modal('show');
-                }
-            </script>
-
         </div>
     </div>
-
 
 </main>
 
