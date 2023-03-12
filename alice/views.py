@@ -17,6 +17,10 @@ def reviews(request):
     return render(request, 'reviews.html')
 
 
+def reserve_table(request):
+    return render(request, 'reservation:reserve_table')
+
+
 def signup(request):
     return render(request, 'signup.html')
 
