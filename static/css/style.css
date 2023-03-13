@@ -9,6 +9,11 @@ body {
     color: #555555;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 #background-video {
     background-size: cover;
     background-position: center;
