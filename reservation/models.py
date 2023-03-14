@@ -10,7 +10,14 @@ import math
 class Customer():
     name = models.CharField(max_length=100)
     phone = models.IntegerField()
-    number_of_persons = models.IntegerField()
+    number_of_persons = models.PositiveIntegerField()
+
+    def clean(self):
+        if self.number_of_persons <= 0:
+            raise ValueError("Number of customers must be larger than 0")
+        if self.number_of_persons > 15:
+            raise ValidationError(
+                "Sorry, we cannot seat more than 15 customers per reservation")
 
 
 TABLE_TIME_CHOICES = [
@@ -41,9 +48,9 @@ class ReservationManager(models.Manager):
         if available.count() < requested_tables:
             return {'available': False}
         new_reservation = Reservation(
-            name=name, 
-            number_of_persons=number_of_persons, 
-            date=date, 
+            name=name,
+            number_of_persons=number_of_persons,
+            date=date,
             booking_time=booking_time)
         new_reservation.save()
 

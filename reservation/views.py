@@ -5,6 +5,8 @@ from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from .models import Reservation
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 
 def reserve_table(request):
@@ -18,7 +20,9 @@ def reserve_table(request):
                 form.cleaned_data['date'],
                 form.cleaned_data['booking_time'])
             if new_reservation['available']:
-                redirect('reservation/success.html')
+                messages.success(
+                    request, f"Reservation for {number_of_persons} customers saved!")
+            return HttpResponseRedirect(request.path_info)
     else:
         form = ReservationForm()
     context = {'form': form, "new_reservation": new_reservation}
