@@ -20,8 +20,8 @@ def reserve_table(request):
                 form.cleaned_data['date'],
                 form.cleaned_data['booking_time'])
             if new_reservation['available']:
-                messages.success(
-                    request, f"Reservation for {number_of_persons} customers saved!")
+                messages.success(request, 
+                f"Reservation for {number_of_persons} customers saved!")
             return HttpResponseRedirect(request.path_info)
     else:
         form = ReservationForm()

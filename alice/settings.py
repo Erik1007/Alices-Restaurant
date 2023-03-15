@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'crispy_forms',
+    'crispy_bootstrap4',
     "debug_toolbar",
     'bootstrap_datepicker_plus',
     'bootstrap4',

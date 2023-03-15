@@ -69,7 +69,7 @@ class ReservationManager(models.Manager):
 
 class Reservation(models.Model):
     name = models.CharField(max_length=150)
-    number_of_persons = models.IntegerField()
+    number_of_persons = models.PositiveIntegerField()
     date = models.DateField(default=timezone.now)
     tables = models.ManyToManyField(
         'reservation.Table', related_name='reservations')
