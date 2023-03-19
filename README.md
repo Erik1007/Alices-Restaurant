@@ -47,10 +47,23 @@ In the middle section of the footer, the user can find interactive shortcut link
 
 From the navigation bar, the signup page is fairly straightforward, prodding interactive prompts for the user to create a log in username and password to be a member of the restaurant.![sign-up screenshot](/media/signup%20screenshot.jpg) The second link from the navigation bar is for member to log in so that they can leave a review or comment on the review page.![sign-in screenshot](/media/signin%20screenshot.jpg) The next link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection.![alt text](image_url) After the food menu, the following link provides the option for the user to the next main reason to visit the restaurant, its incredible and vast selection of drinks, which are fully described in the drink menu.![alt text](image_url) From there the navigation bar provides the user to see other customers thoughts/opinions of the restaurant and dining experience on the review page.![review page](/media/reviews%20screenshot.jpg) And finally the navigation bar provides the customer the link to the reservation system so that they can make their booking.![alt text](image_url)
 
+
 Both the Sign up and Log in pages have color coded alert messages to inform the user of success or failures in their attempt to sign up, log in and log out (green for success, red for unsuccessful). ![successful alert](/media/success%20alert%20screenshot.jpg)
 
+
 The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering their name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/reservation%20screenshot.jpg)
+
+
 Once the user has selected their date and time, they are prompted to confirm the reservation via a popup modal that provides the opportunity to either delete the booking or to move forward and confirm their reservation time. ![confirm pop-up modal](/media/confirm%20popup%20modal.jpg).
+
+
+Included in the reservation system there are controls that interact with the user. For example, if the user enters a number that is not larger than 1, they get a warning message ![number of people warning](/media/number%20of%20people.jpg).
+
+
+In the case the user accidently enters a date that is in the 'past', an interactive pop-up warning explaining that they need to enter a valid date ![past date pop up](/media/past%20date.jpg)
+
+And when the user enters a valid number of guests along with a valid date and time, they get a success message ![success message](/media/success%20message.jpg)
+
 
 On the back end side of this project there is a fully functioning Admin page that supports the admin with a number of options to help the fictional restuarant run and to be successful. ![Admin screenshot](/media/admin%20screenshot.jpgT). On the righthand side of the Admin page, there is a selection of options for the admin to navigate through including the options to see comments and posts, users, emails, reservations, tables and more. Each page in the admin has a display list of methods to search the various topics for ease of use and navigation. The Admin page for reservations provides controls for the reservations ![Reservations Admin](/media/table%20admin%20screenshot.jpg) and for tables and seating capacity assigned to each table ![Tables Admin](/media/Table%20Admin%202.jpg).
 
