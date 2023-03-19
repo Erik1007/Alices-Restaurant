@@ -210,6 +210,7 @@ The favicon icon is set to appear in the browser tab for the project, to provide
 
 
 There are multiple provides supporting the deployment of this project: 
+
 The code was written and stored in the[Alices restaurant GitHub repository](https://github.com/Erik1007/Alices-Restaurant). 
 This was migrated to [Heroku Alices restaurant](https://dashboard.heroku.com/apps/alices-restaurant-eh) to deploy the imbedded Django and python code. 
 
