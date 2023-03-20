@@ -51,7 +51,7 @@ On the top of the main page there is a **Navigation Bar** that allows the user t
 
 At the bottom of the main page the **Footer** can be found. In the footer section alot of vital business information can be found. On the left hand side there is a column providing the important business information for the **Address Location**, **Phone Number** and the email, along with a link to **Google Maps** that provides an interactive geo-location for the restaurant.
 In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the website. On the right hand side of the footer, the last of the vital information is found concerning the **Opening Hours** and **Social Links** to the major social networks. 
-![footer screenshot](/media/footer%20screenshot.jpg)
+![footer screenshot](/media/footer%20new.jpg)
 
 
 ********************
@@ -87,7 +87,7 @@ After the food menu, the fifth link provides the option for the user to the next
 
 
 The sixth link in the Navigation bar moves the user internally in the website to the operational opening hours so that the user knows when they can visit the restaurant.
-![footer screenshot](/media/footer%20screenshot.jpg)
+![footer screenshot](/media/footer%20new.jpg)
 
 ********************
 ## Reviews Page
