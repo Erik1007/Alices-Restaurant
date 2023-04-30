@@ -18,8 +18,6 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from blog.views import HomeScreen
-
 
 from . import views
 
@@ -34,7 +32,7 @@ urlpatterns = [
     path('aboutus/', views.aboutus, name='aboutus'),
     path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
-    path("", HomeScreen.as_view(), name="HomeScreen")
+    path("", Home.as_view(), name="home")
 ]
 
 if settings.DEBUG:
