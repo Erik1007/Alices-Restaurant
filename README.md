@@ -47,24 +47,12 @@ This main page uses a looping background video that shows many highlights of the
 
 On the main page, just below the main background video, there is a link that whisks the user to the booking system, for those that instantly want to come join us for a good time, so that they can start interacting with the website and entering information.
 
-On the top of the main page there is a **Navigation Bar** that allows the user to easily move from page to page of the restaurant to fully explore and become enticed by the restaurant. This navigation bar is present on every page, along with the footer for easy navigation through the website. Links to the **Register Page**, the **Food Menu** and **Drink menu's**, the **About us** page telling a bit of a fictional backstory and of course to the **Book a Table page**. 
+On the top of the main page there is a **Navigation Bar** that allows the user to easily move from page to page of the restaurant to fully explore and become enticed by the restaurant. This navigation bar is present on every page, along with the footer for easy navigation through the website. Links to the **Food Menu** and **Drink menu's**, the **About us** page telling a bit of a fictional backstory and of course to the **Book a Table page**. 
 
 At the bottom of the main page the **Footer** can be found. In the footer section alot of vital business information can be found. On the left hand side there is a column providing the important business information for the **Address Location**, **Phone Number** and the email, along with a link to **Google Maps** that provides an interactive geo-location for the restaurant.
 In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the website. On the right hand side of the footer, the last of the vital information is found concerning the **Opening Hours** and **Social Links** to the major social networks. 
 ![footer screenshot](/media/footer%20new.jpg)
 
-
-********************
-## Register/ Log-In Pages
-
-
-The second and third links after the home link in the navigation bar, are the **Register** and **Login** links that provide interactive prompts for the user to create a **log in username** and **password** to be a member of the restaurant.The second link from the navigation bar is for member to log in so that they can leave a review or comment on the review page.
-![sign-up screenshot](/media/signup%20screenshot.jpg) 
-![sign-in screenshot](/media/signin%20screenshot.jpg) 
-
-
-Both the Sign up and Log in pages have **color coded alert messages** to inform the user of success or failures in their attempt to sign up, log in and log out (green for success, red for unsuccessful). 
-![successful alert](/media/success%20alert%20screenshot.jpg)
 
 
 ********************
@@ -88,13 +76,6 @@ After the food menu, the fifth link provides the option for the user to the next
 
 The sixth link in the Navigation bar moves the user internally in the website to the operational opening hours so that the user knows when they can visit the restaurant.
 ![footer screenshot](/media/footer%20new.jpg)
-
-********************
-## Reviews Page
-
-
-From there the navigation bar's seventh link provides the user the ability to see other customers thoughts/opinions of the restaurant and dining experience on the review page.
-![review page](/media/reviews%20screenshot.jpg)
 
 
 ********************
