@@ -27,15 +27,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
     path('summernote/', include('django_summernote.urls')),
-    path("accounts/", include("allauth.urls")),
     path('reserve_table/', include(
         'reservation.urls', namespace='reservation')),
-    path("reviews/", include("blog.urls"), name="blog"),
     path('menu/', views.menu, name='menu'),
     path('barmenu/', views.barmenu, name='barmenu'),
     path('aboutus/', views.aboutus, name='aboutus'),
-    path('reviews/', views.reviews, name='reviews'),
-    path('signup/', views.signup, name='signup'),
     path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
     path("", HomeScreen.as_view(), name="HomeScreen")

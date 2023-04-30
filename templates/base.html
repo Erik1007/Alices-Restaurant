@@ -5,6 +5,10 @@
 
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -41,18 +45,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'HomeScreen' %}">Home</a>
                     </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'menu' %}"> Menu</a>
                     </li>
@@ -61,9 +53,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">Contact / Hours</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
@@ -129,10 +118,6 @@
                     <a href="{% url 'barmenu' %}">Drinks Menu</a>
                     <br>
                     <a href="{% url 'aboutus' %}">About Us</a>
-                    <br>
-                    <a href="{% url 'account_signup' %}">Sign Up</a>
-                    <br>
-                    <a href="{% url 'reviews' %}">Reviews</a>
                     <br>
             </div>
             <div class="col-sm-4">
