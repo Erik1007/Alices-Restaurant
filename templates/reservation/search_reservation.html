@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Search Reservations</h1>
+<form action="{% url 'search_reservation' %}" method="get">
+    <label for="id">Reservation ID:</label>
+    <input type="text" id="id" name="id">
+    <br>
+    <label for="name">Reservation Name:</label>
+    <input type="text" id="name" name="name">
+    <br>
+    <br>
+    <button type="submit">Search</button>
+    <input type="submit" value="Search">
+</form>
+{% endblock %}

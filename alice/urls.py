@@ -28,6 +28,14 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('reserve_table/', include(
         'reservation.urls', namespace='reservation')),
+    path('search_reservation/', include(
+        'reservation.urls', namespace='search_reservation')),
+    path('update_reservation/', include(
+        'reservation.urls', namespace='update_reservation')),
+    path('delete_reservation/', include(
+        'reservation.urls', namespace='delete_reservation')),
+    path('reservation_details/', include(
+        'reservation.urls', namespace='reservation_details')),
     path('menu/', views.menu, name='menu'),
     path('barmenu/', views.barmenu, name='barmenu'),
     path('aboutus/', views.aboutus, name='aboutus'),

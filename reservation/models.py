@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.db import models
 from django.core.exceptions import ValidationError
 import math
+import uuid
 
 
 class Customer():
@@ -68,6 +69,7 @@ class ReservationManager(models.Manager):
 
 
 class Reservation(models.Model):
+    reservation_id = models.UUIDField(default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=150)
     number_of_persons = models.PositiveIntegerField()
     date = models.DateField(default=timezone.now)
@@ -79,7 +81,7 @@ class Reservation(models.Model):
     objects = ReservationManager()
 
     def __str__(self):
-        return self.name
+        return f'{self.name} ({self.reservation_id})'
         
 
 class Table(models.Model):
