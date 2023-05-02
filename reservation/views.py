@@ -14,15 +14,15 @@ def reserve_table(request):
     new_reservation = {}
     if request.method == 'POST':
         form = ReservationForm(request.POST)
-        if form.is_valid():           
-            reservation_date = form.cleaned_data['date']            
+        if form.is_valid():          
+            reservation_date = form.cleaned_data['date']           
 
             bad_reservation = False
             if reservation_date < timezone.now().date():
                 messages.warning(
                     request, "Reservation date cannot be in the past.")
                 bad_reservation = True
-            
+           
             if form.cleaned_data['number_of_persons'] < 1:
                 messages.warning(
                     request, "Reservation must be at least one person.")
@@ -40,10 +40,10 @@ def reserve_table(request):
             if new_reservation['available']:
                 messages.success(
                     request, f"Reservation made successfully for {form.cleaned_data['number_of_persons']}")
-                url = reverse('reservation/reservation_details', args=[new_reservation.id])
+                url = reverse('reservation_details', args=[new_reservation['id']])
                 return HttpResponseRedirect(url)
+
             else:
-                #not available
                 context = {'form': form, "new_reservation": new_reservation}
                 messages.warning(
                     request, "There are no tables available at this time for this number of people")
@@ -53,6 +53,11 @@ def reserve_table(request):
         form = ReservationForm()
     context = {'form': form, "new_reservation": new_reservation}
     return render(request, 'reservation/reservation.html', context)
+
+
+def reservation_details(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    return render(request, 'reservation/reservation_details.html', {'reservation': reservation})
 
 
 def search_reservation(request):

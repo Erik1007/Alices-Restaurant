@@ -23,6 +23,22 @@ def reserve_table(request):
     return render(request, 'reservation:reserve_table')
 
 
+def reservation_details(request):
+    return render(request, 'reservation:reservation_details')
+
+
+def search_reservation(request):
+    return render(request, 'reservation:search_reservation')
+
+
+def update_reservation(request):
+    return render(request, 'reservation:update_reservation')
+
+
+def delete_reservation(request):
+    return render(request, 'reservation:delete_reservation')
+
+
 def success(request):
     return render(request, 'success.html')
     
