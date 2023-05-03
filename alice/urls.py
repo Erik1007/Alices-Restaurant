@@ -27,18 +27,14 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('reserve_table/', include(
-        'reservation.urls', namespace='reservation')),
-    path('search_reservation/', include(
-        'reservation.urls', namespace='search_reservation')),
-    path('update_reservation/', include(
-        'reservation.urls', namespace='update_reservation')),
-    path('delete_reservation/', include(
-        'reservation.urls', namespace='delete_reservation')),
-    path('reservation_details/', include(
-        'reservation.urls', namespace='reservation_details')),
+        'reservation.urls', namespace='reservation')), 
     path('menu/', views.menu, name='menu'),
     path('barmenu/', views.barmenu, name='barmenu'),
     path('aboutus/', views.aboutus, name='aboutus'),
+    path('search_reservation/', views.search_reservation, name='search_reservation'),
+    path('reservation_details/', views.reservation_details, name='reservation_details'),
+    path('update_reservation/', views.update_reservation, name='update_reservation'),
+    path('delete_reservation/', views.delete_reservation, name='delete_reservation'),
     path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
     path("", HomeScreen.as_view(), name="HomeScreen")

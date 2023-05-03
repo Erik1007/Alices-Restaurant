@@ -41,7 +41,7 @@ def reserve_table(request):
                 messages.success(
                     request, f"Reservation made successfully for {form.cleaned_data['number_of_persons']}")
                 url = reverse('reservation_details', args=[new_reservation['id']])
-                return HttpResponseRedirect(url)
+                return redirect('reservation_details', reservation_id=new_reservation['id'])
 
             else:
                 context = {'form': form, "new_reservation": new_reservation}
@@ -53,11 +53,6 @@ def reserve_table(request):
         form = ReservationForm()
     context = {'form': form, "new_reservation": new_reservation}
     return render(request, 'reservation/reservation.html', context)
-
-
-def reservation_details(request, reservation_id):
-    reservation = get_object_or_404(Reservation, id=reservation_id)
-    return render(request, 'reservation/reservation_details.html', {'reservation': reservation})
 
 
 def search_reservation(request):
@@ -80,6 +75,11 @@ def update_reservation(request, reservation_id):
     else:
         form = ReservationForm(instance=reservation)
     return render(request, 'reservation_details.html', {'form': form})
+
+
+def reservation_details(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    return render(request, 'reservation/reservation_details.html', {'reservation': reservation})
 
 
 def delete_reservation(request, pk):
