@@ -79,7 +79,7 @@ def update_reservation(request, reservation_id):
 
 def reservation_details(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id)
-    return render(request, 'reservation/reservation_details.html', {'reservation': reservation})
+    return render(request, 'reservation_details.html', {'reservation': reservation})
 
 
 def delete_reservation(request, pk):

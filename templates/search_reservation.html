@@ -9,7 +9,6 @@
     <label for="name">Reservation Name:</label>
     <input type="text" id="name" name="name">
     <br>
-    <br>
-    <input type="submit" value="Search">
+    <a href="{% url 'reservation_details' reservation.id %}" class="btn btn-primary">Search</a>
 </form>
 {% endblock %}
