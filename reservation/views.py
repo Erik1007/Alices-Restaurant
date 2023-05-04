@@ -41,7 +41,8 @@ def reserve_table(request):
                 messages.success(
                     request, f"Reservation made successfully for {form.cleaned_data['number_of_persons']}")
                 url = reverse('reservation_details', args=[new_reservation['id']])
-                return redirect('reservation_details', reservation_id=new_reservation['id'])
+                return redirect(
+                    'reservation_details', reservation_name=new_reservation['name'], reservation_id=new_reservation['id'])
 
             else:
                 context = {'form': form, "new_reservation": new_reservation}
@@ -56,9 +57,9 @@ def reserve_table(request):
 
 
 def search_reservation(request):
-    if request.method == 'POST':
-        reservation_id = request.POST.get('reservation_id')
-        reservation = get_object_or_404(Reservation, id=reservation_id)
+    if request.method == 'GET':
+        reservation_name = request.POST.get('reservation_name')
+        reservation = get_object_or_404(Reservation, name=reservation_name)
         return render(
             request, 'update_reservation.html', {'reservation': reservation})
     else:
@@ -66,7 +67,7 @@ def search_reservation(request):
 
 
 def update_reservation(request, reservation_id):
-    reservation = get_object_or_404(Reservation, id=reservation_id)
+    reservation = get_object_or_404(Reservation, name=reservation_name)
     if request.method == 'POST':
         form = ReservationForm(request.POST, instance=reservation)
         if form.is_valid():
@@ -77,13 +78,13 @@ def update_reservation(request, reservation_id):
     return render(request, 'reservation_details.html', {'form': form})
 
 
-def reservation_details(request, reservation_id):
-    reservation = get_object_or_404(Reservation, id=reservation_id)
+def reservation_details(request, reservation_name):
+    reservation = get_object_or_404(Reservation, name=name)
     return render(request, 'reservation_details.html', {'reservation': reservation})
 
 
-def delete_reservation(request, pk):
-    reservation = get_object_or_404(Reservation, pk=pk)
+def delete_reservation(request, reservation_name):
+    reservation = get_object_or_404(Reservation, name=reservation_name)
     if request.method == 'POST':
         reservation.delete()
         messages.success(
