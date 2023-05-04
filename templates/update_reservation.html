@@ -19,7 +19,7 @@
                     <a href="{% url 'success' %}" class="btn btn-primary">Confirm</a>
                     <form action="{% url 'delete_reservation' reservation.id %}" method="post">
                         {% csrf_token %}
-                        <a href="{% url 'delete_reservation' reservation.id %}">Delete Reservation</a>
+                        <a href="{% url 'delete_reservation' %}">Delete Reservation</a>
                     </form>
                     <br>
                 </div>
