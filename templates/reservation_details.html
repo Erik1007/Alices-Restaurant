@@ -14,7 +14,8 @@
       <form action="{% url 'delete_reservation' %}" method="post">
         {% csrf_token %}
         <div class="d-flex justify-content-center flex-wrap">
-          <a href="{% url 'delete_reservation' %}" class="btn btn-outline-primary align-items-center">Delete
+          <a href="{% url 'delete_reservation' reservation.id %}"
+            class="btn btn-outline-primary align-items-center">Delete
             Reservation</a>
 
           <a href="{% url 'reservation:reserve_table' %}" class="btn btn-outline-primary align-items-center">Change

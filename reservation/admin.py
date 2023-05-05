@@ -4,12 +4,12 @@ from .models import Customer, Reservation, Table
 
 class AdminReservation(admin.ModelAdmin):
     list_display = [
-        'name', 'number_of_persons', 'reservation_id',
+        'name', 'email', 'number_of_persons', 'reservation_id',
     ]
     list_filter = [
         'date', 'booking_time', 'reservation_id',
     ]
-    actions = ['approve_reservation']
+    actions = ['approve_reservation', 'delete_reservation']
 
 
 class AdminTable(admin.ModelAdmin):

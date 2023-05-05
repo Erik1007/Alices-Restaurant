@@ -7,7 +7,7 @@
         <div class="col-xs-12 col-md-6">
             <h2>Search Reservations</h2>
             <div class="d-flex justify-content-center flex-wrap">
-                <form action="{% url 'search_reservation' %}" method="get">
+                <form id="search-form" action="{% url 'search_reservation' %}" method="get">
                     <label for="query">Search for Reservation:</label>
                     <br>
                     <input type="text" id="name" name="search_by[]" value="" checked>
@@ -19,11 +19,37 @@
                     <input type="text" id="id" name="search_by[]" value="">
                     <label for="id">Reservation ID #</label>
                     <br>
-                    <a href="{% url 'reservation_details' %}" class="btn btn-primary">Search</a>
+                    <a href="{% url 'reservation_details' %}" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" onclick="submitForm()">Search</button>
+                    </a>
                 </form>
             </div>
         </div>
     </div>
 </main>
+
+
+<script>
+    function submitForm() {
+        document.getElementById('search-form').submit();
+        // Set the href attribute of the search-link to include the search parameters
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var id = document.getElementById('id').value;
+        var href = "{% url 'reservation_details' %}?";
+        if (name) {
+            href += "name=" + name + "&";
+        }
+        if (email) {
+            href += "email=" + email + "&";
+        }
+        if (id) {
+            href += "id=" + id + "&";
+        }
+        // Remove the trailing '&' character
+        href = href.slice(0, -1);
+        document.getElementById('search-link').href = href;
+    }
+</script>
 
 {% endblock %}

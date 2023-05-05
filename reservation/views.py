@@ -85,15 +85,11 @@ def reservation_details(request, reservation_name):
     return render(request, 'reservation_details.html', {'reservation': reservation})
 
 
-def delete_reservation(request, reservation_name):
-    reservation = get_object_or_404(Reservation, name=reservation_name)
+def delete_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
     if request.method == 'POST':
         reservation.delete()
-        messages.success(
-            request, f"Reservation for {reservation.name} has been deleted.")
-        return redirect('home')
-    context = {'reservation': reservation}
-    return render(request, 'reservation/reservation.html', context)
+    return render(request, 'delete_reservation.html')
 
 
 def table_booking(request):
