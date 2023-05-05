@@ -57,11 +57,13 @@ def reserve_table(request):
 
 
 def search_reservation(request):
-    if request.method == 'GET':
+    if request.method == 'POST':
         reservation_name = request.POST.get('reservation_name')
         reservation = get_object_or_404(Reservation, name=reservation_name)
+        reservation_id = request.POST.get('reservation_id')
+        reservation = get_object_or_404(Reservation, id=reservation_id)
         return render(
-            request, 'update_reservation.html', {'reservation': reservation})
+            request, 'reservation_details.html', {'reservation': reservation})
     else:
         return render(request, 'search_reservation.html')
 

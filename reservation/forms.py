@@ -11,7 +11,7 @@ class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservation
         tables = forms.CharField(label='Tables', max_length=50)
-        fields = ["name", "number_of_persons", "date", "booking_time"]
+        fields = ["name", "email", "number_of_persons", "date", "booking_time"]
         widgets = {
              "date": DatePickerInput()}
 

@@ -8,9 +8,9 @@ import math
 import uuid
 
 
-class Customer():
+class Customer(models.Model):
     name = models.CharField(max_length=100)
-    phone = models.IntegerField()
+    emai = models.EmailField(max_length=200)
     number_of_persons = models.PositiveIntegerField()
 
     def clean(self):
@@ -33,7 +33,7 @@ TABLE_TIME_CHOICES = [
 
 class ReservationManager(models.Manager):
     def make_reservation(
-            self, name, number_of_persons, date, booking_time):
+            self, name, email, number_of_persons, date, booking_time):
         existing_reservations = Reservation.objects.filter(
             date=date, booking_time=booking_time)
         used_tables = existing_reservations.values('tables')
@@ -50,6 +50,7 @@ class ReservationManager(models.Manager):
             return {'available': False}
         new_reservation = Reservation(
             name=name,
+            email=email,
             number_of_persons=number_of_persons,
             date=date,
             booking_time=booking_time)
@@ -71,6 +72,7 @@ class ReservationManager(models.Manager):
 class Reservation(models.Model):
     reservation_id = models.UUIDField(default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=150)
+    email = models.EmailField(max_length=200)
     number_of_persons = models.PositiveIntegerField()
     date = models.DateField(default=timezone.now)
     tables = models.ManyToManyField(
@@ -79,6 +81,11 @@ class Reservation(models.Model):
         max_length=50, default=1, choices=TABLE_TIME_CHOICES)
 
     objects = ReservationManager()
+
+    def save(self, *args, **kwargs):
+        if not self.reservation_id:
+            self.id = self.generate_reservation_id()
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f'{self.name} ({self.reservation_id})'
