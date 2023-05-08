@@ -72,7 +72,7 @@ class ReservationManager(models.Manager):
 class Reservation(models.Model):
     reservation_id = models.UUIDField(default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=150)
-    email = models.EmailField(max_length=200)
+    email = models.EmailField(max_length=200, default='example@example.com')
     number_of_persons = models.PositiveIntegerField()
     date = models.DateField(default=timezone.now)
     tables = models.ManyToManyField(
