@@ -15,7 +15,7 @@ def reserve_table(request):
     if request.method == 'POST':
         form = ReservationForm(request.POST)
         if form.is_valid():          
-            reservation_date = form.cleaned_data['date']           
+            reservation_date = form.cleaned_data['date']          
 
             bad_reservation = False
             if reservation_date < timezone.now().date():
