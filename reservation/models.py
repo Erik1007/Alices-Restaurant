@@ -10,7 +10,7 @@ import uuid
 
 class Customer(models.Model):
     name = models.CharField(max_length=100)
-    emai = models.EmailField(max_length=200)
+    email = models.EmailField(max_length=200)
     number_of_persons = models.PositiveIntegerField()
 
     def clean(self):

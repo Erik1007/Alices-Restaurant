@@ -34,6 +34,7 @@ def reserve_table(request):
             
             new_reservation = Reservation.objects.make_reservation(
                 form.cleaned_data['name'],
+                form.cleaned_data['email'],
                 form.cleaned_data['number_of_persons'],
                 form.cleaned_data['date'],
                 form.cleaned_data['booking_time'])
@@ -41,8 +42,7 @@ def reserve_table(request):
                 messages.success(
                     request, f"Reservation made successfully for {form.cleaned_data['number_of_persons']}")
                 url = reverse('reservation_details', args=[new_reservation['id']])
-                return redirect(
-                    'reservation_details', reservation_name=new_reservation['name'], reservation_id=new_reservation['id'])
+                return redirect('reservation_details', reservation_id=new_reservation['reservation_id'])
 
             else:
                 context = {'form': form, "new_reservation": new_reservation}
