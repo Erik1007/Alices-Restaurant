@@ -4,7 +4,7 @@ from .forms import ReservationForm
 from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 from django.utils import timezone
 from django.views.generic import CreateView
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from .models import Reservation
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -41,7 +41,7 @@ def reserve_table(request):
             if new_reservation['available']:
                 messages.success(
                     request, f"Reservation made successfully for {form.cleaned_data['number_of_persons']}")
-                url = reverse('reservation_details', args=[new_reservation['id']])
+                url = reverse('success', args=[new_reservation['id']])
                 return redirect('reservation_details', reservation_id=new_reservation['reservation_id'])
 
             else:
@@ -54,6 +54,11 @@ def reserve_table(request):
         form = ReservationForm()
     context = {'form': form, "new_reservation": new_reservation}
     return render(request, 'reservation/reservation.html', context)
+
+
+def confirm_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, reservation_id=reservation_id)
+    return render(request, 'success.html', {'reservation': reservation})
 
 
 def search_reservation(request):
