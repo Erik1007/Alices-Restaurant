@@ -20,7 +20,7 @@
                     <label for="id">Reservation ID #</label>
                     <br>
                     <a href="{% url 'reservation_details' %}" class="btn btn-primary">
-                        <button type="submit" class="btn btn-primary" onclick="submitForm()">Search</button>
+                        <button type="submit" class="btn btn-primary" onclick="search_reservation">Search</button>
                     </a>
                 </form>
             </div>
@@ -28,28 +28,5 @@
     </div>
 </main>
 
-
-<script>
-    function submitForm() {
-        document.getElementById('search-form').submit();
-        // Set the href attribute of the search-link to include the search parameters
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var id = document.getElementById('id').value;
-        var href = "{% url 'reservation_details' %}?";
-        if (name) {
-            href += "name=" + name + "&";
-        }
-        if (email) {
-            href += "email=" + email + "&";
-        }
-        if (id) {
-            href += "id=" + id + "&";
-        }
-        // Remove the trailing '&' character
-        href = href.slice(0, -1);
-        document.getElementById('search-link').href = href;
-    }
-</script>
 
 {% endblock %}

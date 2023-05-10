@@ -4,7 +4,8 @@ from .models import Customer, Reservation, Table
 
 
 class AdminReservation(admin.ModelAdmin):
-    list_display = ('name', 'email', 'date', 'booking_time', 'number_of_persons')
+    list_display = ('name', 'email', 'date', 'booking_time',
+                    'number_of_persons')
     search_fields = ['name', 'email', 'id']
     
     def save_model(self, request, obj, form, change):
