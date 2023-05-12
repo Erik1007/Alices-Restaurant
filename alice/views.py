@@ -23,6 +23,14 @@ def reserve_table(request):
     return render(request, 'reservation:reserve_table')
 
 
+def my_booking(request):
+    return render(request, 'search_reservation.html')
+
+
+def confirm_reservation(request):
+    return render(request, 'success.html')
+
+
 def reservation_details(request):
     return render(request, 'reservation_details.html')
 

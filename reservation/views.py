@@ -61,6 +61,10 @@ def confirm_reservation(request, reservation_id):
     return render(request, 'success.html', {'reservation': reservation})
 
 
+def my_booking(request):
+    return render(request, 'search_reservations.html')
+
+
 def search_reservation(request):
     if request.method == 'POST':
         reservation_name = request.POST.get('reservation_name')
@@ -85,7 +89,7 @@ def update_reservation(request, reservation_id):
     return render(request, 'search_reservation.html', {'form': form})
 
 
-def reservation_details(request, reservation_name):
+def reservation_details(request, reservation_id):
     reservation = get_object_or_404(Reservation, name=name)
     return render(request, 'reservation_details.html', {'reservation': reservation})
 
