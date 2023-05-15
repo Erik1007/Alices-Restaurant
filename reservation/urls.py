@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import search_reservation, delete_reservation, update_reservation, my_booking
+from .views import search_reservation, delete_reservation, update_reservation, my_booking, confirm_reservation
 
 
 app_name = "reservation"

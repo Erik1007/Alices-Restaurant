@@ -21,6 +21,9 @@ from django.conf.urls.static import static
 from alice.views import HomeScreen
 
 from . import views
+from reservation import views as reservation_views
+from reservation.views import confirm_reservation, search_reservation, reservation_details, delete_reservation, my_booking
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,15 +35,15 @@ urlpatterns = [
     path('barmenu/', views.barmenu, name='barmenu'),
     path('aboutus/', views.aboutus, name='aboutus'),
     path('my_booking/', views.my_booking, name='my_booking'),
-    path('confirm_reservation/<str:reservation_id>/', views.confirm_reservation,
-         name='confirm_reservation'),
-    path('search_reservation/<reservation_id>/', views.search_reservation,
+    path('confirm_reservation/<str:reservation_id>/', confirm_reservation,
+         name='confirm_reservation'),        
+    path('search_reservation/<str:reservation_id>/', views.search_reservation,
          name='search_reservation'),
-    path('reservation_details/<reservation_id>/',
+    path('reservation_details/<str:reservation_id>/',
          views.reservation_details, name='reservation_details'),
-    path('update_reservation/<reservation_id>/', views.update_reservation,
+    path('update_reservation/<str:reservation_id>/', views.update_reservation,
          name='update_reservation'),
-    path('delete_reservation/<reservation_id>/', views.delete_reservation,
+    path('delete_reservation/<str:reservation_id>/', views.delete_reservation,
          name='delete_reservation'),
     path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
