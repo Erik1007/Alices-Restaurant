@@ -28,22 +28,22 @@ def my_booking(request):
 
 
 def confirm_reservation(request):
-    return render(request, 'success.html')
+    return render(request, 'reservation:confirm_reservation')
 
 
-def reservation_details(request):
+def reservation_details(request, reservation_id):
     return render(request, 'reservation_details.html')
 
 
-def search_reservation(request):
+def search_reservation(request, reservation_id):
     return render(request, 'search_reservation.html')
 
 
-def update_reservation(request):
+def update_reservation(request, reservation_id):
     return render(request, 'update_reservation.html')
 
 
-def delete_reservation(request):
+def delete_reservation(request, reservation_id):
     return render(request, 'delete_reservation.html')
 
 

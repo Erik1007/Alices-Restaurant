@@ -41,8 +41,8 @@ def reserve_table(request):
             if new_reservation['available']:
                 messages.success(
                     request, f"Reservation made successfully for {form.cleaned_data['number_of_persons']}")
-                url = reverse('success.html', args=[new_reservation['id']])
-                return redirect('reservation_details.html', reservation_id=new_reservation['reservation_id'])
+                url = reverse('confirm_reservation', kwargs={'reservation_id': new_reservation['id']})
+                return redirect(url)
 
             else:
                 context = {'form': form, "new_reservation": new_reservation}
