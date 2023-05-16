@@ -6,11 +6,12 @@
   <div class="row justify-content-center">
     <div class="col-xs-12 col-md-6">
       <form action="{% url 'confirm_reservation' %}">
-        <h2>Reservation Details</h2>
+        <h2>Thank you for booking with us, here are your details:</h2>
         <p><strong>Reservation Name:</strong> {{ reservation.name }}</p>
         <p><strong>Email:</strong> {{ reservation.email }}</p>
         <p><strong>Reservation Date:</strong> {{ reservation.date }}</p>
         <p><strong>Reservation Time:</strong> {{ reservation.get_booking_time_display }}</p>
+        <p><strong>Reservation ID:</strong> {{ reservation.id }}</p>
       </form>
       <br>
       <form action="{% url 'delete_reservation' %}" method="POST">
@@ -19,7 +20,11 @@
           <a href="{% url 'delete_reservation' reservation.id %}" class="btn btn-outline-primary align-items-center">
             <button type="submit" class="btn btn-primary">Delete
               Reservation</button></a>
+      </form>
 
+      <form action="{% url 'update_reservation' %}" method="GET">
+        {% csrf_token %}
+        <div class="d-flex justify-content-center flex-wrap">
           <a href="{% url 'reservation:reserve_table' %}" class="btn btn-outline-primary align-items-center">
             <button type="submit" class="btn btn-primary">Change
               Reservation</button></a>

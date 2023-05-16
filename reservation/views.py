@@ -4,10 +4,11 @@ from .forms import ReservationForm
 from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 from django.utils import timezone
 from django.views.generic import CreateView
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse
 from .models import Reservation
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+import uuid
 
 
 def reserve_table(request):
@@ -39,9 +40,9 @@ def reserve_table(request):
                 form.cleaned_data['date'],
                 form.cleaned_data['booking_time'])
             if new_reservation['available']:
-                messages.success(
-                    request, f"Reservation made successfully for {form.cleaned_data['number_of_persons']}")
-                url = reverse('confirm_reservation', kwargs={'reservation_id': new_reservation['id']})
+                url = reverse(
+                    'reservation_details', args=[new_reservation[
+                        'reservation_id']])
                 return redirect(url)
 
             else:
@@ -58,7 +59,8 @@ def reserve_table(request):
 
 def confirm_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, reservation_id=reservation_id)
-    return render(request, 'success.html', {'reservation': reservation})
+    return render(
+        request, 'reservation_details.html', {'reservation': reservation})
 
 
 def my_booking(request):
@@ -90,11 +92,12 @@ def update_reservation(request, reservation_id):
 
 
 def reservation_details(request, reservation_id):
-    reservation = get_object_or_404(Reservation, name=name)
-    return render(request, 'reservation_details.html', {'reservation': reservation})
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    return render(request, 'reservation_details.html', {'reservation': reservation_id})
 
 
-def delete_reservation(request, reservation_id):
+def delete_reservation(request):
+    reservation_id = request.POST["reservation_id"]
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     if request.method == 'POST':
         reservation.delete()

@@ -65,7 +65,8 @@ class ReservationManager(models.Manager):
 
         return {
             "available": True,
-            "tables": new_reservation.tables
+            "tables": new_reservation.tables,
+            "reservation_id": new_reservation.id
         }
 
 

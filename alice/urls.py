@@ -22,29 +22,27 @@ from alice.views import HomeScreen
 
 from . import views
 from reservation import views as reservation_views
-from reservation.views import confirm_reservation, search_reservation, reservation_details, delete_reservation, my_booking
+from reservation.views import confirm_reservation, search_reservation, reservation_details, delete_reservation, my_booking, reserve_table, update_reservation
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
     path('summernote/', include('django_summernote.urls')),
-    path('reserve_table/', include(
-        'reservation.urls', namespace='reservation')),
+    path('reserve_table/', reserve_table, name='reserve_table'),
     path('menu/', views.menu, name='menu'),
     path('barmenu/', views.barmenu, name='barmenu'),
     path('aboutus/', views.aboutus, name='aboutus'),
-    path('my_booking/', views.my_booking, name='my_booking'),
-    path('confirm_reservation/<str:reservation_id>/', confirm_reservation,
-         name='confirm_reservation'),        
-    path('search_reservation/<str:reservation_id>/', views.search_reservation,
+    path('my_booking/', my_booking, name='my_booking'),
+    path('confirm_reservation/<str:reservation_id>/', views.confirm_reservation,
+         name='confirm_reservation'),       
+    path('search_reservation/<str:reservation_id>/', search_reservation,
          name='search_reservation'),
     path('reservation_details/<str:reservation_id>/',
-         views.reservation_details, name='reservation_details'),
-    path('update_reservation/<str:reservation_id>/', views.update_reservation,
+         reservation_details, name='reservation_details'),
+    path('update_reservation/<str:reservation_id>/', update_reservation,
          name='update_reservation'),
-    path('delete_reservation/<str:reservation_id>/', views.delete_reservation,
-         name='delete_reservation'),
+    path('delete_reservation/', delete_reservation, name='delete_reservation'),
     path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
     path("", HomeScreen.as_view(), name="HomeScreen")
