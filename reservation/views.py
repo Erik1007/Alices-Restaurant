@@ -11,6 +11,9 @@ from django.http import HttpResponseRedirect
 import uuid
 
 
+# This is the Reservation Creation and Reading section
+
+
 def reserve_table(request):
     new_reservation = {}
     if request.method == 'POST':
@@ -67,6 +70,13 @@ def my_booking(request):
     return render(request, 'search_reservations.html')
 
 
+def reservation_details(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    return render(request, 'reservation_details.html', {'reservation': reservation})
+
+# This is the Researvation Update section
+
+
 def search_reservation(request):
     if request.method == 'POST':
         reservation_name = request.POST.get('reservation_name')
@@ -80,26 +90,36 @@ def search_reservation(request):
 
 
 def update_reservation(request, reservation_id):
-    reservation = get_object_or_404(Reservation, name=reservation_name)
+    existing_reservation = get_object_or_404(Reservation, id=reservation_id)
+
     if request.method == 'POST':
-        form = ReservationForm(request.POST, instance=reservation)
+        form = ReservationForm(request.POST, instance=existing_reservation)
         if form.is_valid():
             form.save()
-            return redirect('reservation_details.html')
+
+            # Create a new reservation
+            new_reservation = reserve_table(request)
+
+            # Delete the existing reservation if a new reservation is created
+            if new_reservation['available']:
+                delete_reservation(
+                    request, reservation_id=existing_reservation.id)
+            return redirect(
+                'reservation_details.html', reservation_id=new_reservation[
+                    'reservation_id'])
     else:
-        form = ReservationForm(instance=reservation)
-    return render(request, 'search_reservation.html', {'form': form})
+        form = ReservationForm(instance=existing_reservation)
+    return render(
+        request, 'reservation_details.html', {
+            'form': form, 'reservation': existing_reservation})
 
-
-def reservation_details(request, reservation_id):
-    reservation = get_object_or_404(Reservation, id=reservation_id)
-    return render(request, 'reservation_details.html', {'reservation': reservation_id})
+# This is the Delete Reservation section:
 
 
 def delete_reservation(request):
-    reservation_id = request.POST["reservation_id"]
-    reservation = get_object_or_404(Reservation, pk=reservation_id)
     if request.method == 'POST':
+        reservation_id = request.POST["reservation_id"]
+        reservation = get_object_or_404(Reservation, pk=reservation_id)
         reservation.delete()
     return render(request, 'delete_reservation.html')
 
