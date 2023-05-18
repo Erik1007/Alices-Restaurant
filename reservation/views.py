@@ -90,7 +90,7 @@ def search_reservation(request):
 
 
 def update_reservation(request, reservation_id):
-    existing_reservation = get_object_or_404(Reservation, id=reservation_id)
+    existing_reservation = get_object_or_404(Reservation, reservation_id=reservation_id)
 
     if request.method == 'POST':
         form = ReservationForm(request.POST, instance=existing_reservation)

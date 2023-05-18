@@ -22,7 +22,7 @@
         </div>
       </form>
       <div class="d-flex justify-content-center flex-wrap">
-        <a href="{% url 'update_reservation' reservation_id=reservation %}">
+        <a href="{% url 'update_reservation' reservation_id=reservation.reservation_id  %}">
           <button class="btn btn-outline-primary align-items-center">Change Reservation</button>
         </a>
       </div>
