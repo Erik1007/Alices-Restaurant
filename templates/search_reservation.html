@@ -1,55 +1,24 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
 
 <main class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-xs-12 col-md-6">
-            <h2>Search Reservations</h2>
+            <h2>Search Reservation</h2>
             <div class="d-flex justify-content-center flex-wrap">
-                <form id="search-form" action="{% url 'search_reservation' %}" method="get">
-                    <label for="query">Search for Reservation:</label>
+                <form id="search-form" action="{% url 'search_reservation' %}" method="post">
+                    {% csrf_token %}
+                    <label for="search_query">Search for Reservation:</label>
                     <br>
-                    <input type="text" id="name" name="search_by[]" value="" checked>
-                    <label for="name">Reservation Name</label>
+                    <input type="text" id="search_query" name="search_query" value="">
                     <br>
-                    <input type="email" id="email" name="search_by[]" value="">
-                    <label for="email">Reservation Email</label>
-                    <br>
-                    <input type="text" id="id" name="search_by[]" value="">
-                    <label for="id">Reservation ID #</label>
-                    <br>
-                    <a href="{% url 'reservation_details' %}" class="btn btn-primary">
-                        <button type="submit" class="btn btn-primary" onclick="submitForm()">Search</button>
-                    </a>
+                    <button type="submit" class="btn btn-primary">Search</button>
                 </form>
             </div>
         </div>
     </div>
 </main>
-
-<script>
-    function submitForm() {
-        document.getElementById('search-form').submit();
-        // Set the href attribute of the search-link to include the search parameters
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var id = document.getElementById('id').value;
-        var href = "{% url 'reservation_details' %}?";
-        if (name) {
-            href += "name=" + name + "&";
-        }
-        if (email) {
-            href += "email=" + email + "&";
-        }
-        if (id) {
-            href += "id=" + id + "&";
-        }
-        // Remove the trailing '&' character
-        href = href.slice(0, -1);
-        document.getElementById('search-link').href = href;
-    }
-</script>
-
 
 {% endblock %}

@@ -9,6 +9,7 @@ from .models import Reservation
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 import uuid
+from django.db.models import Q
 
 
 # This is the Reservation Creation and Reading section
@@ -71,21 +72,31 @@ def reservation_details(request, reservation_id):
     return render(request, 'reservation_details.html', {'reservation': reservation})
 
 
-def my_booking(request):
-    return render(request, 'search_reservations.html')
+def table_booking(request):
+    if request.method == 'POST':
+        form = TableForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('reservationModal')
+    else:
+        form = TableForm()
+
+    return render(request, 'reservation/failure.html', {'form': form})
 
 
 # This is the Researvation Update section
 
 
-def search_reservation(request):
+def search_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
     if request.method == 'POST':
-        reservation_name = request.POST.get('reservation_name')
-        reservation = get_object_or_404(Reservation, name=reservation_name)
-        reservation_id = request.POST.get('reservation_id')
-        reservation = get_object_or_404(Reservation, id=reservation_id)
-        return render(
-            request, 'reservation_details.html', {'reservation': reservation})
+        search_query = request.POST.get('search_query')
+
+        reservations = Reservation.objects.filter(
+            Q(name__icontains=search_query) | Q(id=search_query)
+        )
+
+        return render(request, 'reservation_details.html', {'reservations': reservations})
     else:
         return render(request, 'search_reservation.html')
 
@@ -149,13 +160,4 @@ def delete_reservation(request):
     return render(request, 'delete_reservation.html')
 
 
-def table_booking(request):
-    if request.method == 'POST':
-        form = TableForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('reservationModal')
-    else:
-        form = TableForm()
 
-    return render(request, 'reservation/failure.html', {'form': form})

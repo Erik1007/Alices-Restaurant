@@ -22,7 +22,7 @@ from alice.views import HomeScreen
 
 from . import views
 from reservation import views as reservation_views
-from reservation.views import confirm_reservation, search_reservation, reservation_details, delete_reservation, my_booking, reserve_table, update_reservation
+from reservation.views import confirm_reservation, search_reservation, reservation_details, delete_reservation, reserve_table, update_reservation
 
 
 urlpatterns = [
@@ -33,7 +33,6 @@ urlpatterns = [
     path('menu/', views.menu, name='menu'),
     path('barmenu/', views.barmenu, name='barmenu'),
     path('aboutus/', views.aboutus, name='aboutus'),
-    path('my_booking/', my_booking, name='my_booking'),
     path('confirm_reservation/<str:reservation_id>/', confirm_reservation,
          name='confirm_reservation'),       
     path('search_reservation/<str:reservation_id>/', search_reservation,
@@ -43,7 +42,6 @@ urlpatterns = [
     path('update_reservation/<str:reservation_id>/', update_reservation,
          name='update_reservation'),
     path('delete_reservation/', delete_reservation, name='delete_reservation'),
-    path('success/', views.success, name='success'),
     path('failure/', views.failure, name='failure'),
     path("", HomeScreen.as_view(), name="HomeScreen")
 ]
