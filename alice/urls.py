@@ -35,7 +35,7 @@ urlpatterns = [
     path('aboutus/', views.aboutus, name='aboutus'),
     path('confirm_reservation/<str:reservation_id>/', confirm_reservation,
          name='confirm_reservation'),       
-    path('search_reservation/<str:reservation_id>/', search_reservation,
+    path('search_reservation/', search_reservation,
          name='search_reservation'),
     path('reservation_details/<str:reservation_id>/',
          reservation_details, name='reservation_details'),

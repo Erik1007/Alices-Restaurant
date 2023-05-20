@@ -10,6 +10,8 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 import uuid
 from django.db.models import Q
+from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_http_methods
 
 
 # This is the Reservation Creation and Reading section
@@ -86,19 +88,23 @@ def table_booking(request):
 
 # This is the Researvation Update section
 
-
-def search_reservation(request, reservation_id):
-    reservation = get_object_or_404(Reservation, id=reservation_id)
+@require_http_methods(["GET", "POST"])
+def search_reservation(request):
     if request.method == 'POST':
         search_query = request.POST.get('search_query')
-
-        reservations = Reservation.objects.filter(
-            Q(name__icontains=search_query) | Q(id=search_query)
-        )
-
-        return render(request, 'reservation_details.html', {'reservations': reservations})
-    else:
-        return render(request, 'search_reservation.html')
+        if search_query:
+            reservations = Reservation.objects.filter(
+                Q(name__icontains=search_query) | Q(id=search_query)
+            )
+            if reservations:
+                reservation_id = reservations[0].id
+                return render(request, 'reservation_details.html', {'reservation_id': reservation_id})
+            else:
+                messages.warning(request, 'No reservation found.')
+        else:
+            messages.warning(request, 'Please provide a search query.')
+    
+    return render(request, 'search_reservation.html')
 
 
 def update_reservation(request, reservation_id):

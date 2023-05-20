@@ -6,13 +6,13 @@
 <main class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-xs-12 col-md-6">
-            <h2>Search Reservation</h2>
+            <h2>Search For Your Reservation</h2>
             <div class="d-flex justify-content-center flex-wrap">
                 <form id="search-form" action="{% url 'search_reservation' %}" method="post">
                     {% csrf_token %}
-                    <label for="search_query">Search for Reservation:</label>
+                    <label for="search_query">Reservation Name or ID:</label>
                     <br>
-                    <input type="text" id="search_query" name="search_query" value="">
+                    <input type="text" id="search_query" name="search_query" value="" checked>
                     <br>
                     <button type="submit" class="btn btn-primary">Search</button>
                 </form>
