@@ -21,8 +21,8 @@ def reserve_table(request):
     new_reservation = {}
     if request.method == 'POST':
         form = ReservationForm(request.POST)
-        if form.is_valid():          
-            reservation_date = form.cleaned_data['date']         
+        if form.is_valid():       
+            reservation_date = form.cleaned_data['date']        
 
             bad_reservation = False
             if reservation_date < timezone.now().date():
@@ -54,7 +54,7 @@ def reserve_table(request):
             else:
                 context = {'form': form, "new_reservation": new_reservation}
                 messages.warning(
-                    request, "There are no tables available at this time for this number of people")
+                    request, "Sorry, your reservation size is too large")
                 return render(request, 'reservation/reservation.html', context)                
             
     else:
@@ -71,7 +71,8 @@ def confirm_reservation(request, reservation_id):
 
 def reservation_details(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id)
-    return render(request, 'reservation_details.html', {'reservation': reservation})
+    return render(
+        request, 'reservation_details.html', {'reservation': reservation})
 
 
 def table_booking(request):
@@ -105,9 +106,11 @@ def search_reservation(request):
 
             if reservations:
                 reservation_id = reservations[0].id
-                return redirect('reservation_details', reservation_id=reservation_id)
+                return redirect(
+                    'reservation_details', reservation_id=reservation_id)
             else:
-                messages.warning(request, 'No reservation found.')
+                messages.warning(
+                    request, 'Sorry, No reservation found for that info.')
         else:
             messages.warning(request, 'Please provide a search query.')
 
@@ -115,7 +118,8 @@ def search_reservation(request):
 
 
 def update_reservation(request, reservation_id):
-    existing_reservation = get_object_or_404(Reservation, reservation_id=reservation_id)
+    existing_reservation = get_object_or_404(
+        Reservation, reservation_id=reservation_id)
     new_reservation = {}
     if request.method == 'POST':
         form = ReservationForm(request.POST)
@@ -153,8 +157,8 @@ def update_reservation(request, reservation_id):
             else:
                 context = {'form': form, "new_reservation": new_reservation}
                 messages.warning(
-                    request, "There are no tables available at this time for this number of people")
-                return render(request, 'reservation/reservation.html', context)                
+                    request, "Sorry, your reservation size is too large")
+                return render(request, 'reservation/reservation.html', context)               
             
     else:
         form = ReservationForm()

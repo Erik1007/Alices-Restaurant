@@ -18,6 +18,7 @@
 6. [Unfixed Bugs](#Unfixed-Bugs)
 7. [Deployment](#Deployment)
 8. [Credits](#Credits)
+9. [Aknowledgement](#Aknowledgement)
 ********************
 
 
@@ -88,16 +89,17 @@ The Fifth link in the navigation bar moves the user to a short history of iconic
 
 
 ********************
-## Reservation Page
-
+# Reservation System 
+********************
 
 (The C.R.U.D. model is an acronym for the paradigm of full stack web design, so that the user can be fully interactive, engaged and immersed in the information being presented; the model stands for **C**reate, **R**ead, **U**pdate and **D**elete. When a user has the ability to create information, read and find it, update or change that information and delete it, then the user can be fully engaged.)
 
-
+********************
+## Create a Reservation
 ### This is the **Creation** part of the C.R.U.D. model.
 
 
-The last link in the navigation bar brings the user to the most important page: **The Reservation page** which allows the user to **create a reservation**. Each page has a fixed button that will link to the user to the **Book a Table**. The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering their name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/reservation%20screenshot.jpg)
+The last link in the navigation bar brings the user to the most important page: **The Reservation page** which allows the user to **create a reservation**. Each page has a fixed button that will link to the user to the **Book a Table**. The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering their name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/create-reservation.jpg)
 
 
 Once the user has selected their date and time, they are prompted to confirm the reservation via a popup modal that provides the opportunity to either delete the booking or to move forward and confirm their reservation time. 
@@ -112,7 +114,7 @@ In the case the user accidently enters a date that is in the 'past', an interact
 ![past date pop up](/media/past%20date.jpg)
 
 
-
+********************
 ## Reservation Details page
 ### This is part of the **Read/See** part of the C.R.U.D. model.
 
@@ -128,16 +130,20 @@ On every page users can find the **My Booking** button in the center of the page
 If the user successfully searches for and finds thier reservation in the database, then they are returned to the **Reservation Details** page. However, if the user enters information that is not associated with a reservation in the database then they are greated with a 'Not Found' message ![reservation not found](/media/not%20found.jpg)
 
 
+********************
 ## Update Reservation 
 ### This is the **Update** part of the C.R.U.D. model.
 
-In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Blue button is the **Change Reservation** button that brings the user to the **The Reservation page**. The user can then change whatever information that they feel is required to be changed so that they are satisfied. When they confirm the new reservation, the old reservatin is delted and the new reservation information is displayed in the **Reservation Details** page, including a new **Reservation ID**. ![reservation screenshot](/media/reservation%20screenshot.jpg)
+In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Blue button is the **Change Reservation** button that brings the user to the **The Reservation page**. The user can then change whatever information that they feel is required to be changed so that they are satisfied. When they confirm the new reservation, the old reservatin is delted and the new reservation information is displayed in the **Reservation Details** page, including a new **Reservation ID**. ![reservation screenshot](/media/create-reservation.jpg)
 
 
+********************
 ## Delete Reservation 
 ### This is the **Delete** part of the C.R.U.D. model.
 
 In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Red outlined button is the **Delete Reservation** button that when clicked deletes the reservation from the database and brings the user to the **Delete Reservation Page** which displays a message welcoming the user to return again. ![delete reservation page](/media/delete%20reservation.jpg)
+
+
 
 ********************
 ## Website Administration Pages:
@@ -176,7 +182,6 @@ Secondly, I would like to include more background images and videos for every te
 
 On the Admin side, one of the main features that I would like to include in the next round of improvements would be to code the automatic deletion of reservations that have surpassed the reservation date. As of now, deleting reservations falls to Admin manual deletion.
 
-Another concept that will be involved in the next round of improvments will be the re-insertion of the favicon icon that initially was installed but was removed at the last moment as it was not rendering consistenly or correctly.
 
 
 ********************
@@ -212,7 +217,6 @@ As far as bugs in the actual project, there were significant issues building the
 
 The many to many object combining the reservation with the tables to save the reservation and reserve the table (checking for availability) created many bugs and error codes that needed to be systematically tracked down and solved.
 
-The favicon icon is set to appear in the browser tab for the project, to provide a symbol or icon for the user to identify the website easily on their browser, however, despite multiple attempts to create a path and test for the path to work, the icon itself has not rendered and instead provides an error code. Although this is not essential for the project, it is never the less on ongoing bug. At the last moment I decided to remove the favicon icon code as it was causing more issues while not displaying the icon; there for this will now be another concept for the next round in the future.
 
 
 ********************
@@ -322,3 +326,9 @@ Many different sources have been used as inspiration and for multiple levels of 
 - [A second harbor image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dstrandvagen&psig=AOvVaw0iiN8iburCgWVi5TFiDYJw&ust=1670863908840000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCODx6feT8vsCFQAAAAAdAAAAABAD) that was used for  background in this project.
 
 
+
+********************
+Aknowledgement
+********************
+
+I would like to thank **Adam Gilman** for taking the time to provide unequalled patience, support and guidance throughout the entire development process of this project. He continuously offered high level thought provoking advice on how to conceptualize, understand and execute all aspects of the django project.   
