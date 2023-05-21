@@ -10,9 +10,13 @@
             <div class="d-flex justify-content-center flex-wrap">
                 <form id="search-form" action="{% url 'search_reservation' %}" method="post">
                     {% csrf_token %}
-                    <label for="search_query">Reservation Name or ID:</label>
+                    <label for="search_name">Reservation Name:</label>
                     <br>
-                    <input type="text" id="search_query" name="search_query" value="" checked>
+                    <input type="text" id="search_name" name="search_name" value="" checked>
+                    <br>
+                    <label for="search_id">Reservation ID:</label>
+                    <br>
+                    <input type="text" id="search_id" name="search_id" value="">
                     <br>
                     <button type="submit" class="btn btn-primary">Search</button>
                 </form>

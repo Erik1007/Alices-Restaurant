@@ -91,19 +91,26 @@ def table_booking(request):
 @require_http_methods(["GET", "POST"])
 def search_reservation(request):
     if request.method == 'POST':
-        search_query = request.POST.get('search_query')
-        if search_query:
-            reservations = Reservation.objects.filter(
-                Q(name__icontains=search_query) | Q(id=search_query)
-            )
+        search_name = request.POST.get('search_name')
+        search_id = request.POST.get('search_id')
+
+        if search_name or search_id:
+            reservations = Reservation.objects
+
+            if search_name:
+                reservations = reservations.filter(name__icontains=search_name)
+            
+            if search_id:
+                reservations = reservations.filter(id=search_id)
+
             if reservations:
                 reservation_id = reservations[0].id
-                return render(request, 'reservation_details.html', {'reservation_id': reservation_id})
+                return redirect('reservation_details', reservation_id=reservation_id)
             else:
                 messages.warning(request, 'No reservation found.')
         else:
             messages.warning(request, 'Please provide a search query.')
-    
+
     return render(request, 'search_reservation.html')
 
 
@@ -164,6 +171,4 @@ def delete_reservation(request):
         reservation = get_object_or_404(Reservation, pk=reservation_id)
         reservation.delete()
     return render(request, 'delete_reservation.html')
-
-
 
