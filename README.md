@@ -12,11 +12,12 @@
 ## Table of contents
 1. [Introduction](#Introduction)
 2. [Program Features](#Program-Features)
-3. [Future Implementations](#Future-Implementations)
-4. [Testing and Validation](#Testing-and-Validation)
-5. [Unfixed Bugs](#Unfixed-Bugs)
-6. [Deployment](#Deployment)
-7. [Credits](#Credits)
+3. [Reservation System C.R.U.D. Model](#Reservation-System)
+4. [Future Implementations](#Future-Implementations)
+5. [Testing and Validation](#Testing-and-Validation)
+6. [Unfixed Bugs](#Unfixed-Bugs)
+7. [Deployment](#Deployment)
+8. [Credits](#Credits)
 ********************
 
 
@@ -43,15 +44,15 @@ This app is set up to mimic a real world website for a restaurant, therefor it h
 
 
 The main page is designed to entice the user to click further and explore the website.
-This main page uses a looping background video that shows many highlights of the restaurant, from the food, to people enjoying themselves at the establishment. ![Main Page Screenshot](/media/main%20page%20new.jpg)
+This main page uses a looping background video that shows many highlights of the restaurant, from the food, to people enjoying themselves at the establishment. ![Main Page Screenshot](/media/home-main.jpg)
 
-On the main page, just below the main background video, there is a link that whisks the user to the booking system, for those that instantly want to come join us for a good time, so that they can start interacting with the website and entering information.
+On the main page, just below the main background video, the user can find a link that whisks the user to the booking system, as well as a link that allows the user to search for an existing reservation. These links will allow the users  that instantly want to come join us for a good time, so that they can start interacting with the website and entering information.
 
-On the top of the main page there is a **Navigation Bar** that allows the user to easily move from page to page of the restaurant to fully explore and become enticed by the restaurant. This navigation bar is present on every page, along with the footer for easy navigation through the website. Links to the **Food Menu** and **Drink menu's**, the **About us** page telling a bit of a fictional backstory and of course to the **Book a Table page**. 
+On the top of the main page there is a **Navigation Bar** that allows the user to easily move from page to page of the restaurant to fully explore and become enticed by the restaurant. This navigation bar is present on every page, along with the footer for easy navigation through the website. Links to the **Food Menu** and **Drink Menus**, the **About us** page telling a bit of a fictional backstory and of course to the **Book a Table page**. 
 
 At the bottom of the main page the **Footer** can be found. In the footer section alot of vital business information can be found. On the left hand side there is a column providing the important business information for the **Address Location**, **Phone Number** and the email, along with a link to **Google Maps** that provides an interactive geo-location for the restaurant.
 In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the website. On the right hand side of the footer, the last of the vital information is found concerning the **Opening Hours** and **Social Links** to the major social networks. 
-![footer screenshot](/media/footer%20new.jpg)
+![footer screenshot](/media/new%20footer.jpg)
 
 
 
@@ -59,7 +60,7 @@ In the middle section of the footer, the user can find interactive shortcut link
 ## Food Menu
 
 
-The Fourth link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection.
+The Second link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection.
 ![food menu screenshot](/media/menu.jpg)
 
 
@@ -67,22 +68,22 @@ The Fourth link in the navigation bar brings the user to the food menu so that t
 ## Drinks Menu
 
 
-After the food menu, the fifth link provides the option for the user to the next main reason to visit the restaurant, its incredible and vast selection of **Drinks**, which are fully described in the drink menu.
+After the food menu, the Third link provides the option for the user to the next main reason to visit the restaurant, its incredible and vast selection of **Drinks**, which are fully described in the drink menu.
 ![Drink menu screenshot](/media/drinks.jpg)
 
 ********************
 ## Contact Hours Internal Link
 
 
-The sixth link in the Navigation bar moves the user internally in the website to the operational opening hours so that the user knows when they can visit the restaurant.
-![footer screenshot](/media/footer%20new.jpg)
+The Fourth link in the Navigation bar moves the user internally in the website to the operational opening hours so that the user knows when they can visit the restaurant.
+![footer screenshot](/media/new%20footer.jpg)
 
 
 ********************
 ## About US
 
 
-The eigth link in the navigation bar moves the user to a short history of iconic building that the resaurant calls home, including some stunning images of from the past and present.
+The Fifth link in the navigation bar moves the user to a short history of iconic building that the resaurant calls home, including some stunning images of from the past and present.
 ![about us screenshot](/media/about%20us.jpg)
 
 
@@ -90,7 +91,13 @@ The eigth link in the navigation bar moves the user to a short history of iconic
 ## Reservation Page
 
 
-And the last link in the navigation bar brings the user to the most important page: **The Reservation page**. Each page has a fixed button that will link to the user to the **Book a Table**. The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering their name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/reservation%20screenshot.jpg)
+(The C.R.U.D. model is an acronym for the paradigm of full stack web design, so that the user can be fully interactive, engaged and immersed in the information being presented; the model stands for **C**reate, **R**ead, **U**pdate and **D**elete. When a user has the ability to create information, read and find it, update or change that information and delete it, then the user can be fully engaged.)
+
+
+### This is the **Creation** part of the C.R.U.D. model.
+
+
+The last link in the navigation bar brings the user to the most important page: **The Reservation page** which allows the user to **create a reservation**. Each page has a fixed button that will link to the user to the **Book a Table**. The reservation page opens with a welcoming message inspiring the user to start the reservation process. By entering their name, number of guests and to select a date for a visit, the user is then prompted to select their desired meal time based on table availability. ![reservation screenshot](/media/reservation%20screenshot.jpg)
 
 
 Once the user has selected their date and time, they are prompted to confirm the reservation via a popup modal that provides the opportunity to either delete the booking or to move forward and confirm their reservation time. 
@@ -105,9 +112,32 @@ In the case the user accidently enters a date that is in the 'past', an interact
 ![past date pop up](/media/past%20date.jpg)
 
 
-And when the user enters a valid number of guests along with a valid date and time, they get a success message 
-![success message](/media/success%20message.jpg)
 
+## Reservation Details page
+### This is part of the **Read/See** part of the C.R.U.D. model.
+
+When the user successfully makes a reservation to come visit the restaurant, upon confirming the details on the previous page, the user is whisked to the Reservation Details page. This page shows the user the information entered on the previous view: the **Reservation Name**, the **Email**, the **Reservation Date**, the **Reservation Time** and the **Reservation ID** that is associated with the reservation. ![reservation details page](/media/reservation_details.jpg) 
+
+
+
+## Search for a Reservation
+### This is the second part of the **Read/See** part of the C.R.U.D. model.
+
+On every page users can find the **My Booking** button in the center of the page above the footer, next to the **Book a Table** buttun. The **My Booking** button will bring the user to the **Search Reservation** page where the user will have the ability to search for a reservation using the **Reservation Name** and/or the **Reservation ID**. ![search for reservation page](/media/search%20reservation.jpg)
+
+If the user successfully searches for and finds thier reservation in the database, then they are returned to the **Reservation Details** page. However, if the user enters information that is not associated with a reservation in the database then they are greated with a 'Not Found' message ![reservation not found](/media/not%20found.jpg)
+
+
+## Update Reservation 
+### This is the **Update** part of the C.R.U.D. model.
+
+In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Blue button is the **Change Reservation** button that brings the user to the **The Reservation page**. The user can then change whatever information that they feel is required to be changed so that they are satisfied. When they confirm the new reservation, the old reservatin is delted and the new reservation information is displayed in the **Reservation Details** page, including a new **Reservation ID**. ![reservation screenshot](/media/reservation%20screenshot.jpg)
+
+
+## Delete Reservation 
+### This is the **Delete** part of the C.R.U.D. model.
+
+In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Red outlined button is the **Delete Reservation** button that when clicked deletes the reservation from the database and brings the user to the **Delete Reservation Page** which displays a message welcoming the user to return again. ![delete reservation page](/media/delete%20reservation.jpg)
 
 ********************
 ## Website Administration Pages:
