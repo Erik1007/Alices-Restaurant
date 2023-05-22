@@ -37,7 +37,7 @@ This project represents an imaginary restaurant (semi-set in Stockholm Sweden) t
 ********************
 
 
-This app is set up to mimic a real world website for a restaurant, therefor it has a number of essential features for any real world business. From the fully functional navigation bar to the informative footer, the central features of the website are the reservation system and the review section which are both interactive and function with the user's input. The reservation system is an open system that anyone can interact with the website to make a reservation; however, to be able to leave a review or comment, one has to signup to be a member of the restaurant. As this website is designed with bootstrap it is a mobile first design and there for is fully responsive, thereby meeting the needs to be informative and look good on multiple screen sizes.
+This app is set up to mimic a real world website for a restaurant, therefor it has a number of essential features for any real world business. From the fully functional navigation bar to the informative footer, the central features of the website are the reservation system which is both interactive and function with the user's input. The reservation system is an open system that anyone can interact with the website to make a reservation. As this website is designed with bootstrap it is a mobile first design and there for is fully responsive, thereby meeting the needs to be informative and look good on multiple screen sizes.
 
 
 ********************

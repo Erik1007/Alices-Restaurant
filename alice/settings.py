@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'bootstrap_datepicker_plus',
     'bootstrap4',
     'reservation',
+    'blog',
 ]
 
 SITE_ID = 1

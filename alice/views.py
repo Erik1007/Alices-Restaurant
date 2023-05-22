@@ -19,6 +19,14 @@ def aboutus(request):
     return render(request, 'aboutus.html')
 
 
+def reviews(request):
+    return render(request, 'reviews.html')
+
+
+def signup(request):
+    return render(request, 'signup.html')
+
+
 def reserve_table(request):
     return render(request, 'reservation/reservation.html')
 

@@ -19,6 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from alice.views import HomeScreen
+from blog.views import HomeScreen
 
 from . import views
 from reservation import views as reservation_views
@@ -29,10 +30,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
     path('summernote/', include('django_summernote.urls')),
+    path("accounts/", include("allauth.urls")),
     path('reserve_table/', reserve_table, name='reserve_table'),
     path('menu/', views.menu, name='menu'),
     path('barmenu/', views.barmenu, name='barmenu'),
     path('aboutus/', views.aboutus, name='aboutus'),
+    path('reviews/', views.reviews, name='reviews'),
+    path('signup/', views.signup, name='signup'),
     path('confirm_reservation/<str:reservation_id>/', confirm_reservation,
          name='confirm_reservation'),       
     path('search_reservation/', search_reservation,

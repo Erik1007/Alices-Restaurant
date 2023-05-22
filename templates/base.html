@@ -45,6 +45,18 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'HomeScreen' %}">Home</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'menu' %}"> Menu</a>
                     </li>
@@ -121,6 +133,10 @@
                     <a href="{% url 'barmenu' %}">Drinks Menu</a>
                     <br>
                     <a href="{% url 'aboutus' %}">About Us</a>
+                    <br>
+                    <a href="{% url 'account_signup' %}">Sign Up</a>
+                    <br>
+                    <a href="{% url 'reviews' %}">Reviews</a>
                     <br>
             </div>
             <div class="col-sm-4">
