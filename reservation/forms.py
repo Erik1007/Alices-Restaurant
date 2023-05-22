@@ -8,6 +8,22 @@ from bootstrap_datepicker_plus.widgets import (
 
 
 class ReservationForm(forms.ModelForm):
+    """
+    A form for creating or updating a reservation.
+
+    Inherits from:
+        forms.ModelForm
+
+    Attributes:
+        Meta:
+            model: The model associated with the form.
+            tables: The tables field in the form.
+            fields: The fields displayed in the form.
+            widgets: The widgets used for form fields.
+
+    Methods:
+        clean: Perform form field validation and return cleaned data.
+    """
     class Meta:
         model = Reservation
         tables = forms.CharField(label='Tables', max_length=50)
@@ -16,6 +32,12 @@ class ReservationForm(forms.ModelForm):
              "date": DatePickerInput()}
 
     def clean(self):
+        """
+        Clean and validate form data.
+
+        Returns:
+            dict: The cleaned form data.
+        """
         cleaned_data = super().clean()
         print(cleaned_data)
         new_reservation = Reservation()

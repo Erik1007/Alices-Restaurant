@@ -9,6 +9,17 @@ import uuid
 
 
 class Customer(models.Model):
+    """
+    Model representing a customer.
+
+    Attributes:
+    - name: The name of the customer.
+    - email: The email address of the customer.
+    - number_of_persons: The number of persons in the customer's reservation.
+
+    Methods:
+    - clean: Validate the customer instance.
+    """
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=200)
     number_of_persons = models.PositiveIntegerField()
@@ -32,6 +43,12 @@ TABLE_TIME_CHOICES = [
 
 
 class ReservationManager(models.Manager):
+    """
+    Manager for the Reservation model.
+
+    Methods:
+    - make_reservation: Make a reservation based on the provided information.
+    """
     def make_reservation(
             self, name, email, number_of_persons, date, booking_time):
         existing_reservations = Reservation.objects.filter(
@@ -71,6 +88,22 @@ class ReservationManager(models.Manager):
 
 
 class Reservation(models.Model):
+    """
+    Model representing a reservation.
+
+    Attributes:
+    - reservation_id: The unique ID of the reservation.
+    - name: The name associated with the reservation.
+    - email: The email address associated with the reservation.
+    - number_of_persons: The number of persons in the reservation.
+    - date: The date of the reservation.
+    - tables: The tables associated with the reservation.
+    - booking_time: The booking time slot for the reservation.
+
+    Methods:
+    - save: Save the reservation to the database.
+    - __str__: Return a string representation of the reservation.
+    """
     reservation_id = models.UUIDField(default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=150)
     email = models.EmailField(max_length=200, default='example@example.com')
@@ -93,6 +126,16 @@ class Reservation(models.Model):
         
 
 class Table(models.Model):
+    """
+    Model representing a table.
+
+    Attributes:
+    - name: The name of the table.
+    - capacity: The capacity of the table.
+
+    Methods:
+    - __str__: Return a string representation of the table.
+    """
     name = models.CharField(max_length=50, default='placeholder')
     capacity = models.IntegerField()
 

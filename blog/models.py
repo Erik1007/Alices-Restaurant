@@ -19,8 +19,20 @@ class Post(models.Model):
         ordering = ["-created_on"]
 
     def save(self, *args, **kwargs):
+        """
+        Save the post instance.
+
+        Parameters:
+        - args: Additional positional arguments.
+        - kwargs: Additional keyword arguments.
+        """
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.body
+        """
+        Return a string representation of the post.
 
+        Returns:
+        - A string representation of the post.
+        """
+        return self.body

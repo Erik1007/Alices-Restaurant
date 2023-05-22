@@ -18,6 +18,19 @@ from django.views.decorators.http import require_http_methods
 
 
 def reserve_table(request):
+    """
+    Handle the reservation form submission and display reservation page.
+
+    Parameters:
+    - request: The HTTP request object.
+
+    Returns:
+    - If the request method is 'POST' and the form is valid, redirect to the
+    reservation details page.
+    - If the request method is 'POST' and the form is invalid, render the
+    reservation page with form errors.
+    - If the request method is 'GET', render the reservation page.
+    """
     new_reservation = {}
     if request.method == 'POST':
         form = ReservationForm(request.POST)
@@ -64,18 +77,58 @@ def reserve_table(request):
 
 
 def confirm_reservation(request, reservation_id):
+    """
+    Display the confirmation page for a specific reservation.
+
+    Parameters:
+    - request: The HTTP request object.
+    - reservation_id: The ID of the reservation.
+
+    Returns:
+    - If the reservation with the specified ID is found, render the
+    confirmation page with the reservation details.
+    - If the reservation with the specified ID is not found, return a
+    404 response.
+    """
     reservation = get_object_or_404(Reservation, reservation_id=reservation_id)
     return render(
         request, 'reservation_details.html', {'reservation': reservation})
 
 
 def reservation_details(request, reservation_id):
+    """
+    Display the details page for a specific reservation.
+
+    Parameters:
+    - request: The HTTP request object.
+    - reservation_id: The ID of the reservation.
+
+    Returns:
+    - If the reservation with the specified ID is found, render the details
+    page with the reservation details.
+    - If the reservation with the specified ID is not found, return a
+    404 response.
+    """
     reservation = get_object_or_404(Reservation, id=reservation_id)
     return render(
         request, 'reservation_details.html', {'reservation': reservation})
 
 
 def table_booking(request):
+    """
+    Handle the table booking form submission and display failure page.
+
+    Parameters:
+    - request: The HTTP request object.
+
+    Returns:
+    - If the request method is 'POST' and the form is valid, redirect to the
+    reservation modal page.
+    - If the request method is 'POST' and the form is invalid, render the
+    failure page with form errors.
+    - If the request method is 'GET', render the failure page with an empty
+    form.
+    """
     if request.method == 'POST':
         form = TableForm(request.POST)
         if form.is_valid():
@@ -91,6 +144,20 @@ def table_booking(request):
 
 @require_http_methods(["GET", "POST"])
 def search_reservation(request):
+    """
+    Handle the search reservation form submission and display the reservation
+    details page.
+
+    Parameters:
+    - request: The HTTP request object.
+
+    Returns:
+    - If the request method is 'POST' and the search query is valid, redirect
+    to the reservation details page.
+    - If the request method is 'POST' and the search query is invalid, render
+    the search reservation page with an error message.
+    - If the request method is 'GET', render the search reservation page.
+    """
     if request.method == 'POST':
         search_name = request.POST.get('search_name')
         search_id = request.POST.get('search_id')
@@ -118,6 +185,23 @@ def search_reservation(request):
 
 
 def update_reservation(request, reservation_id):
+    """
+    Handle the reservation update form submission and display the reservation
+    page.
+
+    Parameters:
+    - request: The HTTP request object.
+    - reservation_id: The ID of the existing reservation.
+
+    Returns:
+    - If the request method is 'POST' and the form is valid, redirect to the
+    reservation details page for the updated reservation.
+    - If the request method is 'POST' and the form is invalid, render the
+    reservation page with form errors.
+    - If the request method is 'GET', render the reservation page with an
+    empty form.
+    """
+
     existing_reservation = get_object_or_404(
         Reservation, reservation_id=reservation_id)
     new_reservation = {}
