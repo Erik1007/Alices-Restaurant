@@ -1,62 +1,58 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load crispy_forms_tags %}
-
 
 <main class="container-fluid">
     <div class="row justify-content-center">
         <div class="">
             <div>
-                <div>
-                    <h2>Sign Up to Let Us know About Your Expeirence With Us!</h2>
-                </div>
-                <div>
-                    <h5>Please share about your time with us,
-                        when you were here and your name if you want.
-                    </h5>
-                    <a class="btn btn-outline-primary" href="
-                        {% url 'account_signup' %}">Sign Up</a>
-                </div>
+                <h2>Sign Up to Let Us know About Your Experience With Us!</h2>
+            </div>
+            <div>
+                <h5>Please share about your time with us, when you were here and your name if you want.</h5>
+                {% if user.is_authenticated %}
+                <form method="post" action="{% url 'post_detail' slug=post.slug %}">
+                    {% csrf_token %}
+                    {{ comment_form.as_p }}
+                    <button type="submit" class="btn btn-outline-primary">Leave Comment</button>
+                </form>
+                {% else %}
+                <a class="btn btn-outline-primary" href="{% url 'account_signup' %}">Sign Up</a>
+                {% endif %}
             </div>
         </div>
+    </div>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="">
-                    <div class="row">
-                        {% for post in post_list %} {% csrf_token %}
-                        <div class="">
-                            <div class="card mb-4">
-                                <p class="card-text">
-                                    <h2 class="card-title">{{ post.title }}</h2>
-                                    <p class="card-text">{{ post.content | safe }}</p>
-                                    <p class="card-text text-muted h5">{{ post.created_on }}
-                                    </p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="">
+                <div class="row">
+                    {% for post in post_list %}
+                    <div class="">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.content | safe }}</p>
+                                <p class="card-text text-muted h5">{{ post.created_on }}</p>
                             </div>
                         </div>
                     </div>
-                    {% if forloop.counter|divisibleby:3 %}
-                </div>
-                <div class="row">
-                    {% endif %}
                     {% endfor %}
-
                 </div>
+                {% if is_paginated %}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                        {% endif %}
+                        {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
             </div>
         </div>
-        {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-                {% endif %}
-            </ul>
-        </nav>
-        {% endif %}
     </div>
-    </div>
-    </div>
-    {%endblock%}
+</main>
+{% endblock %}
