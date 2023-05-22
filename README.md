@@ -18,7 +18,6 @@
 6. [Unfixed Bugs](#Unfixed-Bugs)
 7. [Deployment](#Deployment)
 8. [Credits](#Credits)
-9. [Acknowledgement](#Aknowledgement)
 ********************
 
 
@@ -361,8 +360,4 @@ Many different sources have been used as inspiration and for multiple levels of 
 
 
 
-********************
-Acknowledgement
-********************
-
-I would like to thank **Adam Gilman** for taking the time to provide unequalled patience, support and guidance throughout the entire development process of this project. He continuously offered high level thought provoking advice on how to conceptualize, understand and execute all aspects of the django project.   
+  
