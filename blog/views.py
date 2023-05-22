@@ -3,6 +3,7 @@ from django.views import generic, View
 from .models import Post
 from .forms import CommentForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 
 
 class HomeScreen(View):
@@ -29,5 +30,7 @@ class AddComment(LoginRequiredMixin, View):
             comment = form.save(commit=False)
             comment.author = request.user 
             comment.save()
+            messages.success(request, 'Thank you for your comment.')
             return redirect(reverse('reviews'))
+        return redirect(reverse('reviews'))
         

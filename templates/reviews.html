@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="">
             <div>
-                <h2>Sign Up to Let Us know About Your Experience With Us!</h2>
+                <h2> Let Us know About Your Experience With Us!</h2>
             </div>
 
         </div>
@@ -20,7 +20,7 @@
                     <div class="">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <p class="card-text">{{ post.body | safe }}</p>
+                                <p class="card-text"><strong>{{ post.body | safe }}</strong></p>
                             </div>
                         </div>
                     </div>
@@ -28,11 +28,12 @@
                 </div>
                 <div>
                     {% if user.is_authenticated %}
-                    <h3>Please share about your time with us</h3>
-                    <form method="post" action="{% url 'add_comment' %}">
+                    <h3>Please share about your time with us:</h3>
+                    <form id="comment-form" method="post" action="{% url 'add_comment' %}">
                         {% csrf_token %}
                         {{ comment_form.as_p }}
-                        <button type="submit" class="btn btn-outline-primary">Leave Comment</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="confirmPost()">Leave
+                            Comment</button>
                     </form>
                     {% else %}
                     <a class="btn btn-outline-primary" href="{% url 'account_signup' %}">Sign Up</a>
@@ -54,4 +55,13 @@
         </div>
     </div>
 </main>
+
+<script>
+    function confirmPost() {
+        if (confirm("Are you sure you want to leave this comment? It cannot be deleted once its posted")) {
+            document.getElementById("comment-form").submit();
+        }
+    }
+</script>
+
 {% endblock %}

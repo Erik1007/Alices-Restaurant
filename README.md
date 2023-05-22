@@ -18,7 +18,7 @@
 6. [Unfixed Bugs](#Unfixed-Bugs)
 7. [Deployment](#Deployment)
 8. [Credits](#Credits)
-9. [Aknowledgement](#Aknowledgement)
+9. [Acknowledgement](#Aknowledgement)
 ********************
 
 
@@ -37,7 +37,8 @@ This project represents an imaginary restaurant (semi-set in Stockholm Sweden) t
 ********************
 
 
-This app is set up to mimic a real world website for a restaurant, therefor it has a number of essential features for any real world business. From the fully functional navigation bar to the informative footer, the central features of the website are the reservation system which is both interactive and function with the user's input. The reservation system is an open system that anyone can interact with the website to make a reservation. As this website is designed with bootstrap it is a mobile first design and there for is fully responsive, thereby meeting the needs to be informative and look good on multiple screen sizes.
+This app is set up to mimic a real-world website for a restaurant, therefor it has a number of essential features for any real world business. From the fully functional navigation bar to the informative footer, the central features of the website are the reservation system which is both interactive and function with the user's input. The reservation system is an open system that anyone can interact with the website to make a reservation. As this website is designed with bootstrap it is a mobile first design and there for is fully responsive, thereby meeting the needs to be informative and look good on multiple screen sizes.
+
 
 
 ********************
@@ -45,23 +46,36 @@ This app is set up to mimic a real world website for a restaurant, therefor it h
 
 
 The main page is designed to entice the user to click further and explore the website.
-This main page uses a looping background video that shows many highlights of the restaurant, from the food, to people enjoying themselves at the establishment. ![Main Page Screenshot](/media/home-main.jpg)
+This main page uses a looping background video that shows many highlights of the restaurant, from the food, to people enjoying themselves at the establishment. ![Main Page Screenshot](/media/Home-Home%20-3.jpg)
 
-On the main page, just below the main background video, the user can find a link that whisks the user to the booking system, as well as a link that allows the user to search for an existing reservation. These links will allow the users  that instantly want to come join us for a good time, so that they can start interacting with the website and entering information.
+On the main page, just below the main background video, the user can find a link that whisks the user to the booking system, as well as a link that allows the user to search for an existing reservation. These links will allow the users that instantly want to come join us for a good time, so that they can start interacting with the website and entering information.
 
-On the top of the main page there is a **Navigation Bar** that allows the user to easily move from page to page of the restaurant to fully explore and become enticed by the restaurant. This navigation bar is present on every page, along with the footer for easy navigation through the website. Links to the **Food Menu** and **Drink Menus**, the **About us** page telling a bit of a fictional backstory and of course to the **Book a Table page**. 
+On the top of the main page there is a **Navigation Bar** that allows the user to easily move from page to page of the restaurant to fully explore and become enticed by the restaurant. This navigation bar is present on every page, along with the footer for easy navigation through the website. Links to the **Register** page, the **Login** page, the **Food Menu** and **Drink Menus**, the **Contact/Hours**, the **Reviews** page, the **About us** page telling a bit of a fictional backstory and of course to the **Book a Table page**. 
 
-At the bottom of the main page the **Footer** can be found. In the footer section alot of vital business information can be found. On the left hand side there is a column providing the important business information for the **Address Location**, **Phone Number** and the email, along with a link to **Google Maps** that provides an interactive geo-location for the restaurant.
-In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the website. On the right hand side of the footer, the last of the vital information is found concerning the **Opening Hours** and **Social Links** to the major social networks. 
+At the bottom of the main page the **Footer** can be found. In the footer section alot of vital business information can be found. On the left-hand side there is a column providing the important business information for the **Address Location**, **Phone Number** and the email, along with a link to **Google Maps** that provides an interactive geo-location for the restaurant.
+In the middle section of the footer, the user can find interactive shortcut links that help to navigate around the website. On the right-hand side of the footer, the last of the vital information is found concerning the **Opening Hours** and **Social Links** to the major social networks. 
 ![footer screenshot](/media/new%20footer.jpg)
 
+
+
+********************
+## Register
+
+The second link on the navigation bar is the **Register** page has a central focus on getting the user to **Sign Up**. There are prompts for the potential user to enter a **Username**, **Email**, and **Passwords** so that the user can be a member of the website so that they can leave comments on the website. ![register screenshot](/media/singup%20-3.jpg)
+
+
+
+********************
+## Login
+
+The third link on the navigation bar is the **Login** page for existing users to log in to the database. This page is straightforward providing the user with a place to enter their **username** and **password**. ![login screenshot](/media/login%20-3.jpg) 
 
 
 ********************
 ## Food Menu
 
 
-The Second link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection.
+The fourth link in the navigation bar brings the user to the food menu so that the user can see descriptions of the mouth watering food selection.
 ![food menu screenshot](/media/menu.jpg)
 
 
@@ -69,22 +83,35 @@ The Second link in the navigation bar brings the user to the food menu so that t
 ## Drinks Menu
 
 
-After the food menu, the Third link provides the option for the user to the next main reason to visit the restaurant, its incredible and vast selection of **Drinks**, which are fully described in the drink menu.
+After the food menu, the fifth link provides the option for the user to the next main reason to visit the restaurant, its incredible and vast selection of **Drinks**, which are fully described in the drink menu.
 ![Drink menu screenshot](/media/drinks.jpg)
+
 
 ********************
 ## Contact Hours Internal Link
 
 
-The Fourth link in the Navigation bar moves the user internally in the website to the operational opening hours so that the user knows when they can visit the restaurant.
+The sixth link in the Navigation bar is the **Contact/Hours** link which moves the user internally to the footer of the website allowing the user to see the operational opening hours along with other vital information concerning the restaurant.
 ![footer screenshot](/media/new%20footer.jpg)
+
+
+********************
+## Reviews Page
+
+The seventh link in the navigation bar brings the user to the **Reviews page**. If the user is not a member of the database they are able to see what other members have posted concerning their time with the restaurant. For non members there is a button to allow them the opportunity to sign up and make posts. ![reviews logged out screenshot](/media/reviews%20-%20logged%20out%20-3.jpg)
+
+If the user is logged in their screen will be slightly different, there is be a Enter Comment section with a 'Leave Comment' on the bottom of the screen. In this field the user will be able to allow their thoughts to flow freely. ![reviews logged in screenshot](/media/reviews%20-%20logginin%20-3.jpg)
+
+Once the user is ready to submit their comment and they hit the 'Leave Comment' button, a confirm prompt appears on the top of the screen advising them that once the comment is submitted, they wont be able to delete it. This is done intentionally -similar to most restaurants- so that the post will remain anonymous. The user still has a chance to cancel the post to go back and edit it in case they think better of their words. ![reviews confirm screenshot](/media/reviews%20-%20comment%20-confirm%20-%203.jpg)
+
+And finally, when the user has confirmed to submit the post, there is a message of success to let the user know that their message will now be proudly displayed on the reviews page of the restaurant. ![reviews confirm success screenshot](/media/reviews%20-%20comment%20-%20success%20-3.jpg)
 
 
 ********************
 ## About US
 
 
-The Fifth link in the navigation bar moves the user to a short history of iconic building that the resaurant calls home, including some stunning images of from the past and present.
+The eight link in the navigation bar moves the user the **About us** page which proudly details a short history of iconic building that the restaurant calls home, including some stunning images of from the past and present.
 ![about us screenshot](/media/about%20us.jpg)
 
 
@@ -125,7 +152,7 @@ When the user successfully makes a reservation to come visit the restaurant, upo
 ## Search for a Reservation
 ### This is the second part of the **Read/See** part of the C.R.U.D. model.
 
-On every page users can find the **My Booking** button in the center of the page above the footer, next to the **Book a Table** buttun. The **My Booking** button will bring the user to the **Search Reservation** page where the user will have the ability to search for a reservation using the **Reservation Name** and/or the **Reservation ID**. ![search for reservation page](/media/search%20reservation.jpg)
+On every page users can find the **My Booking** button in the center of the page above the footer, next to the **Book a Table** button. The **My Booking** button will bring the user to the **Search Reservation** page where the user will have the ability to search for a reservation using the **Reservation Name** and/or the **Reservation ID**. ![search for reservation page](/media/search%20reservation.jpg)
 
 If the user successfully searches for and finds thier reservation in the database, then they are returned to the **Reservation Details** page. However, if the user enters information that is not associated with a reservation in the database then they are greated with a 'Not Found' message ![reservation not found](/media/not%20found.jpg)
 
@@ -134,7 +161,7 @@ If the user successfully searches for and finds thier reservation in the databas
 ## Update Reservation 
 ### This is the **Update** part of the C.R.U.D. model.
 
-In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Blue button is the **Change Reservation** button that brings the user to the **The Reservation page**. The user can then change whatever information that they feel is required to be changed so that they are satisfied. When they confirm the new reservation, the old reservatin is delted and the new reservation information is displayed in the **Reservation Details** page, including a new **Reservation ID**. ![reservation screenshot](/media/create-reservation.jpg)
+In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Blue button is the **Change Reservation** button that brings the user to the **The Reservation page**. The user can then change whatever information that they feel is required to be changed so that they are satisfied. When they confirm the new reservation, the old reservation is deleted and the new reservation information is displayed in the **Reservation Details** page, including a new **Reservation ID**. ![reservation screenshot](/media/create-reservation.jpg)
 
 
 ********************
@@ -149,9 +176,12 @@ In the middle of the bottom of the **Reservation Details** page, the user will s
 ## Website Administration Pages:
 
 
-On the back end side of this project there is a fully functioning Admin page that supports the admin with a number of options to help the fictional restuarant run and to be successful. This first image is of the **Administration Home Page** ![Admin screenshot](/media/admin%20home.jpg) On the Left hand side of the Admin page, there is a selection of options for the admin to navigate through including the options to see comments and posts, users, emails, **reservations**, tables and more. Each page in the admin has a display list of methods to search the various topics for ease of use and navigation. The Admin page for reservations provides controls for the reservations and for tables/ seating capacity assigned to each table. From this page it is possible to delete, save and modify the reservations and tables.
-![Reservations Admin](/media/table%20admin%20screenshot.jpg)  
-![Tables Admin](/media/Table%20Admin%202.jpg)
+On the back end side of this project there is a fully functioning Admin page that supports the admin with a number of options to help the fictional restaurant run and to be successful. This first image is of the **Administration Home Page** ![Admin screenshot](/media/admin%20-%20home%20%20-3.jpg) On the Left hand side of the Admin page, there is a selection of options for the admin to navigate through including the options to see **Posts**, users, emails, **reservations**, tables and more. Each page in the admin has a display list of methods to search the various topics for ease of use and navigation. The Admin page for reservations provides controls for the reservations and for tables/ seating capacity assigned to each table. From this page it is possible to delete, save and modify the reservations and tables. 
+![admin reservations screenshot](/media/admin%20-%20reservation%20-3.jpg)
+
+
+The Admin Post page provides the Admin with the capability to delete any abusive or unwanted comments that may have slipped past the better judgement of a user during an emotional time. 
+![admin posts screenshot](/media/admin%20-%20posts%20-%203.jpg)
 
 
 
@@ -162,7 +192,7 @@ On the back end side of this project there is a fully functioning Admin page tha
 This project has combined numerous aspects of the full stack process, from **Agile** development process to front and backend languages; it has been a full spectrum project. To compliment such an undertaking there have been numerous production thought processes and designs to make it possible. 
 ![agile example](/media/agile%20porcess%20screenshot%20-%20Copy.jpg)
 
-Included in the **Agile** Development Process was the planning wireframes that were used to help the development 'team' stay focused on tackling one step at a time. In a project this large, there were a nmber of different process that needed to maintained for a successfule development,
+Included in the **Agile** Development Process was the planning wireframes that were used to help the development 'team' stay focused on tackling one step at a time. In a project this large, there were a number of different process that needed to maintained for a successful development,
 ![front end wireframe](/media/front%20end%20wireframe.jpg)
 ![full project wireframe](/media/full%20project%20wireframe.jpg)
 ![reservation app wireframe](/media/reservation%20app%20wireframe%20-%20Copy.jpg)
@@ -208,12 +238,15 @@ W3C html validator was used for debugging errors in all of the html pages. The o
 ********************
 
 
-As far as continuing unfixed bugs, there are a couple that exist that do not impede the functionality of the project:
+I am proud to say that the development of this project taught many lessons on debugging and error tracking, however, at this point, I am not aware of any existing bugs. That does not mean that there are not any, it just means that they do not impede the functionality of the project and I am not aware of them.
+
+There have been many numerous learning situations that have taken patience, time and testing to work through, for example:
 
 One of the main issues came from the migration of the database from Heroku to Elephantsql, which at one point resulted in the need to recover the database. 
-Most recently a bug in Gitpod erased the environmental skeleton of the project including the env.py file, the djago download and all of the connecting url paths in the settings. 
 
-As far as bugs in the actual project, there were significant issues building the tables/seats in the shell connecting to the database for the function to prevent a double booking on a specific date and time. There were also bugs surrounding the javascript code for the pop up modal in the interactive delete/confirm pop up modal in the reservation system.
+Most recently a bug in Gitpod erased the environmental skeleton of the project including the env.py file, the Django download and all of the connecting url paths in the settings. These have all be successfully handled.
+
+As far as bugs in the actual project, there were significant issues building the tables/seats in the shell connecting to the database for the function to prevent a double booking on a specific date and time. There were also bugs surrounding the javascript code for the pop up modal in the interactive delete/confirm pop up modal in the reservation system. These have all been successfully handled as well.
 
 The many to many object combining the reservation with the tables to save the reservation and reserve the table (checking for availability) created many bugs and error codes that needed to be systematically tracked down and solved.
 
@@ -328,7 +361,7 @@ Many different sources have been used as inspiration and for multiple levels of 
 
 
 ********************
-Aknowledgement
+Acknowledgement
 ********************
 
 I would like to thank **Adam Gilman** for taking the time to provide unequalled patience, support and guidance throughout the entire development process of this project. He continuously offered high level thought provoking advice on how to conceptualize, understand and execute all aspects of the django project.   
