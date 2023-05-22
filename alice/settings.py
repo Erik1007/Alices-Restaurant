@@ -32,7 +32,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['alices-restaurant-eh.herokuapp.com', 
     'localhost', 
