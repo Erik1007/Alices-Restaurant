@@ -1,9 +1,10 @@
 from . import views
 from django.urls import path
-from .views import PostDetail
+from .views import PostList, AddComment
 
 
 urlpatterns = [
-    path('', views.PostList.as_view(), name='home'),
-    path('reviews/<slug:slug>/', PostDetail.as_view(), name='post_detail'),
+    path('reviews/', views.PostList.as_view(), name='post_list'),
+    path('add_comment/', views.AddComment.as_view(), name='add_comment'),  
+    path('', views.HomeScreen.as_view(), name='home'),
 ]

@@ -1,13 +1,14 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from .models import Post
 from .forms import CommentForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class HomeScreen(View):
     def get(self, request, *args, **kwargs):
         return render(request, "index.html")
-        
+
 
 class PostList(generic.ListView):
     model = Post
@@ -15,42 +16,18 @@ class PostList(generic.ListView):
     template_name = "reviews.html"
     paginate_by = 12
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['comment_form'] = CommentForm()
+        return context
 
-class PostDetail(View):
-    def get(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
-        comment_form = CommentForm()
-        
-        return render(
-            request,
-            "reviews.html",
-            {
-                "post": post,
-                "comments": comments,
-                "comment_form": comment_form
-            },
-        )
 
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
-
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user.username
-            comment = comment_form.save(commit=False)
-            comment.post = post
+class AddComment(LoginRequiredMixin, View):
+    def post(self, request, *args, **kwargs):
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.author = request.user 
             comment.save()
-
-        return render(
-            request,
-            "reviews.html",
-            {
-                "post": post,
-                "comments": comments,
-                "commented": True,
-                "comment_form": comment_form,
-            },
-        )
+            return redirect(reverse('reviews'))
+        
