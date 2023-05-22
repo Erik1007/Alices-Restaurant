@@ -61,7 +61,7 @@ In the middle section of the footer, the user can find interactive shortcut link
 ********************
 ## Register
 
-The second link on the navigation bar is the **Register** page has a central focus on getting the user to **Sign Up**. There are prompts for the potential user to enter a **Username**, **Email**, and **Passwords** so that the user can be a member of the website so that they can leave comments on the website. ![register screenshot](/media/singup%20-3.jpg)
+The second link on the navigation bar is the **Register** page has a central focus on getting the user to **Sign Up**. There are prompts for the potential user to enter a **Username**, **Email**, and **Passwords** so that the user can be a member of the website so that they can leave comments on the website. The user information is set on the right-hand side to differentiate between the login page, where the log in information is on the left-hand side ![register screenshot](/media/singup%20-3.jpg)
 
 
 
@@ -100,7 +100,7 @@ The sixth link in the Navigation bar is the **Contact/Hours** link which moves t
 
 The seventh link in the navigation bar brings the user to the **Reviews page**. If the user is not a member of the database they are able to see what other members have posted concerning their time with the restaurant. For non members there is a button to allow them the opportunity to sign up and make posts. ![reviews logged out screenshot](/media/reviews%20-%20logged%20out%20-3.jpg)
 
-If the user is logged in their screen will be slightly different, there is be a Enter Comment section with a 'Leave Comment' on the bottom of the screen. In this field the user will be able to allow their thoughts to flow freely. ![reviews logged in screenshot](/media/reviews%20-%20logginin%20-3.jpg)
+If the user is logged in their screen will be slightly different. The Nav bar shows different links for the user. The major differnce is that there is be a Enter Comment section with a 'Leave Comment' on the bottom of the screen. In this field the user will be able to allow their thoughts to flow freely. ![reviews logged in screenshot](/media/reviews%20-%20logginin%20-3.jpg)
 
 Once the user is ready to submit their comment and they hit the 'Leave Comment' button, a confirm prompt appears on the top of the screen advising them that once the comment is submitted, they wont be able to delete it. This is done intentionally -similar to most restaurants- so that the post will remain anonymous. The user still has a chance to cancel the post to go back and edit it in case they think better of their words. ![reviews confirm screenshot](/media/reviews%20-%20comment%20-confirm%20-%203.jpg)
 
@@ -152,7 +152,7 @@ When the user successfully makes a reservation to come visit the restaurant, upo
 ## Search for a Reservation
 ### This is the second part of the **Read/See** part of the C.R.U.D. model.
 
-On every page users can find the **My Booking** button in the center of the page above the footer, next to the **Book a Table** button. The **My Booking** button will bring the user to the **Search Reservation** page where the user will have the ability to search for a reservation using the **Reservation Name** and/or the **Reservation ID**. ![search for reservation page](/media/search%20reservation.jpg)
+On every page users can find the **My Booking** button in the center of the page above the footer, next to the **Book a Table** button. The **My Booking** button will bring the user to the **Search Reservation** page where the user will have the ability to search for a reservation using the **Reservation Name** and/or the **Reservation ID**. These two sources of searching are the most common and most recognizable means to search for a reservation.![search for reservation page](/media/search%20reservation.jpg)
 
 If the user successfully searches for and finds thier reservation in the database, then they are returned to the **Reservation Details** page. However, if the user enters information that is not associated with a reservation in the database then they are greated with a 'Not Found' message ![reservation not found](/media/not%20found.jpg)
 
@@ -161,14 +161,15 @@ If the user successfully searches for and finds thier reservation in the databas
 ## Update Reservation 
 ### This is the **Update** part of the C.R.U.D. model.
 
-In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Blue button is the **Change Reservation** button that brings the user to the **The Reservation page**. The user can then change whatever information that they feel is required to be changed so that they are satisfied. When they confirm the new reservation, the old reservation is deleted and the new reservation information is displayed in the **Reservation Details** page, including a new **Reservation ID**. ![reservation screenshot](/media/create-reservation.jpg)
+In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Blue button is the **Change Reservation** button that brings the user to the **The Reservation page**. The user can then change whatever information that they feel is required to be changed so that they are satisfied. When they confirm the new reservation, the old reservation is deleted and the new reservation information is displayed in the **Reservation Details** page, including a new **Reservation ID**. As there is a limitless amount of reservation id possible, a tactical choice was made that it would be easier for the admin and the program to have the user start 'fresh' with a new reservation instead of changing a small detail in an existing reservation. This would increase the users experience and enhance the effectiveness of the program
+![reservation screenshot](/media/create-reservation.jpg)
 
 
 ********************
 ## Delete Reservation 
 ### This is the **Delete** part of the C.R.U.D. model.
 
-In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The Red outlined button is the **Delete Reservation** button that when clicked deletes the reservation from the database and brings the user to the **Delete Reservation Page** which displays a message welcoming the user to return again. ![delete reservation page](/media/delete%20reservation.jpg)
+In the middle of the bottom of the **Reservation Details** page, the user will see two buttons, one blue and one red. The delete button needed to standout and was therefor changed to the danger color of red so that the user would not press the wrong button by mistake. The Red outlined button is the **Delete Reservation** button that when clicked deletes the reservation from the database. Before this happens though, there is a confirmation popup that forces the user to double check that the delete action is indeed what they want. When confirmed the user is brought to the **Delete Reservation Page** which displays a message welcoming the user to return again. ![delete reservation page](/media/delete%20reservation.jpg)
 
 
 
