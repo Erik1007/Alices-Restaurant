@@ -5,6 +5,7 @@ from .forms import CommentForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 
+
 class HomeScreen(View):
     def get(self, request, *args, **kwargs):
         """
@@ -17,6 +18,7 @@ class HomeScreen(View):
         - A rendered HTML response for the home screen view.
         """
         return render(request, "index.html")
+
 
 class PostList(generic.ListView):
     model = Post
@@ -38,6 +40,7 @@ class PostList(generic.ListView):
         context['comment_form'] = CommentForm()
         return context
 
+
 class AddComment(LoginRequiredMixin, View):
     def post(self, request, *args, **kwargs):
         """
@@ -53,7 +56,7 @@ class AddComment(LoginRequiredMixin, View):
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
-            comment.author = request.user 
+            comment.author = request.user
             comment.save()
             messages.success(request, 'Thank you for your comment.')
             return redirect(reverse('reviews'))
